@@ -1,4 +1,4 @@
-# Hypotheses — candidates, not frozen
+# Hypotheses --- candidates, not frozen
 
 No hypothesis has been tested with project data.
 

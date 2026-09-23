@@ -12,7 +12,7 @@ DOCS = (
     "research_question hypotheses novelty_gate claims_register outcome_definition "
     "feature_registry k562_feasibility sgnex_feasibility external_validation_lock "
     "frozen_analysis_plan manuscript_plan assumptions limitations decision_log "
-    "reproducibility phase1_report command_log"
+    "reproducibility phase1_report command_log sgnex_processed_data_qc replicate_structure icshape_qc structure_missingness outcome_selection quantifier_sensitivity identifiability_baseline structure_feature_specification k562_compatibility_audit data_reuse_and_licensing structure_external_validation_search phase2_report"
 ).split()
 REQUIRED = [
     "README.md", "AGENTS.md", "LICENSE_PENDING.md", "CITATION_PENDING.md",

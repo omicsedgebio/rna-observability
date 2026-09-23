@@ -1,5 +1,9 @@
 # External validation lock
 
+## Phase 2 lock update
+
+LongBench remains locked. During this phase only dataset identity, public availability, technology labels, approximate scale, and licensing metadata were viewed. No transcript-level outcomes, plots, platform disagreement values, model predictions, performance metrics, or transcript-specific behavior were inspected. No LongBench feature, threshold, or hypothesis was selected using outcome information. The lock date is 2026-09-23.
+
 Status: LOCKED
 Lock date: 2026-09-22
 Dataset: biological LongBench, GEO GSE303762 / AWS longbench-data; not the similarly named language-model benchmark.

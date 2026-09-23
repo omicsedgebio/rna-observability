@@ -1,4 +1,4 @@
-# Phase 1 report — 2026-09-22
+# Phase 1 report --- 2026-09-22
 
 ## Novelty verdict
 

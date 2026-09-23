@@ -1,0 +1,23 @@
+source_table	biological_source	cell_line	biological_replicate	rna_preparation	library_id	sequencing_run	technical_replicate	technology	library_protocol	replicate_id	independent_biological_observation
+samples	K562|Leukocyte	K562	replicate1	K562_rep1_enrich1_elute1	GIS_K562_directRNA_1	SGNex_K562_directRNA_replicate1_run1	run1	GridION	directRNA	K562_rep1_enrich1_elute1	K562|replicate1|directRNA
+samples	K562|Leukocyte	K562	replicate1	K562_rep1_enrich1_elute1	GIS_K562_directcDNA_1	SGNex_K562_directcDNA_replicate1_run2	run2	MinION	directcDNA	K562_rep1_enrich1_elute1	K562|replicate1|directcDNA
+samples	K562|Leukocyte	K562	replicate1	K562_rep1_enrich1_elute1	GIS_K562_cDNA_1	SGNex_K562_cDNA_replicate1_run3	run3	MinION	cDNA	K562_rep1_enrich1_elute1	K562|replicate1|cDNA
+samples	K562|Leukocyte	K562	replicate2	K562_replicate2_mRNA (Enrich1: 405ng)	GIS_K562_directcDNA_Rep2-Run1	SGNex_K562_directcDNA_replicate2_run1	run1	GridION	directcDNA	K562_replicate2_mRNA (Enrich1: 405ng)	K562|replicate2|directcDNA
+samples	K562|Leukocyte	K562	replicate2	K562_replicate2_mRNA (Enrich1: 270ng)	GIS_K562_directcDNA_Rep2-Run2	SGNex_K562_directcDNA_replicate2_run2	run2	GridION	directcDNA	K562_replicate2_mRNA (Enrich1: 270ng)	K562|replicate2|directcDNA
+samples	K562|Leukocyte	K562	replicate2	K562_replicate2_mRNA	GIS_K562_cDNAStranded_Rep2-Run3	SGNex_K562_cDNAStranded_replicate2_run3	run3	MinION	cDNAStranded	K562_replicate2_mRNA	K562|replicate2|cDNAStranded
+samples	K562|Leukocyte	K562	replicate3	K562_replicate3_mRNA	GIS_K562_directcDNA_Rep3-Run1	SGNex_K562_directcDNA_replicate3_run1	run1	MinION	directcDNA	K562_replicate3_mRNA	K562|replicate3|directcDNA
+samples	K562|Leukocyte	K562	replicate3	K562_rep3	GIS_K562_cDNAStranded_Rep3-Run2	SGNex_K562_cDNAStranded_replicate3_run2	run2	MinION	cDNAStranded	K562_rep3	K562|replicate3|cDNAStranded
+samples	K562|Leukocyte	K562	replicate3	K562_rep3	GIS_K562_cDNAStranded_Rep3-Run3	SGNex_K562_cDNAStranded_replicate3_run3	run3	GridION	cDNAStranded	K562_rep3	K562|replicate3|cDNAStranded
+samples	K562|Leukocyte	K562	replicate4	K562_rep4	GIS_K562_directRNA_Rep4-Run1	SGNex_K562_directRNA_replicate4_run1	run1	GridION	directRNA	K562_rep4	K562|replicate4|directRNA
+samples	K562|Leukocyte	K562	replicate5	K562_rep5	GIS_K562_directRNA_Rep5-Run1	SGNex_K562_directRNA_replicate5_run1	run1	GridION	directRNA	K562_rep5	K562|replicate5|directRNA
+samples	K562|Leukocyte	K562	replicate4	K562_rep4	GIS_K562_directcDNA_Rep4-Run2	SGNex_K562_directcDNA_replicate4_run2	run2	GridION	directcDNA	K562_rep4	K562|replicate4|directcDNA
+samples	K562|Leukocyte	K562	replicate3	K562_rep3	GIS_K562_cDNA_Rep3-Run4	SGNex_K562_cDNA_replicate3_run4	run4	GridION	cDNA	K562_rep3	K562|replicate3|cDNA
+samples	K562|Leukocyte	K562	replicate6	K562_rep6	GIS_K562_directRNA_Rep6-Run1	SGNex_K562_directRNA_replicate6_run1	run1	GridION	directRNA	K562_rep6	K562|replicate6|directRNA
+samples	K562|Leukocyte	K562	replicate3	K562 replicate 3 total RNA	GIS_K562_Illumina_Rep3-Run1	SGNex_K562_Illumina_replicate3_run1	run1	Illumina	Illumina	K562 replicate 3 total RNA	K562|replicate3|Illumina
+samples	K562|Leukocyte	K562	replicate4	K562 replicate 4 total RNA	GIS_K562_Illumina_Rep4-Run1	SGNex_K562_Illumina_replicate4_run1	run1	Illumina	Illumina	K562 replicate 4 total RNA	K562|replicate4|Illumina
+samples	K562|Leukocyte	K562	replicate5	K562 replicate 5 total RNA	GIS_k562_Illumina_Rep5-Run1	SGNex_K562_Illumina_replicate5_run1	run1	Illumina	Illumina	K562 replicate 5 total RNA	K562|replicate5|Illumina
+samples	K562|Leukocyte	K562	replicate7	7	GIS_K562_PacBio-SMRTcell_Rep7_Run1	SGNex_K562_PacBio-SMRTcell_replicate7_run1	run1	PacBio	PacBio-SMRTcell	7	K562|replicate7|PacBio-SMRTcell
+sampleData_sr	K562|Leukocyte	K562	K562 replicate 3 total RNA	K562 replicate 3 total RNA	RHK309	GIS_K562_Illumina_Rep3-Run1	run1	Illumina	Illumina	K562 replicate 3 total RNA	K562|K562 replicate 3 total RNA|Illumina
+sampleData_sr	K562|Leukocyte	K562	K562 replicate 4 total RNA	K562 replicate 4 total RNA	RHK310	GIS_K562_Illumina_Rep4-Run1	run1	Illumina	Illumina	K562 replicate 4 total RNA	K562|K562 replicate 4 total RNA|Illumina
+sampleData_sr	K562|Leukocyte	K562	K562 replicate 5 total RNA	K562 replicate 5 total RNA	RHK311	GIS_k562_Illumina_Rep5-Run1	run1	Illumina	Illumina	K562 replicate 5 total RNA	K562|K562 replicate 5 total RNA|Illumina
+pacbio_data	K562|Leukocyte	K562	replicate7	replicate7	GIS_K562_PacBio-SMRTcell_Rep7_Run1	m64134_230127_080622	run1	PacBio	PacBio-SMRTcell	replicate7	K562|replicate7|PacBio-SMRTcell

@@ -1,8 +1,8 @@
-# OmicsEdgeBio Project 001 — RNA measurement behavior
+# OmicsEdgeBio Project 001 --- RNA measurement behavior
 
 RNA-sequencing technologies do not observe every transcript equally. This project investigates whether intrinsic molecular properties of RNA can help explain and predict technology-specific measurement behavior.
 
-Research in progress. The hypothesis is not yet validated. “RNA Observability” is provisional terminology, not an established property or validated score. No validated predictive model is currently available. No clinical use, diagnostic use, or sequencing-platform recommendation.
+Research in progress. The hypothesis is not yet validated. --�RNA Observability--� is provisional terminology, not an established property or validated score. No validated predictive model is currently available. No clinical use, diagnostic use, or sequencing-platform recommendation.
 
 Phase 1 verdict: **MODIFY**. See [novelty gate](docs/novelty_gate.md), [K562 feasibility](docs/k562_feasibility.md), and [phase report](docs/phase1_report.md). There are no project results, fitted models, or generated scientific figures.
 
