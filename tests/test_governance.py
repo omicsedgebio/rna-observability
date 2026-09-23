@@ -46,7 +46,7 @@ class GovernanceTests(unittest.TestCase):
         policy = json.loads((V.ROOT / "configs/phase1.json").read_text())
         rows, _ = V.read_table(V.ROOT / "metadata/datasets.tsv", V.SCHEMAS["metadata/datasets.tsv"])
         next(row for row in rows if row["dataset_id"] == "LONGBENCH")["sha256"] = "0" * 64
-        errors = V.phase_errors(policy, "Status: DRAFT_NOT_FROZEN", "Status: LOCKED 2026-09-22", rows)
+        errors = V.phase_errors(policy, "Status: FROZEN_PHASE3D", "Status: LOCKED 2026-09-22", rows)
         self.assertTrue(any("invented checksum" in e for e in errors))
 
 

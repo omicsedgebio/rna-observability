@@ -73,15 +73,15 @@ def forbidden_file(path, size, limit=1000000):
 def phase_errors(policy, plan, lock, datasets):
     errors = []
     expected = {
-        "phase": "reconnaissance", "novelty_verdict": "MODIFY",
-        "modeling_authorized": False, "external_validation_locked": True,
-        "analysis_plan_status": "DRAFT_NOT_FROZEN", "external_outcomes_viewed": False,
-        "public_release_authorized": False, "push_authorized": False,
+        "phase": "phase3d_baselines", "novelty_verdict": "MODIFY",
+        "modeling_authorized": True, "external_validation_locked": True,
+        "analysis_plan_status": "FROZEN_PHASE3D", "external_outcomes_viewed": False,
+        "public_release_authorized": False, "push_authorized": True,
     }
     for key, value in expected.items():
         if policy.get(key) != value:
             errors.append("Phase 1 policy mismatch: " + key)
-    if "Status: DRAFT_NOT_FROZEN" not in plan:
+    if "Status: FROZEN_PHASE3D" not in plan:
         errors.append("Plan incorrectly marked frozen or missing status")
     if "Status: LOCKED" not in lock or "2026-09-22" not in lock:
         errors.append("Missing external lock/status/date")

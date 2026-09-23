@@ -1,0 +1,45 @@
+{
+  "n_transcripts": 15999,
+  "labels": {
+    "ILLUMINA_ONLY": 4680,
+    "BOTH": 4240,
+    "INDETERMINATE": 3747,
+    "NEITHER": 2883,
+    "DIRECT_RNA_ONLY": 449
+  },
+  "models": [
+    "A",
+    "B",
+    "C"
+  ],
+  "feature_sets": {
+    "A": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction"
+    ],
+    "B": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size"
+    ],
+    "C": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy"
+    ]
+  },
+  "cohort_sha256": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+  "fold_sha256": "66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52",
+  "structure_inputs_read": false,
+  "longbench_inputs_read": false
+}

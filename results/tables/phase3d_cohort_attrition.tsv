@@ -1,0 +1,7 @@
+stage	n_transcripts	selection_uses_structure_values	selection_uses_outcome	comment
+all_sgnex_annotation_transcripts	200310	False	False	SG-NEx processed Ensembl91 annotation universe
+mapping_class_A	16268	False	False	Validated Ensembl88-to-91 sequence/exon bridge
+annotation_and_gene_available	16268	False	False	Ensembl91 annotation and gene grouping available
+complete_primary_salmon_rows	16205	False	False	Three Illumina and four direct-RNA Salmon rows available
+structure_eligible	16055	False	False	GSE132099 callable bases >=50 and callable fraction >=0.5
+final_workflow_specific_cohort	15999	False	False	Complete primary rows plus structure-eligible class-A transcripts

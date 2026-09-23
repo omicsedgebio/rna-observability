@@ -1,12 +1,12 @@
 {
-  "phase": "reconnaissance",
+  "phase": "phase3d_baselines",
   "novelty_verdict": "MODIFY",
-  "modeling_authorized": false,
+  "modeling_authorized": true,
   "external_validation_locked": true,
-  "analysis_plan_status": "DRAFT_NOT_FROZEN",
+  "analysis_plan_status": "FROZEN_PHASE3D",
   "external_outcomes_viewed": false,
   "public_release_authorized": false,
-  "push_authorized": false,
+  "push_authorized": true,
   "large_download_review_bytes": 5000000000,
   "max_committed_file_bytes": 1000000
 }

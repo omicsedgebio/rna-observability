@@ -18,7 +18,7 @@ class Phase3CTest(unittest.TestCase):
     def test_provisional_folds_are_grouped_and_complete(self):
         rows = list(csv.DictReader((ROOT / 'metadata/cv_folds.tsv').open(), delimiter='\t'))
         self.assertEqual(len(rows), 15999)
-        self.assertTrue(all(row['status'] == 'PROVISIONAL_NOT_FROZEN' for row in rows))
+        self.assertTrue(all(row['status'] == 'FROZEN_PHASE3D' for row in rows))
         self.assertEqual(len({row['stable_id'] for row in rows}), len(rows))
         self.assertEqual({int(row['fold']) for row in rows}, set(range(5)))
 
@@ -39,7 +39,7 @@ class Phase3CTest(unittest.TestCase):
     def test_final_pre_endpoint_cohort_manifest(self):
         rows = list(csv.DictReader((ROOT / 'metadata/final_transcript_cohort.tsv').open(), delimiter='\t'))
         self.assertEqual(len(rows), 15999)
-        self.assertTrue(all(row['cohort_status'] == 'PRE_ENDPOINT_ELIGIBILITY' for row in rows))
+        self.assertTrue(all(row['cohort_status'] == 'FINAL_WORKFLOW_SPECIFIC' for row in rows))
         self.assertEqual(len({row['stable_id'] for row in rows}), len(rows))
 
     def test_strategy_evidence_has_all_options(self):

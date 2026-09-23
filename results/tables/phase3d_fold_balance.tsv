@@ -1,0 +1,6 @@
+fold	n_transcripts	n_sequence_clusters	n_genes	n_both	n_illumina_only	n_directrna_only	n_neither	n_indeterminate	seed	structure_inputs_read	longbench_inputs_read
+0	3199	875	1011	916	934	86	536	727	20260923	False	False
+1	3199	880	1008	887	920	80	558	754	20260923	False	False
+2	3202	913	1066	838	917	96	562	789	20260923	False	False
+3	3199	818	981	796	945	78	618	762	20260923	False	False
+4	3200	828	1005	803	964	109	609	715	20260923	False	False

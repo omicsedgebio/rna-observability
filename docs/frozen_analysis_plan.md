@@ -1,69 +1,82 @@
-# Analysis plan
+# Frozen analysis plan - Phase 3D workflow-specific baselines
 
-Status: DRAFT_NOT_FROZEN
-Phase 3B review: 2026-09-23 - GSE132099 Ensembl 88 bridge rescued 16,055 coverage-eligible A transcripts, but zero-aware ONT endpoint quantifier sensitivity and structure-selection/independent-reproducibility limits prevent a final freeze. The offset-based outcome in the older draft table below is superseded by `docs/zero_aware_endpoint_design.md`. No baseline or Model D was fitted. No structure-versus-sequencing association was inspected. LongBench remains locked.
-Created: 2026-09-22
-Phase 3A review: 2026-09-23
-Freeze timestamp: NOT_APPLICABLE
-Freeze commit: NOT_APPLICABLE
+Status: FROZEN_PHASE3D
+Freeze timestamp UTC: 2026-09-23T15:30:16Z
+Freeze parent git SHA before design commit: 09d12633f4587aa60e8cd34e7e58b9657a437a9a
+Endpoint version: `workflow_detection_v1`
+Cohort SHA256: `3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5`
+CV fold SHA256: `66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52`
 External outcomes viewed: NO
-Central structure versus measurement association examined: NO
 
-This file is an explicit pre-freeze draft. Its initial local commit does NOT unlock LongBench. Do not mark FROZEN while any required choice is unresolved. Phase 3A did not freeze or run Models A/B/C because no mapping class A/B transcript exists and other endpoint/missingness blockers remain.
+**RNA structure versus sequencing measurement behavior has not been inspected.** This freeze precedes the final structure hypothesis test. LongBench remains locked and no LongBench outcome is used.
 
-## Proposed analysis and fields to freeze
+## Scientific scope
 
-| Required field | Current proposal | Unresolved before freeze |
-|---|---|---|
-| Primary outcome | Signed ONT directRNA minus Illumina median log2 relative abundance, +0.1 offset | Comparable abundance units and independent preparations |
-| Secondary outcomes | Absolute disagreement, replicate variance, detection, isoform fractions, spike-in error | Exact family and multiplicity |
-| Inclusion | Fixed annotation, independent expression eligibility, adequate independent libraries | Numeric coverage and expression rules after outcomes-blind QC |
-| Exclusion | Ambiguous coordinate map, invalid sequences, incompatible treatment, missing essential covariates | Exact audited sample IDs and reasons |
-| Transcript universe | Ensembl 91-compatible mature transcripts | Hash of FASTA/GTF and exact map/list |
-| Feature set | A abundance/length/GC; B architecture/identifiability; C sequence; D measured structure | Exact columns and structure summaries |
-| Preprocessing | Training-only centering/scaling; nonlinear terms prespecified; no external fitting | Transform definitions |
-| Missing data | Structure missingness audited; common C/D cohort; other imputation fitted only on training | Callable threshold, imputation method, missing indicators |
-| Primary statistical model | Interpretable regularized linear model with prespecified smooth abundance/length/GC terms; protocol-specific fit | Penalty/spline degrees and model formula |
-| Predictive baselines | Mean-only; A/B/C; annotation K-value; measured-coverage-only increment; predicted-structure comparator | Implementations and computational scope |
-| Hyperparameters | Inner grouped CV for fixed small grid; identical budget for C/D | Exact grid |
-| CV procedure | Nested 5 outer / 4 inner folds grouped by gene AND cross-gene sequence similarity components | Feasible group counts, similarity threshold, seeds, repetitions |
-| Performance | Primary paired held-out MAE reduction; RMSE/R2/rank and calibration slope/intercept secondary | Cluster weighting and uncertainty prescription |
-| Null/permutation tests | Matched-bin whole-profile permutations with fixed masks; outcome permutation; random features | Matching bins, exchangeability justification, number of null fits |
-| Primary comparison | D vs C on identical rows/folds, conditional on coverage | Exact paired loss estimand and primary contrast |
-| Success criteria | Positive practically meaningful delta with cluster CI excluding zero, control robustness, independent context replication | Minimum meaningful delta and precision/power target fixed before outcome analysis |
-| Failure criteria | No stable phenotype; no meaningful D>C; gain explained by missingness/sequence; failure to transport | Quantitative equivalence and transport margins |
-| External test | Frozen pipeline, no retraining; one compatible LongBench bulk contrast | Transcript outputs/annotation/replication and matched-structure availability |
-| Model/prediction artifacts | Hash all code/config/environment/model files; save predictions before scoring | Exact storage paths and freeze commit |
-| Reporting | All prespecified tests including nulls; post-hoc separately labeled | Final table/figure manifest |
+The estimand is measurement behavior under a defined sequencing and quantification workflow. It is not technology-intrinsic reliability, platform accuracy, endogenous true error, or a universal observability score. The development context is SG-NEx K562 bulk RNA with Ensembl GRCh38 transcript definitions and Salmon 1.9.0 outputs.
 
-## Statistical safeguards to preserve at freeze
+## Data and reference versions
 
-- Define per-gene contribution to loss (equal gene weights proposed) so many isoforms do not dominate. Cluster bootstrap paired C/D errors by gene/similarity group; do not t-test correlated fold means.
-- Transcript resampling is not a substitute for biological-preparation uncertainty. Resample preparations separately; report limited library degrees of freedom.
-- Pooling all cells of a transcript across train/test is prohibited for unseen-transcript claims. For cross-study same-transcript transfer, label it explicitly and report separately.
-- Separate expression covariate libraries from endpoint libraries. Freeze cross-fitting only if replication supports it.
-- Choose every inclusion/coverage threshold without LongBench outcomes and without maximizing a structural association. Nested CV does not repair whole-dataset feature selection.
-- A secondary GAM/mixed model can assess adjusted effects with simultaneous controls and clustered uncertainty. Avoid claiming causation from coefficients.
-- Calibration for continuous y: out-of-fold calibration intercept/slope and residual scale; probability calibration only for binary detection outcomes.
-- Primary delta = MAE_C - MAE_D; positive favors D. Report absolute/relative delta, uncertainty, distribution across contexts/protocols, and permutation tail area (1 + exceedances)/(1 + permutations).
-- No “success” based solely on P<0.05, a feature importance rank, or a single favorable protocol.
+- SG-NEx processed K562 quantification object, restricted to the documented Illumina and direct-RNA runs in `metadata/quantification_workflows.tsv`.
+- Ensembl release 91 GRCh38 transcriptome, GTF, cDNA and ncRNA FASTA with recorded checksums.
+- GSE132099 in-vivo icSHAPE is used only to define the future conditional structure-callability population; no reactivity value enters baseline outcomes, features or folds.
+- GSE149767 is not an outcome or baseline predictor.
+- LongBench is not downloaded or read beyond `docs/external_validation_lock.md`.
 
-## Negative-control design
+## Transcript universe and eligibility
 
-| Control | Preserved / disrupted | Leakage or validity risk |
-|---|---|---|
-| Whole-profile permutation within expression/length/GC/coverage/ambiguity bins | Retains broad nuisance structure, disrupts transcript link | Conditional exchangeability approximate; bins built in training only |
-| Transcript-label permutation in grouped folds | Tests full pipeline against no target association | Must permute gene/similarity units, not split sibling rows |
-| Circular profile shifts within transcript | Retains value distribution, changes local positioning | Invalid for global mean tests; handle mask and boundary effects |
-| Context-mismatched structure | Tests cell-context specificity | Same RNA sequence remains; not a pure null; no external outcomes used |
-| Predicted structure vs experimental | Tests whether experiment adds beyond computable sequence summary | Prediction not equivalent to in-vivo truth |
-| Random features with matched dimension | Tests overfitting from added capacity | Draw only with fixed training seeds |
-| Coverage-only added features | Tests missingness/measurement availability explanation | Required comparator, not biological structure |
+The final universe contains 15,999 stable Ensembl transcript IDs. Eligibility is fixed and outcome-blind: class-A Ensembl 88 to 91 sequence and exon equivalence; valid Ensembl 91 annotation; complete rows in three Illumina Salmon and four direct-RNA Salmon SG-NEx runs; at least 50 callable GSE132099 positions and callable fraction at least 0.5 for the conditional future structure estimand. No structure magnitude, platform disagreement, or model performance was used. The full attrition is `results/tables/phase3d_cohort_attrition.tsv`.
 
-A stable null is publishable only within its identifiable scope and precision. An external failure remains failure even if an exploratory refit subsequently works.
+## Replicate unit and quantification
 
-## Phase 3A freeze gate failure
+A transcript is the prediction row. SG-NEx biological preparations are the inferential unit; run-level columns are aggregated into support states and are not pseudoreplicates. The primary workflow is Salmon 1.9.0 with Ensembl 91. Illumina uses the two outcome libraries `GIS_K562_Illumina_Rep4-Run1` and `GIS_k562_Illumina_Rep5-Run1`. Direct RNA uses four outcome libraries `SGNex_K562_directRNA_replicate1_run1`, `replicate4_run1`, `replicate5_run1`, and `replicate6_run1`. `GIS_K562_Illumina_Rep3-Run1` is an independent prior-run abundance covariate only.
 
-No plan is frozen. The 200,310 SG-NEx/Ensembl 91 transcripts map to zero validated A/B icSHAPE transcript definitions, so an exact primary transcript inclusion list cannot be written. The proposed 0.5 callable fraction and 50 callable-base threshold produces 35,309 **provisional** ID/length/availability matches, but 47.37% of the 198,569-transcript adjusted universe has fitted availability below 0.05 and naive inverse-probability weights have effective sample size about 193. The abundance representation is identified as Salmon TPM after common-universe closure, yet the median signed contrast moves from -6.90 to -1.40 log2 units between fixed 0.01 and 1 TPM offsets. Only one Illumina library remains for independent abundance conditioning when two outcome libraries are reserved. A cross-gene similarity graph beyond exact duplicates and exact outer fold assignments are also pending. These are scientific stop conditions, not optional analysis choices.
+## Primary phenotype
 
-Before a real freeze, resolve the icSHAPE source transcript FASTA/GTF or reconstruct a documented equivalent transcript model, set an explicit high-overlap conditional estimand and missing-data rule, decide whether a hurdle/detection endpoint replaces the unstable continuous primary, obtain an independent abundance covariate strategy, build the complete gene/sequence-similarity group graph and lock fold assignments. Then finalize exact model classes, inner penalty grids, null/permutation units, number of permutations, multiplicity family, numerical success/partial-success/failure margins and uncertainty procedure with a freeze timestamp and commit SHA **before** A/B/C fitting or any reactivity association. RNA structure versus transcript measurement behavior has not yet been tested.
+`workflow_detection_v1` is a five-state categorical endpoint:
+
+1. Illumina supported detection: Salmon TPM >= 1 in both two outcome libraries.
+2. Direct-RNA supported detection: Salmon TPM >= 1 in at least three of four outcome libraries.
+3. `BOTH` if both supported, `ILLUMINA_ONLY` if only Illumina supported, `DIRECT_RNA_ONLY` if only direct RNA supported, and `NEITHER` if neither supported.
+4. Any intermediate replicate support (one of two Illumina or one/two of four direct-RNA libraries) is `INDETERMINATE`.
+
+Zeros are retained as fitted zeros and are not treated as biological absence. No pseudocount is used. This endpoint is workflow-specific and is not called measurement error or truth.
+
+## Secondary and exploratory phenotypes
+
+Secondary: within-common-positive percentile-rank difference using the same named Salmon workflows; within-workflow replicate reproducibility; quantifier sensitivity using Illumina RSEM and direct-RNA Bambu/NanoCount as descriptive alternatives; synthetic spike-in calibration separated from endogenous inference. Exploratory: transcript completeness or transcript-end measures only if a future processed alignment resource supplies validated evidence; isoform ambiguity and architecture remain separate annotation-derived phenotypes. No composite score is defined.
+
+## Baseline predictors
+
+Model A uses independent prior-run `log1p` Illumina Salmon TPM, transcript length and GC fraction. Model B adds exon count, isoforms per gene and sequence-cluster size as architecture and identifiability controls. Model C adds prespecified sequence features: homopolymer fraction, 32-nt low-complexity fraction, and whole-transcript Shannon entropy. Features are computed from Ensembl 91 sequence and annotation only, with training-fold standardization. No endpoint-derived predictor is permitted. Exact definitions remain in `metadata/feature_definitions.tsv`.
+
+Annotation-only identifiability controls remain mandatory. The 95% identity / 90% coverage sequence cluster is a leakage group, not a biological feature selected from results. The miniQuant K-value and unique k-mer fraction remain sensitivity resources but are not required for the frozen minimal Model C because their complete cohort rows were not available in the current checkout.
+
+## Reserved future structure features
+
+Callable fraction is an assay quality covariate. Mean or median reactivity and high- or low-reactivity fractions are conditional future candidates, each requiring a prespecified structure-quality analysis and reproducibility report. Local variability, transcript-end structure and splice-junction structure are unsupported in the present evidence. No structure feature enters Models A, B or C.
+
+## Structure estimand and missingness
+
+Future structure inference is conditional on the 15,999 measured, mapped and structure-callable transcripts described above. It does not target all human transcripts. Positivity is poor outside the measured high-callability population, so complete-case conditional inference is primary. Stratified reporting by abundance, length and isoform complexity is required. Matching may be used only as a sensitivity analysis. Inverse-probability weighting is prohibited unless positivity and weight stability are demonstrated independently before analysis.
+
+## Cross-validation and leakage control
+
+Five folds are fixed in `metadata/cv_folds.tsv` with NumPy seed `20260923`. Same-gene transcripts and all transcripts in the same connected Ensembl 91 sequence cluster are assigned together. Clusters use BLASTN 2.15.0 megablast, >=95% identity and >=90% coverage of the shorter sequence; a 99% threshold is a sensitivity diagnostic. No gene or primary sequence cluster occurs in more than one fold. Technical runs are columns, not rows. These exact folds must be reused for all structure-blind and future structure models.
+
+## Models, tuning and metrics
+
+Models A, B and C are multinomial regularized logistic models with fixed `C=1`, `lbfgs`, maximum 2,000 iterations, NumPy/sklearn seed `20260923`, and training-fold centering/scaling. No post-freeze feature selection or endpoint redesign is allowed. Metrics are held-out accuracy, balanced accuracy, macro-F1, multiclass log loss, multiclass Brier score, and calibration summaries where class probabilities are estimable. The majority-class classifier is the trivial comparator. Performance is reported overall and by prespecified abundance, length and isoform strata. Quantifier sensitivity uses the fixed alternative labels and does not redefine the primary outcome.
+
+Uncertainty uses a sequence-cluster bootstrap of out-of-fold predictions with 100 fixed-seed replicates for primary metric intervals. Fold-level and class-level counts are reported. Replicate variation is reported descriptively because SG-NEx has limited independent biological preparations. No transcript-level t-test treats technical runs as independent.
+
+## Future structure hypothesis tests
+
+Model D is reserved. Only after review of the frozen structure-blind results may a future phase add prespecified structure summaries to Model C on the identical cohort and folds. That phase must use held-out incremental performance, cluster uncertainty, null permutations at the sequence-cluster unit, and multiplicity control defined before reading the structure-outcome result. This plan does not authorize Model D or any structure association.
+
+## Sensitivity analyses
+
+Prespecified sensitivities are: 0.1 and 5 TPM detection thresholds; alternative replicate support rules; RSEM and Bambu/NanoCount descriptive labels; 99% sequence-cluster threshold; abundance, length and isoform strata; exclusion of indeterminate rows; and secondary rank phenotype. None may replace the primary endpoint after outcome inspection. Spike-ins calibrate synthetic mixture behavior only and cannot be treated as endogenous truth.
+
+## Success, partial success and failure
+
+Success requires a stable workflow-specific phenotype, leakage-safe held-out baseline estimates with useful calibration, and a future Model D comparison that improves held-out performance beyond Model C with cluster-level uncertainty and null control. Partial success is a reproducible workflow-specific baseline and a precisely bounded null or conditional structure increment. Failure is unresolved quantifier dependence, unstable endpoint labels, leakage, severe loss of positivity, or no reproducible incremental structure information at the conditional estimand.
