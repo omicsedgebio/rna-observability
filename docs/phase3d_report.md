@@ -119,12 +119,12 @@ After independent review of this frozen, structure-blind state, the next phase m
 
 ## FINAL COMMIT SHA
 
-Recorded after commit.
+Substantive Phase 3D design and baseline commit: `5b98bfd`. A documentation closeout commit records the final repository state after this report was updated.
 
 ## PRIVATE PUSH STATUS
 
-Recorded after push.
+The substantive Phase 3D commit was pushed to the existing private `origin/main`; the documentation closeout is pushed with it.
 
 ## WORKING TREE STATUS
 
-Recorded after commit/push.
+The source checkout cannot update its Git index because `.git/index.lock` creation is denied by the managed environment. The committed temporary clone is clean; the source files mirror the pushed commit and local scientific caches remain ignored.

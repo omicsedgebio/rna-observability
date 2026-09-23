@@ -3,6 +3,7 @@
 Status: FROZEN_PHASE3D
 Freeze timestamp UTC: 2026-09-23T15:30:16Z
 Freeze parent git SHA before design commit: 09d12633f4587aa60e8cd34e7e58b9657a437a9a
+Design freeze and baseline commit: 5b98bfd
 Endpoint version: `workflow_detection_v1`
 Cohort SHA256: `3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5`
 CV fold SHA256: `66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52`
