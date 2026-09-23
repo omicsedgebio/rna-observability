@@ -1,0 +1,23 @@
+search_id	date	channel	query_or_resource	screening_result	limitation
+S01	2026-09-22	Web scholarly discovery	SG-NEx transcriptome sequencing benchmark processed data cell lines Nature methods	SG-NEx paper and official repo	Not a citation census
+S02	2026-09-22	NCBI GEO	GSE145805 icSHAPE K562 HepG2 H9	Series and K562N record read	Dataset-specific license and annotation unresolved
+S03	2026-09-22	Web catalog identity	LongBench RNA sequencing benchmark dataset	GSE303762 and AWS catalog	Outcomes excluded; unrelated LLM LongBench discarded
+S04	2026-09-22	PubMed indexed	site.pubmed.ncbi.nlm.nih.gov RNA sequencing bias structure transcript quantification	Boivin; Blind spots; precision literature	Search-engine retrieval not exhaustive PubMed export
+S05	2026-09-22	bioRxiv indexed	site.biorxiv.org RNA structure sequencing bias transcript quantification prediction	Mixed relevance; Brooks identified in follow-up title searches	Preprint versions may overlap journals
+S06	2026-09-22	medRxiv indexed	site.medrxiv.org RNA sequencing platform bias transcript quantification	Blood directRNA comparison found in refinement	Clinical translation outside scope
+S07	2026-09-22	Google Patents	site.patents.google.com RNA secondary structure sequencing reverse transcription bias	US9909175B2; EP4482977A1	Public prior-art screen; no legal opinion
+S08	2026-09-22	GitHub/software	miniQuant transcript identifiability quantification	miniQuant paper/repo; online-tool link	Do not equate exon structure with folding
+S09	2026-09-22	Journal search	RNA sequencing bias secondary structure Roberts 2011 alpine Salmon fragment sequence bias	Roberts; alpine; Salmon; Brooks	Full supplementary audits pending
+S10	2026-09-22	Primary source	https://doi.org/10.1038/s41422-021-00476-y	PrismNet structure source and comparisons	Some web opens failed; publisher HTML read by curl
+S11	2026-09-22	SG-NEx citing/using works	https://github.com/GoekeLab/sg-nex-data/blob/master/docs/SGNEx_usecases.md	Exitrons; xPore; m6Anet; IsoTV; JAFFAL	Curated examples not complete forward citations
+S12	2026-09-22	Forward-use search	site.biorxiv.org SG-NEx quantification	Follow-ups found TranSigner; lr-kallisto; DeepChopper; fusion work	No LongBench results/citing-paper review
+S13	2026-09-22	Conceptual refinement	RNA structure sequencing bias prediction transcript	Price 2017 and Su 2025 retrieved	Critical closest overlap; more full-text review needed
+S14	2026-09-22	Identifiability search	transcript identifiability Lacroix 2008	Zheng/Ma/Kingsford 2022 primary work located	Foundational Lacroix/Hiller leads not independently audited
+S15	2026-09-22	Web tools	RASP RNA structure database 2021	RASP and PrismNet web server; IsoAtlas in later preprint search	Tool availability not deployment tested
+S16	2026-09-22	OpenAlex equivalent scholarly source	site.openalex.org RNA sequencing bias	Price OpenAlex W2594823100; anti-bias review W3159129703	Google Scholar not directly searched; index completeness unknown
+S17	2026-09-22	PubMed version follow-up	Sources of non-uniform coverage in short-read RNA-Seq data	PMID39975309 links 2026 update PMID42527318 DOI10.1261/rna.080852.125	Journal full text access failed; reconcile later
+S18	2026-09-22	SG-NEx metadata	Pinned GitHub tree fea2aa80b149778d7fce507867dd6754fc4f84ca; samples.tsv; illumina_samples.tsv; samples_pacbio.tsv	K562 run/kit inventory	Replicate labels not biological pairing proof
+S19	2026-09-22	S3 metadata only	SG-NEx processed_data/manuscript README and processed object listing	Transcript RDS and exact object sizes	No RDS contents downloaded
+S20	2026-09-22	Primary reuse catalog	https://registry.opendata.aws/sgnex/	CC BY-NC 4.0 verified	Earlier sg-nex-data registry URL failed
+S21	2026-09-22	Primary methods	SG-NEx publisher HTML; Supplementary Table 1 link discovery	Culture/extraction delegated to supplement; metadata workbook link inaccessible through web reader	Exact provenance remains unresolved
+S22	2026-09-22	Structure methods	GEO K562 record; PrismNet publisher HTML; AStruct reuse	In-vivo assay, NULL scores, replicate references	Exact normalization/version and replicate-resolved files unresolved
