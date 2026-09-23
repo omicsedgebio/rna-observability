@@ -1,5 +1,7 @@
 # Phase 3D final scientific review
 
+Integrity closeout: [verification addendum](phase3d_integrity_verification.md) supersedes the pre-baseline freeze chronology and log-loss claims below. Baseline results were inspected before the recorded freeze; the later rerun does not restore prospective status. The historical verdict is retained, but full freeze compliance is not certified. No central structure or LongBench outcome exposure was found.
+
 ## PHASE 3D VERDICT
 
 **GO_TO_BASELINES**

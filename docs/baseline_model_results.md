@@ -1,5 +1,7 @@
 # Structure-blind baseline model results
 
+Integrity qualification: these fits are exploratory relative to the recorded freeze chronology. The log-loss column below is invalid because of probability-column ordering; corrected values from saved predictions are A=0.971933, B=0.947665, C=0.945452. See [verification addendum](phase3d_integrity_verification.md). The endpoint, models, cohort, folds and predictions were not changed during verification.
+
 These are the frozen Phase 3D Models A, B and C. They use the 15,999-transcript workflow-specific cohort, fixed five-fold gene and sequence-cluster folds, and no RNA structure value or LongBench outcome. The primary label has five classes: `BOTH`, `ILLUMINA_ONLY`, `DIRECT_RNA_ONLY`, `NEITHER`, and `INDETERMINATE`.
 
 ## Held-out performance

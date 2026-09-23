@@ -1,6 +1,7 @@
 # Frozen analysis plan - Phase 3D workflow-specific baselines
 
 Status: FROZEN_PHASE3D
+Integrity qualification: this is the recorded status, not a certified prospective pre-baseline freeze. Baseline results were inspected before this document was written. See [closeout integrity audit](phase3d_integrity_verification.md); do not interpret this status as permission for Model D or LongBench evaluation.
 Freeze timestamp UTC: 2026-09-23T15:30:16Z
 Freeze parent git SHA before design commit: 09d12633f4587aa60e8cd34e7e58b9657a437a9a
 Design freeze and baseline commit: 5b98bfd

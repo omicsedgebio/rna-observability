@@ -1,5 +1,7 @@
 # Phase 3D skeptical final design review
 
+Closeout correction: the table has eight MAJOR_BUT_MANAGEABLE entries, not seven. The subsequent [integrity audit](phase3d_integrity_verification.md) identifies freeze-chronology and probability-scoring exceptions that this review did not detect; its conclusion must be read with that qualification.
+
 This review was performed after the quantifier strategy audit and sequence-cluster construction, before any structure-outcome analysis. It does not inspect LongBench outcomes.
 
 | Objection | Classification | Resolution or remaining limitation |
