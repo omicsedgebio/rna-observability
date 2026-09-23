@@ -1,6 +1,8 @@
 # Candidate feature registry
 
-No features calculated. P = candidate primary core; S = secondary; E = exploratory. Model memberships are additive, except endpoint-derived features are excluded from primary prediction. Unspecified direction means two-sided; absence is not zero.
+Phase 3A generated the structure-independent features documented in `metadata/feature_definitions.tsv` for 199,216 sequence-validated Ensembl 91 transcripts. The joined local matrix is `results/tables/identifiability_sequence_features.tsv`; `results/tables/feature_audit_summary.json` records missingness. Canonical 31-mers collapse reverse complements and are unique only if no other transcript identity contains them. This is exact-sequence uniqueness, not error-tolerant mappability. Repeat content and effective fragment-unique length remain unimplemented. The original miniQuant gene K-value is available as a separate annotation control. No outcome-based feature filtering occurred.
+
+The table below preserves Phase 1 candidate definitions, including future structure features, and must not be mistaken for implemented or frozen features. P = candidate primary core; S = secondary; E = exploratory. Model memberships are additive, except endpoint-derived features are excluded from primary prediction. Unspecified direction means two-sided; absence is not zero.
 
 Definitions: L transcript length; O callable positions; r_i icSHAPE reactivity; B annotation read-compatibility matrix at declared read length/distribution. Source annotations must be versioned and sequence-verified.
 

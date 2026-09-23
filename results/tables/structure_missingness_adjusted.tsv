@@ -1,0 +1,18 @@
+term	standardized_coefficient	standardized_odds_ratio	model
+bs(log_abundance, df=4)[0]	-0.5935766032794279	0.5523482172294143	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_abundance, df=4)[1]	1.0341494883175577	2.8127129727766227	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_abundance, df=4)[2]	-0.8041278867817202	0.44747800792267467	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_abundance, df=4)[3]	0.8853896374871033	2.42392866098459	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_length, df=4)[0]	0.3043401067045786	1.3557300705747706	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_length, df=4)[1]	0.03014813655544131	1.0306071932456473	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_length, df=4)[2]	0.10284065987394593	1.108314795986305	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(log_length, df=4)[3]	-0.21760632126591725	0.8044420710735214	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(gc_fraction, df=4)[0]	-0.4491390010701851	0.6381773851887664	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(gc_fraction, df=4)[1]	0.35280627897473016	1.4230554409707414	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(gc_fraction, df=4)[2]	0.8652438866996265	2.375585389012295	ridge_logistic_C1_descriptive_no_inferential_CI
+bs(gc_fraction, df=4)[3]	0.020512887598722076	1.0207247228490615	ridge_logistic_C1_descriptive_no_inferential_CI
+log_isoforms	0.483995980758384	1.6225451242382687	ridge_logistic_C1_descriptive_no_inferential_CI
+log_exons	0.3560881997880229	1.4277334684999692	ridge_logistic_C1_descriptive_no_inferential_CI
+shared_exon_fraction	0.7593073320659713	2.1367956179669303	ridge_logistic_C1_descriptive_no_inferential_CI
+illumina_detection_fraction	-0.11578295464421157	0.8906685177852106	ridge_logistic_C1_descriptive_no_inferential_CI
+directRNA_detection_fraction	0.0938225035169796	1.098364772729925	ridge_logistic_C1_descriptive_no_inferential_CI

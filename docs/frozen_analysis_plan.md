@@ -2,11 +2,13 @@
 
 Status: DRAFT_NOT_FROZEN
 Created: 2026-09-22
+Phase 3A review: 2026-09-23
+Freeze timestamp: NOT_APPLICABLE
 Freeze commit: NOT_APPLICABLE
-Approval: PENDING_PHASE1_REVIEW
 External outcomes viewed: NO
+Central structure versus measurement association examined: NO
 
-This file is an explicit pre-freeze draft. Its initial local commit does NOT unlock LongBench. Do not mark FROZEN while any required choice is unresolved. No modeling is authorized in Phase 1.
+This file is an explicit pre-freeze draft. Its initial local commit does NOT unlock LongBench. Do not mark FROZEN while any required choice is unresolved. Phase 3A did not freeze or run Models A/B/C because no mapping class A/B transcript exists and other endpoint/missingness blockers remain.
 
 ## Proposed analysis and fields to freeze
 
@@ -58,3 +60,9 @@ This file is an explicit pre-freeze draft. Its initial local commit does NOT unl
 | Coverage-only added features | Tests missingness/measurement availability explanation | Required comparator, not biological structure |
 
 A stable null is publishable only within its identifiable scope and precision. An external failure remains failure even if an exploratory refit subsequently works.
+
+## Phase 3A freeze gate failure
+
+No plan is frozen. The 200,310 SG-NEx/Ensembl 91 transcripts map to zero validated A/B icSHAPE transcript definitions, so an exact primary transcript inclusion list cannot be written. The proposed 0.5 callable fraction and 50 callable-base threshold produces 35,309 **provisional** ID/length/availability matches, but 47.37% of the 198,569-transcript adjusted universe has fitted availability below 0.05 and naive inverse-probability weights have effective sample size about 193. The abundance representation is identified as Salmon TPM after common-universe closure, yet the median signed contrast moves from -6.90 to -1.40 log2 units between fixed 0.01 and 1 TPM offsets. Only one Illumina library remains for independent abundance conditioning when two outcome libraries are reserved. A cross-gene similarity graph beyond exact duplicates and exact outer fold assignments are also pending. These are scientific stop conditions, not optional analysis choices.
+
+Before a real freeze, resolve the icSHAPE source transcript FASTA/GTF or reconstruct a documented equivalent transcript model, set an explicit high-overlap conditional estimand and missing-data rule, decide whether a hurdle/detection endpoint replaces the unstable continuous primary, obtain an independent abundance covariate strategy, build the complete gene/sequence-similarity group graph and lock fold assignments. Then finalize exact model classes, inner penalty grids, null/permutation units, number of permutations, multiplicity family, numerical success/partial-success/failure margins and uncertainty procedure with a freeze timestamp and commit SHA **before** A/B/C fitting or any reactivity association. RNA structure versus transcript measurement behavior has not yet been tested.

@@ -1,0 +1,27 @@
+{
+  "status": "PROVISIONAL_ID_LENGTH_AVAILABILITY_ONLY_NOT_VALIDATED_MAPPING",
+  "feature_universe": 199216,
+  "usable_provisional": 35309,
+  "usable_fraction": 0.17723977993735443,
+  "adjusted_analysis_n": 198569,
+  "excluded_missing_covariates": 647,
+  "gene_clusters": 56853,
+  "genes_no_usable": 51629,
+  "genes_all_usable": 1529,
+  "probability_below_0_05_fraction": 0.4737244987888341,
+  "probability_above_0_95_fraction": 0.006627419184263405,
+  "inverse_probability_weight_max": 12607.784698460413,
+  "inverse_probability_weight_q99": 55.51664579232875,
+  "weight_effective_sample_size": 192.83601178665447,
+  "model_converged": true,
+  "model": "ridge_logistic_C1_standardized",
+  "formula": "bs(log_abundance,df=4) + bs(log_length,df=4) + bs(gc_fraction,df=4) + log_isoforms + log_exons + shared_exon_fraction + illumina_detection_fraction + directRNA_detection_fraction",
+  "seed": "NONE_DETERMINISTIC_SOLVER",
+  "coverage_threshold_counts": {
+    "0.25": 48048,
+    "0.5": 35309,
+    "0.75": 20941
+  },
+  "reactivity_values_read": false,
+  "disagreement_values_read": false
+}

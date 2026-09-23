@@ -28,3 +28,7 @@ There is no verified matched structure assay for these cell contexts. Decide bef
 | 2026-09-22 | General identity search; GEO catalog result; AWS catalog page | Existence/platform/license feasibility | None identified; catalog-level summary only |
 
 No claimed physical access isolation: this is a documented procedural lock with offline CI guards. Future access must append its purpose and fields viewed, including accidental exposure. If outcomes are inadvertently exposed, quarantine affected decisions and reassess confirmatory validity.
+
+## Phase 3A interruption-recovery audit, 2026-09-23
+
+The prior Phase 1/2 lock document and previously recorded compatibility metadata were read. No LongBench bucket, file, transcript-level result, outcome distribution, benchmark/tutorial figure, model performance or association was opened or downloaded. The Phase 3A acquisition script contains a URL/accession guard; an attempted generic literature query containing the word LongBench was rejected before a network transfer. It produced no LongBench exposure. Search of local outputs and scripts found no LongBench outcome dependency. Status remains **LOCKED**. No committed frozen plan exists, so the release conditions are unmet.

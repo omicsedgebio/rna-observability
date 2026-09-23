@@ -14,3 +14,11 @@
 | 2026-09-22 | D010 | Defer commercial/public reuse judgment | SG-NEx CC BY-NC; structure dataset terms unresolved |
 | 2026-09-22 | D011 | Separate expression covariates and endpoint samples | Prevent mechanical predictive leakage |
 | 2026-09-22 | D012 | No unmatched-structure external claim | LongBench C-only transfer cannot validate D>C |
+| 2026-09-23 | D013 | Retain exact Ensembl 91 GRCh38 resources | Seven checksummed reference files and source mirrors agree; no newer substitute |
+| 2026-09-23 | D014 | Fail-closed icSHAPE mapping, A/B=0 | Source exon/sequence annotation unavailable; exact ID and length cannot prove transcript equivalence |
+| 2026-09-23 | D015 | Salmon TPM common-universe closure is proposed comparison | Same quantifier family, but ONT mode/effective length and prep confounding remain |
+| 2026-09-23 | D016 | Do not freeze signed log endpoint | Zero-heavy direct RNA and strong pseudocount sensitivity; independent abundance covariate has one library |
+| 2026-09-23 | D017 | Do not use unrestricted IPW | Severe availability selection and effective sample size about 193 under naive weights |
+| 2026-09-23 | D018 | No A/B/C modeling and no Model D | Zero validated structure match and unfrozen endpoint/plan fail conditional modeling gate |
+| 2026-09-23 | D019 | LongBench remains locked | No transcript outcome or figure access; guard blocked generic URL query |
+| 2026-09-23 | D020 | Phase 3A verdict MODIFY | Scientifically remediable mapping/endpoint/missingness issues; no structure association examined |

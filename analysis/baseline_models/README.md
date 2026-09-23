@@ -1,0 +1,3 @@
+# Structure-blind baseline modeling gate
+
+Models A, B and C were **not fitted** in Phase 3A. The primary matched transcript universe contains zero validated A/B mappings, the outcome is not frozen, severe selective structure availability has no defensible full-population adjustment, and the analysis plan remains DRAFT_NOT_FROZEN. A numeric performance table would imply an invalid cohort or unapproved endpoint. The implementation and data/feature audits reside in `src/rnaobs/` and `scripts/phase3a_*.py`. Once the specified freeze gate is met, build A/B/C from a committed plan on identical grouped folds and record the structure-blind results before any Model D analysis.

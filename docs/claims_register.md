@@ -1,6 +1,6 @@
 # Claims register
 
-Updated 2026-09-22. No original scientific result exists.
+Updated 2026-09-23. Phase 3A produced reference and QC findings, but no structure-versus-outcome result. The central manuscript claim remains a testable question, not an empirical finding.
 
 | Candidate claim | Evidence required | Current evidence status | Prior-art risk | Allowed wording | Prohibited wording |
 |---|---|---|---|---|---|
@@ -14,3 +14,7 @@ Updated 2026-09-22. No original scientific result exists.
 | External structure generalization | Matched structure in independent validation context; no adaptive inspection | Unverified | High | LongBench is locked; structural validation feasibility unresolved | Externally validated structural model |
 | Public platform recommendations | Decision utility, cost-aware transportability and licensing | No evidence | miniQuant already informs design | No recommendations available | Recommended clinical or sequencing platform |
 | Company explorer is reusable | Validated findings, rights review, approval | Not built | Data license restriction | Future possibility only | Commercially cleared validated AI |
+
+## Phase 3A permitted wording
+
+"This project tests whether independently measured RNA structure contains incremental information about technology-specific transcript measurement behavior after accounting for established sources of quantification difficulty." Reference identity, abundance semantics, sequence features and availability bias have been characterized. Zero transcripts currently meet the required A/B structure-mapping class, the analysis plan is not frozen and Models A/B/C have not been fit. Do not claim a breakthrough, world's first result, universal observability, structure prediction of sequencing reliability, measurement accuracy for endogenous transcripts or a validated sequencing recommender.

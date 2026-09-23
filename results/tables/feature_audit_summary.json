@@ -1,0 +1,25 @@
+{
+  "feature_transcripts": 199216,
+  "kmer_transcripts": 199216,
+  "miniquant_genes_reported": 58302,
+  "miniquant_kvalue_available_transcripts": 191286,
+  "unique_kmer_fraction_available": 199181,
+  "cross_gene_exact_sequence_hashes": 398,
+  "cross_gene_exact_sequence_transcripts": 970,
+  "cross_gene_exact_sequence_max_genes": 16,
+  "feature_missingness": {
+    "sequence_length": 0,
+    "gc_fraction": 0,
+    "homopolymer_fraction": 0,
+    "low_complexity_fraction": 46,
+    "sequence_entropy": 0,
+    "unique_kmer_fraction": 35,
+    "unique_exonic_bases": 0,
+    "unique_junction_count": 0,
+    "max_exon_jaccard": 0,
+    "incidence_rank_deficiency": 0,
+    "miniquant_kvalue": 7930
+  },
+  "outcome_inputs_read": false,
+  "structure_inputs_read": false
+}

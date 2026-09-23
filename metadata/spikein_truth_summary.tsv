@@ -1,0 +1,7 @@
+spike_group	transcripts_with_ids	transcripts_with_numeric_concentration	library_evidence	compatible_processed_quantification	truth_status
+sequinMixAV1	164	161	K562 Illumina replicates 3-5; ONT direct RNA replicates 4-5; synthetic combined libraries	salmon_sr and salmon_lr combined spike-in output; per-K562-library joint abundance linkage not established	Within-mixture molecule concentration ratios available for 161 transcripts
+sequinMixAV2	164	164	Other libraries and synthetic combined runs; K562 PacBio cocktail	salmon synthetic combined outputs	Within-mixture molecule concentration ratios available
+sirv_e2	100	69	Several SIRV-1 E2 libraries; combined synthetic runs	salmon synthetic combined outputs	Within-mixture ratio available for 69 transcripts
+sirv_e0	100	69	SIRV-4 libraries; combined synthetic runs	salmon synthetic combined outputs	Equal nominal concentration among 69 transcripts
+long_sirv	15	15	Not established per K562 primary library	synthetic output compatibility needs confirmation	Equal nominal concentration among 15 transcripts
+ercc	92	92	SIRV/ERCC mixes in selected libraries	synthetic output compatibility needs confirmation	Within-mixture concentration ratios available

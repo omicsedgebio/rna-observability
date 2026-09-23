@@ -1,0 +1,28 @@
+{
+  "annotation_transcripts": 200310,
+  "ensembl_fasta_sequences": 218166,
+  "sgnex_mirror_sequences": 218166,
+  "genome_reconstruction_equal": 199216,
+  "genome_unavailable": 0,
+  "fasta_unavailable": 1094,
+  "sequence_discordant": 0,
+  "sgnex_mirror_equal": 199216,
+  "augmented_exons_equal": 200310,
+  "sgnex_records": 200310,
+  "mapping_classes": {
+    "A": 0,
+    "B": 0,
+    "C": 59,
+    "D": 65956,
+    "E": 134295
+  },
+  "sgnex_missing_versions_recovered": 1094,
+  "reasons": {
+    "no_structure_stable_id": 134295,
+    "icshape_source_exons_and_sequence_unavailable": 65956,
+    "reported_transcript_length_changed": 59
+  },
+  "unmatched_structure": 3401,
+  "primary_eligible": 0,
+  "exact_id_equal_length_provisional": 65956
+}

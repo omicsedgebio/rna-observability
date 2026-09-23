@@ -1,0 +1,23 @@
+{
+  "missing_transcript_id_rows_excluded": 0,
+  "common_quantified_reference_transcripts": 198569,
+  "independent_covariate_TPM_ge1": 49309,
+  "covariate_library": "GIS_K562_Illumina_Rep3-Run1",
+  "outcome_illumina_libraries": [
+    "GIS_K562_Illumina_Rep4-Run1",
+    "GIS_k562_Illumina_Rep5-Run1"
+  ],
+  "outcome_directRNA_libraries": [
+    "SGNex_K562_directRNA_replicate1_run1",
+    "SGNex_K562_directRNA_replicate4_run1",
+    "SGNex_K562_directRNA_replicate5_run1",
+    "SGNex_K562_directRNA_replicate6_run1"
+  ],
+  "closure_vs_original_median_abs_change": 0.4323802748254655,
+  "all_zero_directRNA_fraction_eligible": 0.5680707375935428,
+  "all_zero_illumina_fraction_eligible": 0.025289500902472166,
+  "disjoint_contrast_spearman_min": 0.734008248746296,
+  "disjoint_contrast_spearman_max": 0.7574100720900159,
+  "structure_inputs_used": false,
+  "status": "MEASUREMENT_QC_NOT_FROZEN"
+}

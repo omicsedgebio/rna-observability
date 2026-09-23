@@ -1,0 +1,12 @@
+{
+  "metadata/reference_resources.tsv": {
+    "resources": 7,
+    "bytes": 1955127239,
+    "failures": []
+  },
+  "metadata/phase3a_source_provenance.tsv": {
+    "resources": 73,
+    "bytes": 5127992,
+    "failures": []
+  }
+}
