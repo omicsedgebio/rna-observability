@@ -1,0 +1,15 @@
+{
+  "version": "workflow_detection_v1",
+  "reference": "Ensembl 91 GRCh38",
+  "quantifier": "SG-NEx Salmon 1.9.0 protocol-specific workflows",
+  "quantity": "unmodified processed normEst; TPM-like, no pseudocount or new reclosure",
+  "threshold": 1.0,
+  "illumina_runs": ["GIS_K562_Illumina_Rep4-Run1", "GIS_k562_Illumina_Rep5-Run1"],
+  "directrna_runs": ["SGNex_K562_directRNA_replicate1_run1", "SGNex_K562_directRNA_replicate4_run1", "SGNex_K562_directRNA_replicate5_run1", "SGNex_K562_directRNA_replicate6_run1"],
+  "independent_covariate_run": "GIS_K562_Illumina_Rep3-Run1",
+  "illumina_support": {"detected": [2], "absent": [0], "indeterminate": [1]},
+  "directrna_support": {"detected": [3, 4], "absent": [0], "indeterminate": [1, 2]},
+  "joint_rule": "If either state is indeterminate, INDETERMINATE; otherwise BOTH, ILLUMINA_ONLY, DIRECT_RNA_ONLY, or NEITHER according to detected states.",
+  "biological_absence_claim": false,
+  "unit": "one transcript row after replicate-supported categorization; library preparations are not independent prediction rows"
+}
