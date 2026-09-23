@@ -78,11 +78,11 @@ The scientific implementation commit is `a797439`. The final report commit is id
 
 ## PRIVATE PUSH STATUS
 
-The final terminal handoff verifies the existing private `origin`, branch `main` and `origin/main` equality. No visibility change or public release was made.
+The two Phase 3B commits were pushed from a repository-local clone to the existing `omicsedgebio/rna-observability` private remote on `main`. GitHub visibility was verified as PRIVATE before the push. The original checkout's `.git` directory is read-only in this execution environment, so its local HEAD/tracking ref cannot be advanced here; the terminal handoff verifies the actual remote SHA separately. No visibility change or public release was made.
 
 ## WORKING TREE STATUS
 
-The final terminal handoff verifies a clean working tree after the report commit and push. Cached source files and generated large tables remain ignored.
+The repository-local commit clone is clean after push. The original checkout still reports Phase 3B source, metadata and documentation as modified/untracked against its old `52cb042` HEAD because this execution environment denied Git index writes with `Operation not permitted`. The work is preserved in place and pushed privately, but the original checkout's Git status is **not clean**. Do not misreport it as clean. Cached source files and generated large tables remain ignored.
 
 ## EXACT NEXT PHASE
 
