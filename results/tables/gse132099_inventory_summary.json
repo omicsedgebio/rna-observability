@@ -1,0 +1,11 @@
+{
+  "transcripts": 16295,
+  "reported_bases": 20354101,
+  "callable_bases": 19188788,
+  "profiles_callable_50_fraction_0_5": 16082,
+  "min_score": -299.933,
+  "max_score": 4.444,
+  "score_semantics": "GEO: per-position icSHAPE enrichment score; NULL is uncalled",
+  "source": "GSE132099 processed in-vivo icSHAPE only",
+  "sequencing_outcomes_read": false
+}

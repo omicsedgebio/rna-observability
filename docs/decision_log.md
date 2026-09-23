@@ -22,3 +22,12 @@
 | 2026-09-23 | D018 | No A/B/C modeling and no Model D | Zero validated structure match and unfrozen endpoint/plan fail conditional modeling gate |
 | 2026-09-23 | D019 | LongBench remains locked | No transcript outcome or figure access; guard blocked generic URL query |
 | 2026-09-23 | D020 | Phase 3A verdict MODIFY | Scientifically remediable mapping/endpoint/missingness issues; no structure association examined |
+# Phase 3B decisions, 2026-09-23
+
+- Keep Phase 3A GSE145805 A/B count at zero; the source annotation remains unpinned. Do not reinterpret exact ID plus length as definition equivalence.
+- Adopt GSE132099 as the provisional structure-development assay because GEO explicitly pins Ensembl 88 GRCh38 and 16,268 transcripts have exact Ensembl 88/91 exon and sequence definitions. Coverage leaves 16,055.
+- Keep GSE149767 only as a weak structure-to-structure replication resource. Its in-vivo profiles use RefSeq IDs without a pinned release; same-accession fSHAPE map bases provide a limited sequence proxy. Cross-study median summary reproducibility was not established in 75 fully covered profiles.
+- Replace the offset-dependent signed log abundance candidate with a zero-aware supported-detection family. Select 1 TPM, 2/2 Illumina and 3/4 ONT support using measurement-only QC; preserve indeterminate states. Do not freeze the endpoint while ONT quantifier sensitivity remains large.
+- Limit future inference to assay-callable, sequence/exon-validated and independently expressed K562 transcripts. Reject unrestricted population IPW given poor overlap; use a conditional complete-case estimand if a later freeze succeeds.
+- Retain SG-NEx provisionally as sequencing development because its biological hierarchy and Ensembl 91 Salmon workflows are audited. ENCODE ONT/Illumina alternatives need annotation, treatment and preparation harmonization before replacement.
+- Phase 3B verdict MODIFY. Do not freeze the plan, fit A/B/C or test Model D. LongBench remains locked.

@@ -1,0 +1,27 @@
+{
+  "sequence_validated_universe": 199216,
+  "adjusted_universe": 198539,
+  "usable": 15999,
+  "usable_fraction": 0.08058366366305865,
+  "independent_abundance_TPM_ge1": 49309,
+  "usable_with_independent_abundance_TPM_ge1": 11687,
+  "high_overlap_descriptive_stratum_n": 41165,
+  "high_overlap_descriptive_stratum_usable": 10281,
+  "high_overlap_descriptive_stratum_usable_fraction": 0.24975100206486092,
+  "fitted_probability_below_0_05_fraction": 0.7110089201617819,
+  "fitted_probability_below_0_01_fraction": 0.023975138385909065,
+  "naive_ipw_max": 246.6281474934807,
+  "naive_ipw_effective_sample_size": 6301.5443733974025,
+  "model": "standardized_ridge_logistic_C1_descriptive",
+  "model_converged": true,
+  "predictors": [
+    "log_abundance",
+    "log_length",
+    "gc_fraction",
+    "log_isoforms",
+    "exon_count",
+    "unique_kmer_fraction"
+  ],
+  "reactivity_values_read": false,
+  "sequencing_outcomes_read": false
+}

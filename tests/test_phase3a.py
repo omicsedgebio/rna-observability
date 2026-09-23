@@ -57,9 +57,10 @@ class ReferenceMappingTests(unittest.TestCase):
         import csv
         with (ROOT/'metadata/reference_resources.tsv').open() as handle:
             rows=list(csv.DictReader(handle,delimiter='\t'))
-        self.assertEqual(len(rows), 7)
-        self.assertEqual(len({r['resource_id'] for r in rows}), 7)
-        for row in rows:
+        release91 = [r for r in rows if 'Ensembl 91' in r['release']]
+        self.assertEqual(len(release91), 7)
+        self.assertEqual(len({r['resource_id'] for r in rows}), len(rows))
+        for row in release91:
             self.assertIn('Ensembl 91', row['release'])
             self.assertEqual(row['assembly'], 'GRCh38')
             self.assertEqual(len(row['sha256']), 64)

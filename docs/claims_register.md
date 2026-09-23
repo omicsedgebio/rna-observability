@@ -1,5 +1,7 @@
 # Claims register
 
+Phase 3B update, 2026-09-23: GSE132099 now has 16,055 coverage-eligible, release-validated A transcript bridges. The older statement below saying zero A/B mappings is historical and applies only to GSE145805. The zero-aware endpoint remains a candidate, the plan is unfrozen, Models A/B/C and D have not been fitted, and no structure-versus-sequencing association has been inspected. The allowed manuscript wording is unchanged: "This project tests whether independently measured RNA structure contains incremental information about technology-specific transcript measurement behavior after accounting for established sources of quantification difficulty." No novelty, causation, accuracy, clinical, universal or product claim is supported.
+
 Updated 2026-09-23. Phase 3A produced reference and QC findings, but no structure-versus-outcome result. The central manuscript claim remains a testable question, not an empirical finding.
 
 | Candidate claim | Evidence required | Current evidence status | Prior-art risk | Allowed wording | Prohibited wording |

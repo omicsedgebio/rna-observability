@@ -1,5 +1,7 @@
 # Provisional manuscript plan
 
+Phase 3B update, 2026-09-23: the current design would use the GSE132099 Ensembl 88-to-91 bridge and an explicitly conditional, coverage-selected K562 estimand. The candidate primary display is four-category supported detection with an indeterminate category reported; percentile-rank difference among confidently detected transcripts is secondary. The former signed log-offset disagreement should not appear as the primary phenotype. The proposed independent GSE149767 structure validation is limited to 75 high-coverage overlapping profiles and has not established cross-study median-reactivity reproducibility. Preserve this negative result in any future manuscript. No results section on structure versus sequencing can be drafted before a frozen plan and first test.
+
 Working title: Molecular correlates of technology-specific RNA measurement behavior. No authorship or conclusion finalized.
 
 1. Introduction: established bias/identifiability literature; specific unresolved incremental question.

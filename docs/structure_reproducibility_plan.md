@@ -1,0 +1,15 @@
+# K562 structure reproducibility plan - Phase 3B
+
+This plan was written before any comparison of GSE132099 and GSE149767 reactivity summaries. It contains no sequencing outcome. The analysis asks whether independently acquired K562 in-vivo structure measurements reproduce across experiments. It cannot validate an incremental structure contribution to sequencing behavior.
+
+GSE132099 is mapped through the study-pinned Ensembl 88 reference and exact Ensembl 91 transcript sequence and exons. GSE149767 in-vivo RefSeq profiles are linked to the same Ensembl 91 transcript only when a same-RefSeq fSHAPE `.map` supplies a full sequence of matching length with a unique exact Ensembl 91 FASTA hash. This cross-assay map-base proxy is weaker than a directly supplied in-vivo FASTA. Exclude duplicate, unmatched, length-discordant or ambiguous profiles. Require at least 50 callable positions and callable fraction at least 0.5 in GSE132099. For GSE149767, require at least 50 callable bases and fraction at least 0.5 in each in-vivo `.rx` replicate.
+
+Prespecified summaries per transcript are callable fraction and median numeric reactivity over callable positions. Compare GSE132099 pooled enrichment with the mean of the two GSE149767 replicate medians by Spearman rank correlation across eligible transcripts. Compare GSE149767 replicate medians with each other using Spearman. Report sample size, missingness and a gene-cluster bootstrap 95% interval (500 draws, seed 33149). The assay scales differ and no absolute score equivalence is assumed. A low or unstable correlation is retained as a negative result. No summary or threshold is selected from sequencing behavior, and no structure-sequencing joins are allowed in this script.
+
+The GSE149767 `.map` files describe fSHAPE, while the `.rx` files describe in-vivo icSHAPE. Matching filename/length plus full map sequence is a useful identity check, but cannot prove that every in-vivo position uses the identical transcript model. The resulting reproducibility estimate is therefore an exploratory cross-study diagnostic, not independent confirmation of the central hypothesis.
+
+## Prespecified diagnostic result
+
+Cross-study callable-fraction Spearman was -0.008 in the eligible overlap, providing no evidence of shared assay callability ordering.
+
+Seventy-five profiles from 71 genes passed both assays' coverage requirements. GSE149767's two replicate median summaries had Spearman 0.799. Cross-study GSE132099 versus the mean GSE149767 replicate median had Spearman 0.196, with a 500-draw gene-cluster bootstrap 95% interval of -0.063 to 0.408. This does not establish cross-study reproducibility of the selected median summary. The small overlap and distinct score-generation pipelines limit power and comparability. All 75 per-transcript structure-only summaries and the aggregate result are in `results/tables/structure_reproducibility.tsv` and `results/tables/structure_reproducibility_summary.json`. No sequencing result was read or joined.

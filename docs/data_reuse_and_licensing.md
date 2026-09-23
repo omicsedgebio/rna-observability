@@ -1,5 +1,7 @@
 # Data reuse and licensing tracks
 
+Phase 3B additions, 2026-09-23: [GSE132099](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132099) and [GSE149767](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149767) are public GEO processed structure resources suitable for academic feasibility analysis with attribution; explicit dataset-level redistribution and commercial terms were not established in the primary metadata. Their processed archives remain uncommitted. Ensembl 88 follows the same Ensembl-produced reference reuse track as Ensembl 91, subject to third-party-content caveats. [ENCODE ENCSR917JIA](https://www.encodeproject.org/experiments/ENCSR917JIA), [ENCSR589FUJ](https://www.encodeproject.org/experiments/ENCSR589FUJ) and [ENCSR526TQU](https://www.encodeproject.org/experiments/ENCSR526TQU) have released metadata and processed files under ENCODE's data-use policy; no Phase 3B ENCODE source file was downloaded. Academic research is not invalidated by SG-NEx's future-commercial restrictions. A future product requires resource-by-resource rights review or separately generated/cleared data. This record is not legal advice.
+
 This is a source-specific research record, not legal advice. Academic manuscript analysis and a future commercial product are distinct tracks. Dataset access alone does not imply redistribution rights, and software terms do not automatically license an associated dataset.
 
 | Resource | Academic manuscript analysis | Redistribution and attribution | Future commercial product | Evidence |

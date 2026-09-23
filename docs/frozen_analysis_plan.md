@@ -1,6 +1,7 @@
 # Analysis plan
 
 Status: DRAFT_NOT_FROZEN
+Phase 3B review: 2026-09-23 - GSE132099 Ensembl 88 bridge rescued 16,055 coverage-eligible A transcripts, but zero-aware ONT endpoint quantifier sensitivity and structure-selection/independent-reproducibility limits prevent a final freeze. The offset-based outcome in the older draft table below is superseded by `docs/zero_aware_endpoint_design.md`. No baseline or Model D was fitted. No structure-versus-sequencing association was inspected. LongBench remains locked.
 Created: 2026-09-22
 Phase 3A review: 2026-09-23
 Freeze timestamp: NOT_APPLICABLE

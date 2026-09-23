@@ -1,0 +1,13 @@
+{
+  "n_profiles": 75,
+  "n_genes": 71,
+  "cross_study_median_spearman": 0.1958830974813902,
+  "cross_study_gene_bootstrap_95ci": [
+    -0.0630674214797893,
+    0.4078808844068354
+  ],
+  "gse149767_replicate_median_spearman": 0.7989388260431525,
+  "cross_study_callable_fraction_spearman": -0.007681365576102417,
+  "sequencing_outcomes_read": false,
+  "structure_vs_sequencing_tested": false
+}

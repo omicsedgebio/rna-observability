@@ -1,5 +1,9 @@
 # External validation lock
 
+## Phase 3B exposure audit, 2026-09-23
+
+Status remains **LOCKED**. Phase 3B read this lock and prior catalog-level compatibility notes only. No LongBench bucket, file, transcript outcome, platform-disagreement distribution, figure, model performance, tutorial result or association was accessed. No LongBench download occurred. The analysis plan is still `DRAFT_NOT_FROZEN`; its Phase 3B edit does not authorize release of the lock.
+
 ## Phase 2 lock update
 
 LongBench remains locked. During this phase only dataset identity, public availability, technology labels, approximate scale, and licensing metadata were viewed. No transcript-level outcomes, plots, platform disagreement values, model predictions, performance metrics, or transcript-specific behavior were inspected. No LongBench feature, threshold, or hypothesis was selected using outcome information. The lock date is 2026-09-23.

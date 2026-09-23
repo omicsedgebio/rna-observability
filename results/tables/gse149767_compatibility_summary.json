@@ -1,0 +1,13 @@
+{
+  "vivo_profiles": 10896,
+  "matched_fshape_maps": 10878,
+  "categories": {
+    "NO_EXACT_ENSEMBL91_SEQUENCE": 10149,
+    "UNIQUE_EXACT_ENSEMBL91_SEQUENCE": 724,
+    "NO_UNIQUE_SEQUENCE_MAP": 18,
+    "MAP_VIVO_LENGTH_MISMATCH": 4,
+    "MULTIPLE_ENSEMBL91_SEQUENCE_MATCHES": 1
+  },
+  "sequencing_outcomes_read": false,
+  "structure_vs_sequencing_tested": false
+}

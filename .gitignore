@@ -37,6 +37,15 @@ results/tables/*
 !results/tables/replicate_outcome_qc.tsv
 !results/tables/structure_missingness_adjusted.tsv
 !results/tables/structure_missingness_strata.tsv
+!results/tables/mapping_failure_categories.tsv
+!results/tables/gse132099_inventory_summary.json
+!results/tables/ensembl88_to_91_bridge_summary.json
+!results/tables/gse132099_missingness_strata.tsv
+!results/tables/gse132099_missingness_summary.json
+!results/tables/gse149767_compatibility_summary.json
+!results/tables/structure_reproducibility_summary.json
+!results/tables/zero_aware_threshold_qc.tsv
+!results/tables/zero_aware_endpoint_summary.json
 results/figures/*
 !results/figures/.gitkeep
 !results/figures/qc/

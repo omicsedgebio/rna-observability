@@ -1,0 +1,23 @@
+{
+  "study_transcripts": 16295,
+  "ensembl88_gtf_transcripts": 199234,
+  "ensembl91_gtf_transcripts": 200310,
+  "ensembl88_fasta_study_candidates": 16288,
+  "ensembl88_fasta_genome_reconstructed": 16288,
+  "mapping_classes": {
+    "A": 16268,
+    "B": 0,
+    "C": 17,
+    "D": 5,
+    "E": 5
+  },
+  "reasons": {
+    "exact_id_sequence_exons": 16268,
+    "sequence_or_exon_definition_changed": 17,
+    "source_fasta_unavailable": 5,
+    "absent_from_ensembl88_or_91": 5
+  },
+  "a_or_b_coverage_eligible": 16055,
+  "reactivity_values_read": false,
+  "sequencing_outcomes_read": false
+}

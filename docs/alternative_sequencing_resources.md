@@ -1,0 +1,24 @@
+# Alternative K562 sequencing resource audit
+
+Selection used experiment design and processed-file metadata only. No alternative transcript-level outcome pattern was inspected. No alternative quantification or raw sequencing file was downloaded. Genome assembly alone is insufficient for transcript-annotation compatibility, and independent K562 cultures are not paired biological samples merely because the cell-line name agrees.
+
+| Resource | Technology and replication | Annotation/processed data | Design assessment |
+|---|---|---|---|
+| [SG-NEx](https://github.com/GoekeLab/sg-nex-data) | Illumina, ONT direct RNA, ONT cDNA, PacBio; K562 biological preparation hierarchy audited in Phase 2/3A | Ensembl 91 GRCh38, abundant processed transcript values; Salmon family for Illumina/ONT | Strongest present multi-platform development resource; different labs/preparations across structure and sequencing, quantifier-specific scale and sparse ONT detection |
+| [GSE143129 / ENCSR589FUJ](https://www.encodeproject.org/experiments/ENCSR589FUJ/) | K562 PacBio Sequel, two isogenic replicates | GRCh38 transcript quantification TSV and GTF per replicate in [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143129); discovered isoforms use pipeline-specific annotation | Useful independent long-read sequencing check, not an Illumina versus ONT replacement |
+| [GSE174877 / ENCSR526TQU](https://www.encodeproject.org/experiments/ENCSR526TQU/) | K562 PacBio Sequel II, one unreplicated library; SIRV/Ambion spike-ins | GRCh38 processed GTF/TSV in [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174877) | Weak for replicated platform phenotype |
+| [GSE220019 / ENCSR917JIA](https://www.encodeproject.org/experiments/ENCSR917JIA/) | K562 ONT direct RNA MinION, two isogenic replicates | GRCh38 processed transcript quantification and annotations; ENCODE metadata identifies files `ENCFF668BLB` and `ENCFF078DIN` | Strong alternative ONT source; its annotation and quantifier are not yet harmonized with a matched Illumina set |
+| [GSE132766](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132766) | K562 ONT direct RNA, two samples | GENCODE v29/hg38 TALON transcript counts; 8.2 MB processed K562 table | Alternative ONT validation, annotation differs from Ensembl 91 and may include novel IDs |
+| [ENCSR000AEP](https://www.encodeproject.org/experiments/ENCSR000AEP/) / [ENCSR000AEM](https://www.encodeproject.org/experiments/ENCSR000AEM/) | Untreated K562 Illumina polyA, two isogenic replicates each; separate labs and protocols | Processed availability via ENCODE, exact transcript quantifier/annotation linkage not audited | Plausible Illumina partner for ENCODE ONT only after preparation and annotation audit |
+| [ENCSR534TGM](https://www.encodeproject.org/experiments/ENCSR534TGM/) | Illumina K562, two replicates **treated with JQ1 for 48 hours** | GRCh38 processed tables | Unsuitable untreated partner; treatment confounds comparison |
+
+Compatibility matrix, qualitative and metadata-only:
+
+| Pair | ANNOTATION_COMPATIBILITY | BIOLOGICAL_COMPATIBILITY | PLATFORM_BREADTH | REPLICATION | PROCESSED_DATA_AVAILABILITY | LICENSING | VALIDATION_VALUE |
+|---|---|---|---|---|---|---|---|
+| SG-NEx + GSE132099 | High, exact A bridge | Same K562 context, different preparations/labs | Broad | Good sequencing, pooled structure scores | Good | SG-NEx CC BY-NC 4.0; structure terms unclear | Best current development design, conditional estimand only |
+| ENCSR917JIA + ENCSR000AEP/AEM + GSE132099 | Unverified transcript harmonization | Same cell line; matched aliquots unverified | Illumina + ONT | Two per sequencing experiment | Present, semantics not yet reconciled | ENCODE reuse policy; structure terms unclear | Candidate independent sequencing-behavior validation after audit |
+| GSE143129/174877 + GSE132099 | Requires novel-isoform/exon bridge | Independent K562 preparations | PacBio only | Two/one | Good | ENCODE reuse policy; structure terms unclear | Orthogonal long-read phenotype check, not primary platform replacement |
+| ENCSR534TGM + untreated ONT | Annotation unverified | Treatment mismatch | Two | Two Illumina, two ONT | Good | ENCODE reuse policy | Unsuitable primary pair |
+
+Recommendation: **retain SG-NEx as the provisional development sequencing resource** because it currently has the only audited Illumina/ONT Salmon-family comparison, fixed Ensembl 91 transcript universe, known biological nesting and direct GSE132099 bridge. Do not preserve it automatically: a future audit may replace it if ENCODE provides matched untreated preparations, common-reference re-quantification and better replicate behavior. ENCODE reuse generally permits research and attribution under its [data-use policy](https://www.encodeproject.org/about/data-use-policy/); precise downstream dataset and commercial obligations require separate review, not legal interpretation here.

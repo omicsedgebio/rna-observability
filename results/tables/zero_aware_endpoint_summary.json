@@ -1,0 +1,37 @@
+{
+  "common_quantified_transcripts": 198569,
+  "independent_expression_count": 49309,
+  "selected_threshold_TPM": 1.0,
+  "selected_illumina_support": "2_of_2",
+  "selected_direct_rna_support": "3_of_4",
+  "selected_category_counts": {
+    "both": 11731,
+    "illumina_only": 20201,
+    "direct_rna_only": 315,
+    "neither": 3687,
+    "indeterminate": 13375
+  },
+  "both_with_all_positive_replicates": 9356,
+  "conditional_rank_delta_median": 0.028380562927747932,
+  "conditional_rank_delta_iqr": [
+    0.0040143476574893144,
+    0.07221482205178037
+  ],
+  "rsem_complete_rows": 198569,
+  "rsem_vs_salmon_illumina_status_agreement": 0.8605220351615811,
+  "nanocount_complete_rows": 30445,
+  "nanocount_vs_salmon_direct_rna_status_agreement_on_complete_rows": 0.5185416324519626,
+  "independent_abundance_run": "GIS_K562_Illumina_Rep3-Run1",
+  "illumina_outcome_runs": [
+    "GIS_K562_Illumina_Rep4-Run1",
+    "GIS_k562_Illumina_Rep5-Run1"
+  ],
+  "direct_rna_outcome_runs": [
+    "SGNex_K562_directRNA_replicate1_run1",
+    "SGNex_K562_directRNA_replicate4_run1",
+    "SGNex_K562_directRNA_replicate5_run1",
+    "SGNex_K562_directRNA_replicate6_run1"
+  ],
+  "structure_input_used": false,
+  "transcript_level_outcomes_written": false
+}

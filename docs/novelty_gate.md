@@ -1,5 +1,7 @@
 # Formal novelty gate --- reconnaissance decision
 
+Phase 3B design update, 2026-09-23: a new K562 in-vivo structure resource now maps exactly across Ensembl 88/91 for 16,055 coverage-eligible transcripts, and a zero-aware supported-detection phenotype replaces the pseudocount-dependent candidate. This changes feasibility, not novelty. The prior-art risk and MODIFY novelty gate remain. Independent structure-summary reproducibility is weak in a small cross-study overlap, and the primary sequencing phenotype remains quantifier sensitive. No new originality claim is made.
+
 Decision: **MODIFY**. Date: 2026-09-22. This is a documented reconnaissance gate, not proof of novelty or an exhaustive systematic review. No modeling is authorized by this verdict.
 
 ## Why modify
