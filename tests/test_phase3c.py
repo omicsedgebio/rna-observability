@@ -36,6 +36,19 @@ class Phase3CTest(unittest.TestCase):
         self.assertFalse(s['sequencing_outcomes_read'])
         self.assertFalse(s['longbench_inputs_read'])
 
+    def test_final_pre_endpoint_cohort_manifest(self):
+        rows = list(csv.DictReader((ROOT / 'metadata/final_transcript_cohort.tsv').open(), delimiter='\t'))
+        self.assertEqual(len(rows), 15999)
+        self.assertTrue(all(row['cohort_status'] == 'PRE_ENDPOINT_ELIGIBILITY' for row in rows))
+        self.assertEqual(len({row['stable_id'] for row in rows}), len(rows))
+
+    def test_strategy_evidence_has_all_options(self):
+        rows = list(csv.DictReader((ROOT / 'results/tables/quantifier_strategy_evidence.tsv').open(), delimiter='\t'))
+        self.assertEqual({row['strategy'] for row in rows}, {
+            'A_single_technically_preferred_quantifier', 'B_quantifier_consensus',
+            'C_replicate_supported_consensus', 'D_primary_quantifier_with_sensitivity',
+            'E_endpoint_not_stabilized'})
+
 
 if __name__ == '__main__':
     unittest.main()

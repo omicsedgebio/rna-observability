@@ -4,6 +4,8 @@ Phase 3B update, 2026-09-23: GSE132099 now has 16,055 coverage-eligible, release
 
 Phase 3C interim update, 2026-09-23: the fixed class-A/coverage cohort and provisional 15,999 complete-Salmon maximum are defined without outcome selection. Quantifier audit shows material direct-RNA method sensitivity, and the 1 TPM supported-detection phenotype remains a candidate pending final review. No endpoint is frozen, no baseline model has been fit, and no structure-versus-sequencing association has been inspected. The permitted wording and all prohibited claims remain unchanged.
 
+Phase 3C final scientific review, 2026-09-23: verdict MODIFY. The pre-endpoint cohort is 15,999 transcripts, but no quantifier-robust primary phenotype is frozen. The central hypothesis remains untested, and no prediction, accuracy, novelty or product claim is supported.
+
 Updated 2026-09-23. Phase 3A produced reference and QC findings, but no structure-versus-outcome result. The central manuscript claim remains a testable question, not an empirical finding.
 
 | Candidate claim | Evidence required | Current evidence status | Prior-art risk | Allowed wording | Prohibited wording |

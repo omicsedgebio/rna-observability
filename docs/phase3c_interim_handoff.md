@@ -2,6 +2,8 @@
 
 Status: deterministic work complete; final endpoint review pending. This handoff deliberately does not freeze the analysis plan, declare GO_TO_BASELINES, fit Models A/B/C, inspect structure versus sequencing behavior, or access LongBench outcomes.
 
+The final scientific review is recorded in `docs/phase3c_report.md`; the resulting verdict is MODIFY.
+
 ## Work completed
 
 - Rebuilt the Ensembl 88 to 91 bridge from the pinned GSE132099 structure inventory, Ensembl 88/91 GTFs and transcript FASTA files. The exact class counts are A=16,268, B=0, C=17, D=5 and E=5; 16,055 class-A profiles meet the 50-callable-base and 0.5-callable-fraction rule.
