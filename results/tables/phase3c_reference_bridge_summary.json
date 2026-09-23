@@ -1,0 +1,15 @@
+{
+  "ensembl91_transcripts": 200310,
+  "structure_profiles": 16295,
+  "mapping_classes": {
+    "A": 16268,
+    "B": 0,
+    "C": 17,
+    "D": 5,
+    "E": 5
+  },
+  "coverage_eligible": 16055,
+  "study_ids_lengths_masks_only": true,
+  "structure_values_read": false,
+  "sequencing_outcomes_read": false
+}

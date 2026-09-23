@@ -4,6 +4,8 @@ Phase 3B design update, 2026-09-23: a new K562 in-vivo structure resource now ma
 
 Decision: **MODIFY**. Date: 2026-09-22. This is a documented reconnaissance gate, not proof of novelty or an exhaustive systematic review. No modeling is authorized by this verdict.
 
+Phase 3C interim decision, 2026-09-23: **MODIFY remains in force**. The Ensembl bridge is now defensible, but direct-RNA endpoint behavior remains quantifier sensitive and the cross-study structure diagnostic does not establish a reproducible structure summary. Endpoint selection, analysis freeze and baseline modeling are deferred for final review. This does not alter the narrow testable question or add an originality claim.
+
 ## Why modify
 
 The broad proposition --�molecular RNA properties affect measurement--� is established. [miniQuant](https://doi.org/10.1038/s41587-025-02633-9) explicitly characterizes quantification difficulty and supports read-technology choice. [Price et al.](https://doi.org/10.1371/journal.pone.0173023) already link experimental PARS structure to Illumina read-start bias. [Su et al.](https://doi.org/10.1101/gr.280713.125) connect local sequence-derived structural representations to sequencing efficiency. [Brooks et al.'s preprint](https://doi.org/10.1101/2025.01.30.634337) reports no improvement from inferred structure in an alpine coverage model; its [2026 journal version](https://doi.org/10.1261/rna.080852.125) must be reconciled in a full review.

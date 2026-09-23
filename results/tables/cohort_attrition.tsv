@@ -1,0 +1,9 @@
+stage	n_transcripts	source	selection_uses_structure_values	selection_uses_outcome
+all_sgnex_annotation_transcripts	200310	SG-NEx Ensembl91 annotation	False	False
+mapping_compatible_A_or_B	16268	phase3c_reference_bridge and processed row availability	False	False
+class_A	16268	phase3c_reference_bridge and processed row availability	False	False
+annotation_available	16268	phase3c_reference_bridge and processed row availability	False	False
+platform_measurable_complete_salmon	16205	phase3c_reference_bridge and processed row availability	False	False
+quantifier_supported_reference	16205	phase3c_reference_bridge and processed row availability	False	False
+structure_eligible_A_coverage	16055	phase3c_reference_bridge and processed row availability	False	False
+future_maximum_intersection	15999	phase3c_reference_bridge and processed row availability	False	False

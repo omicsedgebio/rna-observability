@@ -1,0 +1,19 @@
+{
+  "attrition": {
+    "gse149767_vivo_profiles": 10896,
+    "profiles_with_map": 10878,
+    "profiles_with_unique_map": 10878,
+    "unique_exact_classA_bridge": 353,
+    "joint_coverage_eligible": 72,
+    "joint_coverage_below_rule": 281
+  },
+  "n_profiles": 72,
+  "n_genes": 68,
+  "cross_study_median_spearman": 0.32100729342165174,
+  "within_gse149767_median_spearman": 0.6785648493458032,
+  "cross_study_median_upper_quartile_overlap": 0.1255772369569691,
+  "cross_study_median_low_quartile_overlap": 0.09979628791308284,
+  "structure_values_only": true,
+  "sequencing_outcomes_read": false,
+  "longbench_inputs_read": false
+}

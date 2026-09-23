@@ -2,6 +2,8 @@
 
 Phase 3B update, 2026-09-23: the current design would use the GSE132099 Ensembl 88-to-91 bridge and an explicitly conditional, coverage-selected K562 estimand. The candidate primary display is four-category supported detection with an indeterminate category reported; percentile-rank difference among confidently detected transcripts is secondary. The former signed log-offset disagreement should not appear as the primary phenotype. The proposed independent GSE149767 structure validation is limited to 75 high-coverage overlapping profiles and has not established cross-study median-reactivity reproducibility. Preserve this negative result in any future manuscript. No results section on structure versus sequencing can be drafted before a frozen plan and first test.
 
+Phase 3C interim update, 2026-09-23: the proposed maximum is 15,999 class-A, structure-eligible and complete-Salmon-row transcripts. The leading detection candidate remains 1 TPM with 2/2 Illumina and 3/4 direct-RNA support, but it is pending final endpoint review because direct-RNA quantifier agreement is limited. The stricter structure-only local diagnostic retained 72 cross-study profiles and did not establish reproducibility. No structure-versus-sequencing results may be drafted.
+
 Working title: Molecular correlates of technology-specific RNA measurement behavior. No authorship or conclusion finalized.
 
 1. Introduction: established bias/identifiability literature; specific unresolved incremental question.

@@ -1,0 +1,161 @@
+{
+  "stages": [
+    {
+      "stage": "all_sgnex_annotation_transcripts",
+      "n_transcripts": 200310,
+      "source": "SG-NEx Ensembl91 annotation",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "mapping_compatible_A_or_B",
+      "n_transcripts": 16268,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "class_A",
+      "n_transcripts": 16268,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "annotation_available",
+      "n_transcripts": 16268,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "platform_measurable_complete_salmon",
+      "n_transcripts": 16205,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "quantifier_supported_reference",
+      "n_transcripts": 16205,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "structure_eligible_A_coverage",
+      "n_transcripts": 16055,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    },
+    {
+      "stage": "future_maximum_intersection",
+      "n_transcripts": 15999,
+      "source": "phase3c_reference_bridge and processed row availability",
+      "selection_uses_structure_values": false,
+      "selection_uses_outcome": false
+    }
+  ],
+  "rows_in_bridge": 16295,
+  "reference_workflows": {
+    "Illumina:rsem_sr": 200310,
+    "Illumina:salmon_sr": 198569,
+    "PacBio-SMRTcell:NanoCount_lr": 28234,
+    "PacBio-SMRTcell:bambu_lr": 200310,
+    "PacBio-SMRTcell:salmon_lr": 200310,
+    "cDNA:NanoCount_lr": 20139,
+    "cDNA:bambu_lr": 200310,
+    "cDNA:salmon_lr": 200310,
+    "directRNA:NanoCount_lr": 30553,
+    "directRNA:bambu_lr": 200310,
+    "directRNA:salmon_lr": 200310,
+    "directcDNA:NanoCount_lr": 2379,
+    "directcDNA:bambu_lr": 200310,
+    "directcDNA:salmon_lr": 200310
+  },
+  "reference_workflow_runs": {
+    "Illumina:rsem_sr": [
+      "GIS_K562_Illumina_Rep3-Run1",
+      "GIS_K562_Illumina_Rep4-Run1",
+      "GIS_k562_Illumina_Rep5-Run1"
+    ],
+    "Illumina:salmon_sr": [
+      "GIS_K562_Illumina_Rep3-Run1",
+      "GIS_K562_Illumina_Rep4-Run1",
+      "GIS_k562_Illumina_Rep5-Run1"
+    ],
+    "PacBio-SMRTcell:NanoCount_lr": [
+      "GIS_K562_PacBio-SMRTcell_Rep7_Run1"
+    ],
+    "PacBio-SMRTcell:bambu_lr": [
+      "GIS_K562_PacBio-SMRTcell_Rep7_Run1"
+    ],
+    "PacBio-SMRTcell:salmon_lr": [
+      "GIS_K562_PacBio-SMRTcell_Rep7_Run1"
+    ],
+    "cDNA:NanoCount_lr": [
+      "SGNex_K562_cDNAStranded_replicate2_run3",
+      "SGNex_K562_cDNAStranded_replicate3_run2",
+      "SGNex_K562_cDNAStranded_replicate3_run3",
+      "SGNex_K562_cDNA_replicate1_run3",
+      "SGNex_K562_cDNA_replicate3_run4"
+    ],
+    "cDNA:bambu_lr": [
+      "SGNex_K562_cDNAStranded_replicate2_run3",
+      "SGNex_K562_cDNAStranded_replicate3_run2",
+      "SGNex_K562_cDNAStranded_replicate3_run3",
+      "SGNex_K562_cDNA_replicate1_run3",
+      "SGNex_K562_cDNA_replicate3_run4"
+    ],
+    "cDNA:salmon_lr": [
+      "SGNex_K562_cDNAStranded_replicate2_run3",
+      "SGNex_K562_cDNAStranded_replicate3_run2",
+      "SGNex_K562_cDNAStranded_replicate3_run3",
+      "SGNex_K562_cDNA_replicate1_run3",
+      "SGNex_K562_cDNA_replicate3_run4"
+    ],
+    "directRNA:NanoCount_lr": [
+      "SGNex_K562_directRNA_replicate1_run1",
+      "SGNex_K562_directRNA_replicate4_run1",
+      "SGNex_K562_directRNA_replicate5_run1",
+      "SGNex_K562_directRNA_replicate6_run1"
+    ],
+    "directRNA:bambu_lr": [
+      "SGNex_K562_directRNA_replicate1_run1",
+      "SGNex_K562_directRNA_replicate4_run1",
+      "SGNex_K562_directRNA_replicate5_run1",
+      "SGNex_K562_directRNA_replicate6_run1"
+    ],
+    "directRNA:salmon_lr": [
+      "SGNex_K562_directRNA_replicate1_run1",
+      "SGNex_K562_directRNA_replicate4_run1",
+      "SGNex_K562_directRNA_replicate5_run1",
+      "SGNex_K562_directRNA_replicate6_run1"
+    ],
+    "directcDNA:NanoCount_lr": [
+      "SGNex_K562_directcDNA_replicate1_run2",
+      "SGNex_K562_directcDNA_replicate2_run1",
+      "SGNex_K562_directcDNA_replicate2_run2",
+      "SGNex_K562_directcDNA_replicate3_run1",
+      "SGNex_K562_directcDNA_replicate4_run2"
+    ],
+    "directcDNA:bambu_lr": [
+      "SGNex_K562_directcDNA_replicate1_run2",
+      "SGNex_K562_directcDNA_replicate2_run1",
+      "SGNex_K562_directcDNA_replicate2_run2",
+      "SGNex_K562_directcDNA_replicate3_run1",
+      "SGNex_K562_directcDNA_replicate4_run2"
+    ],
+    "directcDNA:salmon_lr": [
+      "SGNex_K562_directcDNA_replicate1_run2",
+      "SGNex_K562_directcDNA_replicate2_run1",
+      "SGNex_K562_directcDNA_replicate2_run2",
+      "SGNex_K562_directcDNA_replicate3_run1",
+      "SGNex_K562_directcDNA_replicate4_run2"
+    ]
+  },
+  "structure_values_read": false,
+  "sequencing_outcomes_read": false,
+  "future_maximum_definition": "class-A, >=50 callable bases, >=0.5 callable fraction, complete SG-NEx Salmon rows in all Illumina and directRNA K562 runs"
+}

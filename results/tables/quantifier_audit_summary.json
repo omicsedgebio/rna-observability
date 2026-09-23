@@ -1,0 +1,33 @@
+{
+  "annotation_transcripts": 200310,
+  "k562_rows": 7900002,
+  "workflows": {
+    "Illumina:salmon_sr": {
+      "transcripts": 198569,
+      "runs": 3
+    },
+    "Illumina:rsem_sr": {
+      "transcripts": 200310,
+      "runs": 3
+    },
+    "directRNA:salmon_lr": {
+      "transcripts": 200310,
+      "runs": 4
+    },
+    "directRNA:NanoCount_lr": {
+      "transcripts": 60052,
+      "runs": 4
+    },
+    "directRNA:bambu_lr": {
+      "transcripts": 200310,
+      "runs": 4
+    }
+  },
+  "bambu_novel_output_rows": 167362,
+  "structure_inputs_read": false,
+  "longbench_inputs_read": false,
+  "source": "SG-NEx K562 processed quantification only",
+  "duckdb_version": "1.5.5",
+  "pandas_version": "3.0.6",
+  "scipy_version": "1.18.1"
+}
