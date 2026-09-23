@@ -1,5 +1,7 @@
 # Phase 3D final scientific review
 
+Subsequent adjudication: the historical GO_TO_BASELINES remains recorded, but a pre-structure analysis lock has not been approved. [Decision chronology](prestructure_decision_chronology.md) records BLOCK_STRUCTURE_TEST because the original per-transcript baseline predictions are unavailable and the exact D comparison remains incompletely specified. Prior baseline inspection alone is not a disqualification.
+
 Integrity closeout: [verification addendum](phase3d_integrity_verification.md) supersedes the pre-baseline freeze chronology and log-loss claims below. Baseline results were inspected before the recorded freeze; the later rerun does not restore prospective status. The historical verdict is retained, but full freeze compliance is not certified. No central structure or LongBench outcome exposure was found.
 
 ## PHASE 3D VERDICT

@@ -1,5 +1,7 @@
 # Frozen analysis plan - Phase 3D workflow-specific baselines
 
+Current adjudication: **BLOCK_STRUCTURE_TEST**. This file is a historical baseline specification, not an approved pre-structure analysis lock. See [decision chronology](prestructure_decision_chronology.md). No new lock timestamp or prospective-registration claim is created. The recorded status below is retained for historical traceability.
+
 Status: FROZEN_PHASE3D
 Integrity qualification: this is the recorded status, not a certified prospective pre-baseline freeze. Baseline results were inspected before this document was written. See [closeout integrity audit](phase3d_integrity_verification.md); do not interpret this status as permission for Model D or LongBench evaluation.
 Freeze timestamp UTC: 2026-09-23T15:30:16Z
