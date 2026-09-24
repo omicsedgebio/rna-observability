@@ -1,0 +1,434 @@
+{
+  "status": "PASS",
+  "n": 15999,
+  "all_oof_constraints_passed": true,
+  "input_matrix_exactly_rebuilt": true,
+  "genes_spanning_folds": 0,
+  "independent_metrics": {
+    "n": 15999,
+    "macro_f1": 0.5218300679510073,
+    "log_loss": 0.9454521553596369,
+    "accuracy": 0.6152259516219764,
+    "balanced_accuracy": 0.5274919726380182,
+    "brier_multiclass": 0.5157598074560126,
+    "per_class_f1": [
+      0.7383007171508448,
+      0.665011421193763,
+      0.1733102253032929,
+      0.6926303175554224,
+      0.33989765855171344
+    ],
+    "confusion_matrix": [
+      [
+        3037,
+        769,
+        3,
+        20,
+        411
+      ],
+      [
+        456,
+        3348,
+        2,
+        179,
+        695
+      ],
+      [
+        19,
+        8,
+        50,
+        250,
+        122
+      ],
+      [
+        4,
+        159,
+        30,
+        2312,
+        378
+      ],
+      [
+        471,
+        1105,
+        43,
+        1032,
+        1096
+      ]
+    ]
+  },
+  "independent_fold_metrics": [
+    {
+      "fold": 0,
+      "n": 3199,
+      "macro_f1": 0.513375425702682,
+      "log_loss": 0.9476304638790355,
+      "accuracy": 0.6080025007814942,
+      "balanced_accuracy": 0.5200714943752951,
+      "brier_multiclass": 0.5198934543763739,
+      "per_class_f1": [
+        0.7278835386338186,
+        0.6463104325699746,
+        0.16071428571428573,
+        0.688,
+        0.34396887159533074
+      ],
+      "confusion_matrix": [
+        [
+          650,
+          169,
+          1,
+          4,
+          92
+        ],
+        [
+          111,
+          635,
+          0,
+          38,
+          150
+        ],
+        [
+          4,
+          2,
+          9,
+          46,
+          25
+        ],
+        [
+          1,
+          25,
+          10,
+          430,
+          70
+        ],
+        [
+          104,
+          200,
+          6,
+          196,
+          221
+        ]
+      ]
+    },
+    {
+      "fold": 1,
+      "n": 3199,
+      "macro_f1": 0.5433929837885888,
+      "log_loss": 0.9533133737973883,
+      "accuracy": 0.6223819943732416,
+      "balanced_accuracy": 0.5456857820685184,
+      "brier_multiclass": 0.5161679829352868,
+      "per_class_f1": [
+        0.7324766355140186,
+        0.6570862239841427,
+        0.2545454545454545,
+        0.7180685358255452,
+        0.35478806907378335
+      ],
+      "confusion_matrix": [
+        [
+          627,
+          177,
+          1,
+          3,
+          79
+        ],
+        [
+          88,
+          663,
+          0,
+          34,
+          135
+        ],
+        [
+          4,
+          2,
+          14,
+          43,
+          17
+        ],
+        [
+          1,
+          30,
+          3,
+          461,
+          63
+        ],
+        [
+          105,
+          226,
+          12,
+          185,
+          226
+        ]
+      ]
+    },
+    {
+      "fold": 2,
+      "n": 3202,
+      "macro_f1": 0.5135659228446484,
+      "log_loss": 0.9552805991306675,
+      "accuracy": 0.6043098063710182,
+      "balanced_accuracy": 0.5229746236284738,
+      "brier_multiclass": 0.5247809176684188,
+      "per_class_f1": [
+        0.7330482590103848,
+        0.6598984771573604,
+        0.16666666666666666,
+        0.6716417910447762,
+        0.3365744203440538
+      ],
+      "confusion_matrix": [
+        [
+          600,
+          143,
+          0,
+          4,
+          91
+        ],
+        [
+          97,
+          650,
+          0,
+          44,
+          126
+        ],
+        [
+          8,
+          2,
+          10,
+          52,
+          24
+        ],
+        [
+          0,
+          27,
+          3,
+          450,
+          82
+        ],
+        [
+          94,
+          231,
+          11,
+          228,
+          225
+        ]
+      ]
+    },
+    {
+      "fold": 3,
+      "n": 3199,
+      "macro_f1": 0.5200122983825872,
+      "log_loss": 0.9225478368406774,
+      "accuracy": 0.6245701781806815,
+      "balanced_accuracy": 0.5271854722041364,
+      "brier_multiclass": 0.5021681118772678,
+      "per_class_f1": [
+        0.7460732984293194,
+        0.6802919708029197,
+        0.13043478260869565,
+        0.705800139762404,
+        0.33746130030959753
+      ],
+      "confusion_matrix": [
+        [
+          570,
+          144,
+          0,
+          5,
+          77
+        ],
+        [
+          69,
+          699,
+          0,
+          34,
+          143
+        ],
+        [
+          1,
+          2,
+          6,
+          50,
+          19
+        ],
+        [
+          1,
+          36,
+          3,
+          505,
+          73
+        ],
+        [
+          91,
+          229,
+          5,
+          219,
+          218
+        ]
+      ]
+    },
+    {
+      "fold": 4,
+      "n": 3200,
+      "macro_f1": 0.5190189505917806,
+      "log_loss": 0.9484783401256957,
+      "accuracy": 0.616875,
+      "balanced_accuracy": 0.5232282568085723,
+      "brier_multiclass": 0.5157801041434644,
+      "per_class_f1": [
+        0.7544757033248082,
+        0.6802523047064531,
+        0.15384615384615385,
+        0.6797957695113056,
+        0.3267248215701824
+      ],
+      "confusion_matrix": [
+        [
+          590,
+          136,
+          1,
+          4,
+          72
+        ],
+        [
+          91,
+          701,
+          2,
+          29,
+          141
+        ],
+        [
+          2,
+          0,
+          11,
+          59,
+          37
+        ],
+        [
+          1,
+          41,
+          11,
+          466,
+          90
+        ],
+        [
+          77,
+          219,
+          9,
+          204,
+          206
+        ]
+      ]
+    }
+  ],
+  "independently_recomputed_bootstrap_ci": [
+    0.512376260340985,
+    0.5328101838801408
+  ],
+  "all_manifest_hashes_verified": true,
+  "structure_inputs_read": false,
+  "longbench_inputs_read": false,
+  "fitting_performed": false,
+  "verification_script_sha256": "6f0f27019bbc05318d79b4c1f6ae3a9d64428afe94f23c86a43873659bbebba8",
+  "verification_utc": "2026-09-24T07:01:47.523754+00:00",
+  "launch_guard_retained": true,
+  "wrapper_exit_status": 0,
+  "fitting_attempts_total": 1,
+  "first_fold_started": true,
+  "completed_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "classification": "PRESTRUCTURE_BASELINE_REESTABLISHMENT",
+  "git_commit_push": "INTENTIONALLY_DEFERRED_UNTIL_HUMAN_REVIEW",
+  "process_inventory_limitation": "Sandbox denied ps; own execution sessions and durable receipts/logs observed.",
+  "resource_verification": {
+    "SGNEX_TX": {
+      "bytes": 669521420,
+      "sha256": "51d41a85766e536fc995965d820facc3e2e02bb99391330b9df4a46ff9a3a7d2",
+      "verified": true
+    },
+    "SGNEX_META": {
+      "bytes": 27131354,
+      "sha256": "d37b4e2bf289ea46b59c2cd47c23c036f0708b1c31a5c235687dbfd1048b24b5",
+      "verified": true
+    },
+    "ensembl91_cdna": {
+      "bytes": 65088589,
+      "sha256": "a7f0022e884826d70e0a151f6c38547aea8d443eaa9653aaf56e698e23109201",
+      "verified": true
+    },
+    "ensembl91_ncrna": {
+      "bytes": 9365901,
+      "sha256": "0ab3565714f88fb98eb7df7814fe3fed770e2b098d37cd7b83601258f87e75dd",
+      "verified": true
+    }
+  },
+  "extraction_verification": {
+    ".cache/phase3a/qc/sgnex_annotation_full.tsv": {
+      "bytes": 40031956,
+      "sha256": "5ac1122d0e751b235d416ee7457e2711108935a55f417accf23e33fe7c7661fa",
+      "rows_excluding_header": 200310
+    },
+    ".cache/phase3a/qc/k562_quantification.tsv": {
+      "bytes": 859220112,
+      "sha256": "f00b1002e1b5c5e3109df112fbeb6c9799fafb795ee2d1cd546a42c90878289a",
+      "rows_excluding_header": 7900002
+    },
+    ".cache/phase3a/qc/model_c_R_session.txt": {
+      "bytes": 1476,
+      "sha256": "75ce2d04e4d59795db6f660710413759e129795bfafc89e4191725f69dda0d63"
+    }
+  },
+  "retained_artifacts": {
+    "results/tables/model_c_oof.tsv.gz": {
+      "bytes": 996601,
+      "sha256": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225"
+    },
+    "results/tables/model_c_inputs.tsv.gz": {
+      "bytes": 885816,
+      "sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31"
+    },
+    "results/tables/model_c_reestablishment_metrics.json": {
+      "bytes": 12185,
+      "sha256": "ee3e23119338cd411f44c4b4e7d22a252fdee35fdb3ae2d445b2a76b83c6921c"
+    },
+    "metadata/model_c_reestablishment_manifest.json": {
+      "bytes": 6019,
+      "sha256": "5d11686ed71166d1351c03473166fcbc55d2974b9a98e0e568231f6ec6951647"
+    },
+    "docs/model_c_reestablishment_results.md": {
+      "bytes": 2336,
+      "sha256": "6751dfd8192431ab3cfc4468655f3e0a05b217fdb958728ad5a32f611f65da0f"
+    },
+    "results/logs/model_c_reestablishment_run.log": {
+      "bytes": 610,
+      "sha256": "57c1d09d29a7e20ccbecde596d3ac6d1584c77070df355839c0d88e62946845e"
+    },
+    ".automation/run_model_c_once.sh": {
+      "bytes": 1311,
+      "sha256": "92e5871a192904e7f9b9250f269a2ef0a1ea65f85e5f43e2b9e27889aede151a"
+    },
+    ".automation/MODEL_C_FIT_LAUNCH_CONSUMED/receipt.txt": {
+      "bytes": 182,
+      "sha256": "bd71f25aa1a26dc27068b8c0308c7c1edfdb67f6139f079120e1626d90155244"
+    },
+    ".automation/MODEL_C_FIT_LAUNCH_CONSUMED/exit_status.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "metadata/model_c_fit_attempt.json": {
+      "bytes": 230,
+      "sha256": "deab199239d81f32f829d2464123ebd40e23bd92399ea26dbc04516f6a99b4b0"
+    },
+    "metadata/model_c_prefit_lock.json": {
+      "bytes": 801,
+      "sha256": "2931df32551ca363032296c531456808d985ed1176eb059d502c1c82286d37f0"
+    }
+  }
+}

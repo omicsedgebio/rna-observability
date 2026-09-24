@@ -1,0 +1,584 @@
+{
+  "n": 15999,
+  "macro_f1": 0.5218300679510073,
+  "log_loss": 0.9454521553596428,
+  "accuracy": 0.6152259516219764,
+  "balanced_accuracy": 0.5274919726380182,
+  "brier_multiclass": 0.5157598074560121,
+  "class_metrics": [
+    {
+      "label": "BOTH",
+      "n": 4240,
+      "predicted_n": 3987,
+      "f1": 0.7383007171508448,
+      "recall": 0.7162735849056604,
+      "precision": 0.7617256082267368
+    },
+    {
+      "label": "ILLUMINA_ONLY",
+      "n": 4680,
+      "predicted_n": 5389,
+      "f1": 0.665011421193763,
+      "recall": 0.7153846153846154,
+      "precision": 0.6212655409166822
+    },
+    {
+      "label": "DIRECT_RNA_ONLY",
+      "n": 449,
+      "predicted_n": 128,
+      "f1": 0.1733102253032929,
+      "recall": 0.111358574610245,
+      "precision": 0.390625
+    },
+    {
+      "label": "NEITHER",
+      "n": 2883,
+      "predicted_n": 3793,
+      "f1": 0.6926303175554224,
+      "recall": 0.8019424210891433,
+      "precision": 0.6095438966517268
+    },
+    {
+      "label": "INDETERMINATE",
+      "n": 3747,
+      "predicted_n": 2702,
+      "f1": 0.33989765855171344,
+      "recall": 0.292500667200427,
+      "precision": 0.40562546262028126
+    }
+  ],
+  "confusion_matrix": [
+    [
+      3037,
+      769,
+      3,
+      20,
+      411
+    ],
+    [
+      456,
+      3348,
+      2,
+      179,
+      695
+    ],
+    [
+      19,
+      8,
+      50,
+      250,
+      122
+    ],
+    [
+      4,
+      159,
+      30,
+      2312,
+      378
+    ],
+    [
+      471,
+      1105,
+      43,
+      1032,
+      1096
+    ]
+  ],
+  "class_order": [
+    "BOTH",
+    "ILLUMINA_ONLY",
+    "DIRECT_RNA_ONLY",
+    "NEITHER",
+    "INDETERMINATE"
+  ],
+  "prediction_sha256": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225",
+  "provenance": "PRESTRUCTURE_BASELINE_REESTABLISHMENT",
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "n": 3199,
+      "macro_f1": 0.513375425702682,
+      "log_loss": 0.9476304638790369,
+      "accuracy": 0.6080025007814942,
+      "balanced_accuracy": 0.5200714943752951,
+      "brier_multiclass": 0.5198934543763728,
+      "class_metrics": [
+        {
+          "label": "BOTH",
+          "n": 916,
+          "predicted_n": 870,
+          "f1": 0.7278835386338186,
+          "recall": 0.7096069868995634,
+          "precision": 0.7471264367816092
+        },
+        {
+          "label": "ILLUMINA_ONLY",
+          "n": 934,
+          "predicted_n": 1031,
+          "f1": 0.6463104325699746,
+          "recall": 0.6798715203426124,
+          "precision": 0.6159068865179438
+        },
+        {
+          "label": "DIRECT_RNA_ONLY",
+          "n": 86,
+          "predicted_n": 26,
+          "f1": 0.16071428571428573,
+          "recall": 0.10465116279069768,
+          "precision": 0.34615384615384615
+        },
+        {
+          "label": "NEITHER",
+          "n": 536,
+          "predicted_n": 714,
+          "f1": 0.688,
+          "recall": 0.8022388059701493,
+          "precision": 0.6022408963585434
+        },
+        {
+          "label": "INDETERMINATE",
+          "n": 727,
+          "predicted_n": 558,
+          "f1": 0.34396887159533074,
+          "recall": 0.30398899587345257,
+          "precision": 0.3960573476702509
+        }
+      ],
+      "confusion_matrix": [
+        [
+          650,
+          169,
+          1,
+          4,
+          92
+        ],
+        [
+          111,
+          635,
+          0,
+          38,
+          150
+        ],
+        [
+          4,
+          2,
+          9,
+          46,
+          25
+        ],
+        [
+          1,
+          25,
+          10,
+          430,
+          70
+        ],
+        [
+          104,
+          200,
+          6,
+          196,
+          221
+        ]
+      ],
+      "class_order": [
+        "BOTH",
+        "ILLUMINA_ONLY",
+        "DIRECT_RNA_ONLY",
+        "NEITHER",
+        "INDETERMINATE"
+      ]
+    },
+    {
+      "fold": 1,
+      "n": 3199,
+      "macro_f1": 0.5433929837885888,
+      "log_loss": 0.9533133737973875,
+      "accuracy": 0.6223819943732416,
+      "balanced_accuracy": 0.5456857820685185,
+      "brier_multiclass": 0.5161679829352861,
+      "class_metrics": [
+        {
+          "label": "BOTH",
+          "n": 887,
+          "predicted_n": 825,
+          "f1": 0.7324766355140186,
+          "recall": 0.7068771138669673,
+          "precision": 0.76
+        },
+        {
+          "label": "ILLUMINA_ONLY",
+          "n": 920,
+          "predicted_n": 1098,
+          "f1": 0.6570862239841427,
+          "recall": 0.7206521739130435,
+          "precision": 0.6038251366120219
+        },
+        {
+          "label": "DIRECT_RNA_ONLY",
+          "n": 80,
+          "predicted_n": 30,
+          "f1": 0.2545454545454545,
+          "recall": 0.175,
+          "precision": 0.4666666666666667
+        },
+        {
+          "label": "NEITHER",
+          "n": 558,
+          "predicted_n": 726,
+          "f1": 0.7180685358255452,
+          "recall": 0.8261648745519713,
+          "precision": 0.6349862258953168
+        },
+        {
+          "label": "INDETERMINATE",
+          "n": 754,
+          "predicted_n": 520,
+          "f1": 0.35478806907378335,
+          "recall": 0.29973474801061006,
+          "precision": 0.4346153846153846
+        }
+      ],
+      "confusion_matrix": [
+        [
+          627,
+          177,
+          1,
+          3,
+          79
+        ],
+        [
+          88,
+          663,
+          0,
+          34,
+          135
+        ],
+        [
+          4,
+          2,
+          14,
+          43,
+          17
+        ],
+        [
+          1,
+          30,
+          3,
+          461,
+          63
+        ],
+        [
+          105,
+          226,
+          12,
+          185,
+          226
+        ]
+      ],
+      "class_order": [
+        "BOTH",
+        "ILLUMINA_ONLY",
+        "DIRECT_RNA_ONLY",
+        "NEITHER",
+        "INDETERMINATE"
+      ]
+    },
+    {
+      "fold": 2,
+      "n": 3202,
+      "macro_f1": 0.5135659228446484,
+      "log_loss": 0.955280599130669,
+      "accuracy": 0.6043098063710182,
+      "balanced_accuracy": 0.5229746236284739,
+      "brier_multiclass": 0.5247809176684192,
+      "class_metrics": [
+        {
+          "label": "BOTH",
+          "n": 838,
+          "predicted_n": 799,
+          "f1": 0.7330482590103848,
+          "recall": 0.7159904534606205,
+          "precision": 0.7509386733416771
+        },
+        {
+          "label": "ILLUMINA_ONLY",
+          "n": 917,
+          "predicted_n": 1053,
+          "f1": 0.6598984771573604,
+          "recall": 0.7088331515812432,
+          "precision": 0.6172839506172839
+        },
+        {
+          "label": "DIRECT_RNA_ONLY",
+          "n": 96,
+          "predicted_n": 24,
+          "f1": 0.16666666666666666,
+          "recall": 0.10416666666666667,
+          "precision": 0.4166666666666667
+        },
+        {
+          "label": "NEITHER",
+          "n": 562,
+          "predicted_n": 778,
+          "f1": 0.6716417910447762,
+          "recall": 0.800711743772242,
+          "precision": 0.5784061696658098
+        },
+        {
+          "label": "INDETERMINATE",
+          "n": 789,
+          "predicted_n": 548,
+          "f1": 0.3365744203440538,
+          "recall": 0.28517110266159695,
+          "precision": 0.41058394160583944
+        }
+      ],
+      "confusion_matrix": [
+        [
+          600,
+          143,
+          0,
+          4,
+          91
+        ],
+        [
+          97,
+          650,
+          0,
+          44,
+          126
+        ],
+        [
+          8,
+          2,
+          10,
+          52,
+          24
+        ],
+        [
+          0,
+          27,
+          3,
+          450,
+          82
+        ],
+        [
+          94,
+          231,
+          11,
+          228,
+          225
+        ]
+      ],
+      "class_order": [
+        "BOTH",
+        "ILLUMINA_ONLY",
+        "DIRECT_RNA_ONLY",
+        "NEITHER",
+        "INDETERMINATE"
+      ]
+    },
+    {
+      "fold": 3,
+      "n": 3199,
+      "macro_f1": 0.5200122983825872,
+      "log_loss": 0.9225478368406762,
+      "accuracy": 0.6245701781806815,
+      "balanced_accuracy": 0.5271854722041363,
+      "brier_multiclass": 0.5021681118772681,
+      "class_metrics": [
+        {
+          "label": "BOTH",
+          "n": 796,
+          "predicted_n": 732,
+          "f1": 0.7460732984293194,
+          "recall": 0.7160804020100503,
+          "precision": 0.7786885245901639
+        },
+        {
+          "label": "ILLUMINA_ONLY",
+          "n": 945,
+          "predicted_n": 1110,
+          "f1": 0.6802919708029197,
+          "recall": 0.7396825396825397,
+          "precision": 0.6297297297297297
+        },
+        {
+          "label": "DIRECT_RNA_ONLY",
+          "n": 78,
+          "predicted_n": 14,
+          "f1": 0.13043478260869565,
+          "recall": 0.07692307692307693,
+          "precision": 0.42857142857142855
+        },
+        {
+          "label": "NEITHER",
+          "n": 618,
+          "predicted_n": 813,
+          "f1": 0.705800139762404,
+          "recall": 0.8171521035598706,
+          "precision": 0.6211562115621156
+        },
+        {
+          "label": "INDETERMINATE",
+          "n": 762,
+          "predicted_n": 530,
+          "f1": 0.33746130030959753,
+          "recall": 0.28608923884514437,
+          "precision": 0.41132075471698115
+        }
+      ],
+      "confusion_matrix": [
+        [
+          570,
+          144,
+          0,
+          5,
+          77
+        ],
+        [
+          69,
+          699,
+          0,
+          34,
+          143
+        ],
+        [
+          1,
+          2,
+          6,
+          50,
+          19
+        ],
+        [
+          1,
+          36,
+          3,
+          505,
+          73
+        ],
+        [
+          91,
+          229,
+          5,
+          219,
+          218
+        ]
+      ],
+      "class_order": [
+        "BOTH",
+        "ILLUMINA_ONLY",
+        "DIRECT_RNA_ONLY",
+        "NEITHER",
+        "INDETERMINATE"
+      ]
+    },
+    {
+      "fold": 4,
+      "n": 3200,
+      "macro_f1": 0.5190189505917806,
+      "log_loss": 0.9484783401256959,
+      "accuracy": 0.616875,
+      "balanced_accuracy": 0.5232282568085723,
+      "brier_multiclass": 0.5157801041434642,
+      "class_metrics": [
+        {
+          "label": "BOTH",
+          "n": 803,
+          "predicted_n": 761,
+          "f1": 0.7544757033248082,
+          "recall": 0.7347447073474471,
+          "precision": 0.7752956636005256
+        },
+        {
+          "label": "ILLUMINA_ONLY",
+          "n": 964,
+          "predicted_n": 1097,
+          "f1": 0.6802523047064531,
+          "recall": 0.7271784232365145,
+          "precision": 0.6390154968094804
+        },
+        {
+          "label": "DIRECT_RNA_ONLY",
+          "n": 109,
+          "predicted_n": 34,
+          "f1": 0.15384615384615385,
+          "recall": 0.10091743119266056,
+          "precision": 0.3235294117647059
+        },
+        {
+          "label": "NEITHER",
+          "n": 609,
+          "predicted_n": 762,
+          "f1": 0.6797957695113056,
+          "recall": 0.7651888341543513,
+          "precision": 0.6115485564304461
+        },
+        {
+          "label": "INDETERMINATE",
+          "n": 715,
+          "predicted_n": 546,
+          "f1": 0.3267248215701824,
+          "recall": 0.2881118881118881,
+          "precision": 0.3772893772893773
+        }
+      ],
+      "confusion_matrix": [
+        [
+          590,
+          136,
+          1,
+          4,
+          72
+        ],
+        [
+          91,
+          701,
+          2,
+          29,
+          141
+        ],
+        [
+          2,
+          0,
+          11,
+          59,
+          37
+        ],
+        [
+          1,
+          41,
+          11,
+          466,
+          90
+        ],
+        [
+          77,
+          219,
+          9,
+          204,
+          206
+        ]
+      ],
+      "class_order": [
+        "BOTH",
+        "ILLUMINA_ONLY",
+        "DIRECT_RNA_ONLY",
+        "NEITHER",
+        "INDETERMINATE"
+      ]
+    }
+  ],
+  "macro_f1_ci": [
+    0.512376260340985,
+    0.5328101838801408
+  ],
+  "bootstrap_replicates": 100,
+  "historical_differences": {
+    "macro_f1": 0.0,
+    "log_loss": 5.662137425588298e-15,
+    "accuracy": 0.0
+  },
+  "historical_metrics_within_tolerance": true
+}

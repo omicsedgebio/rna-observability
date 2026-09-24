@@ -1,5 +1,39 @@
 # Model C re-establishment Reviewer 2 integrity review
 
+## Completed unattended review — 2026-09-24 UTC
+
+Disposition: **READY_FOR_PRESTRUCTURE_LOCK_SPEC**. Classification remains **PRESTRUCTURE_BASELINE_REESTABLISHMENT**, after prior baseline inspection. This is not exact historical reconstruction, original-prediction recovery or prospective preregistration. The completed review supersedes the earlier incomplete execution disposition preserved below; it does not approve a structure test. **BLOCK_STRUCTURE_TEST** remains in force pending a separately reviewed exact lock specification. No Model D work was performed.
+
+Reviewer 2 integrity review was performed by the executing agent using a separate saved-artifact verification implementation; no independent human reviewer or second agent is implied. Evidence: [execution report](model_c_execution_verification.md), [verification receipt](../metadata/model_c_saved_artifact_verification.json), [fit manifest](../metadata/model_c_reestablishment_manifest.json), and the durable run log.
+
+| Item | Evidence and disposition |
+|---|---|
+| Pre-fit chronology | Existing authoritative lock 162ee8f4195bf2141cd8c086c131acf2c65dda9b matched HEAD, origin/main, read-only remote check and every protected script/config byte before the sole launch. The missing lock receipt was reconstructed from that existing evidence. PASS; no newly invented scientific lock. |
+| Resource identity | SGNEX_META, SGNEX_TX, Ensembl 91 cDNA and ncRNA matched pinned sizes/SHA256. Completed SGNEX_TX was not downloaded again. Transport logs/partials were preserved; no source substitution. PASS. |
+| Extraction | Unchanged R script, exit 0: 200,310 annotation rows and 7,900,002 K562 rows; sizes/hashes recorded. R data.table build-version warning retained. PASS with disclosed environment warning. |
+| Frozen inputs | All four stated SHA256 values match; 15,999 ordered transcripts; unchanged five folds, nine finite predictors and historical label counts. PASS. |
+| Nesting and leakage | Independent Rep3 abundance remains distinct from outcome runs; training-fold StandardScaler remains inside each pipeline; zero duplicate measurement keys; 4,314 sequence groups intact; zero genes spanning folds. PASS for these checks; this is not proof against all possible leakage or cross-study confounding. |
+| Attempts and selection | Exactly one wrapper launch and one fitting attempt; first fold started, all five completed, exit 0. Guard and internal marker retained. No retry, tuning or scientific code change. PASS. |
+| Numerical fitting | Fold iterations 33, 32, 31, 32, 34; no warning/error in fit log. Frozen one-thread limit applied; available native-library report archived. PASS in declared Mac environment. |
+| OOF artifact | Reopened 15,999 rows; exact membership/order/folds/groups; weight 1; valid observed/predicted classes; finite bounded probabilities summing to one; documented lexicographic argmax handling verified. PASS. |
+| Input artifact | All nine predictors rebuilt from verified resources using unchanged historical helpers and exactly matched saved values; labels and support counts matched. PASS. |
+| Scoring | Named-class corrected log loss independently checked against sklearn with explicit class ordering; macro-F1, accuracy, balanced accuracy, multiclass Brier, class F1, confusion matrices and every fold checked to <1e-12. PASS. |
+| Bootstrap | Fixed 100-draw sequence-cluster interval independently recomputed with historical group ordering/seed: [0.512376260340985, 0.5328101838801408]. PASS; conditional OOF uncertainty only. |
+| Historical comparison | Macro-F1 difference 0, corrected log-loss difference +5.662137425588298e-15, accuracy difference 0; all within 1e-6. Descriptive agreement only; no historical prediction identity claim. |
+| Weak/negative performance | DIRECT_RNA_ONLY F1 0.1733102253032929, recall 0.111358574610245, 50 true positives among 449 observed; INDETERMINATE F1 0.33989765855171344. Retained without relabeling, tuning or exclusion. |
+| Structure and external lock | No RNA-structure resources restored/read; LongBench not accessed; Model D not fitted. Procedural evidence from reviewed code and authorized input paths, not an OS-wide access audit. Sandbox denied ps. |
+| Git and retention | Scientific artifacts and hashes preserved. No Git write, push, pull, fetch, gh, clean clone or remote modification. Commit/push intentionally deferred by unattended override; not a scientific blocker. OOF/input files remain ignored and need explicit retention in the later human-reviewed workflow. |
+
+No fatal scientific inconsistency was identified in the executed re-establishment and saved-artifact checks. No new empirical claim about structure, novelty, causation, clinical utility, endogenous true error, validated scores or platform accuracy is supported.
+
+Major limitations remain unchanged: historical numerical environment and original prediction identity are unrecoverable; C contains limited annotation-only identifiability controls and preserves the documented sequence ambiguity-handling discrepancy. Mandatory annotation-only controls for a future comparison still require an explicit specification and cannot be replaced by experimental structure. Shared preparations, workflow specificity and cross-study context limit biological/generalization claims. Bootstrap draws are not independent biological replicates. Canonical Linux reproduction remains unperformed; this run is the declared Mac re-establishment. These limits are not repaired by aggregate historical agreement.
+
+## Preserved prior incomplete review (historical record)
+
+The text below describes the earlier pre-fit state and is superseded only as to execution completion by the completed review above. Its historical chronology and substantive limitations are retained.
+
+# Model C re-establishment Reviewer 2 integrity review
+
 Disposition: **BLOCKED_BEFORE_PRESTRUCTURE_LOCK_SPEC**. This is an incomplete pre-fit review; no new model results exist. Classification remains **PRESTRUCTURE_BASELINE_REESTABLISHMENT**, described as **PRE-STRUCTURE BASELINE RE-ESTABLISHMENT AFTER PRIOR BASELINE INSPECTION**. It is not prospective preregistration, exact reconstruction, numerical-equivalence reconstruction or original-prediction recovery.
 
 ## Fatal execution gate

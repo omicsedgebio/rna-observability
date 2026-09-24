@@ -1,0 +1,11 @@
+{
+  "commit": "162ee8f4195bf2141cd8c086c131acf2c65dda9b",
+  "recorded_utc": "2026-09-24T06:52:15.763913+00:00",
+  "evidence": "User-supplied authoritative pre-fit lock; local HEAD and origin/main match; protected protocol bytes verified against commit. Earlier remote verification recorded in .cache/model_c_execution/start.json.",
+  "classification": "PRESTRUCTURE_BASELINE_REESTABLISHMENT",
+  "receipt_reconstructed_before_fitting": true,
+  "scientific_protocol_modified": false,
+  "unattended_git_policy": "No push, pull, fetch, gh, clean clone, commit, or remote modification; final commit/push deferred to human review.",
+  "readonly_remote_main_verified": "162ee8f4195bf2141cd8c086c131acf2c65dda9b",
+  "readonly_remote_evidence": ".cache/model_c_execution/prefit_remote_readonly_20260924.txt"
+}

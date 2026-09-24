@@ -1,0 +1,24 @@
+Starting sole authorized C attempt, fold 0
+Completed fixed C fold 0
+Starting sole authorized C attempt, fold 1
+Completed fixed C fold 1
+Starting sole authorized C attempt, fold 2
+Completed fixed C fold 2
+Starting sole authorized C attempt, fold 3
+Completed fixed C fold 3
+Starting sole authorized C attempt, fold 4
+Completed fixed C fold 4
+{
+  "n": 15999,
+  "macro_f1": 0.5218300679510073,
+  "log_loss": 0.9454521553596428,
+  "macro_f1_ci": [
+    0.512376260340985,
+    0.5328101838801408
+  ],
+  "historical_differences": {
+    "macro_f1": 0.0,
+    "log_loss": 5.662137425588298e-15,
+    "accuracy": 0.0
+  }
+}

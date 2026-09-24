@@ -1,0 +1,187 @@
+{
+  "provenance": "PRESTRUCTURE_BASELINE_REESTABLISHMENT",
+  "started_utc": "2026-09-24T07:00:10.121903+00:00",
+  "completed_utc": "2026-09-24T07:00:32.987343+00:00",
+  "source_git_commit": "162ee8f4195bf2141cd8c086c131acf2c65dda9b",
+  "invocation": ".venv/bin/python3.11 scripts/model_c_reestablish.py",
+  "python": "3.11.12 (main, Apr  8 2025, 14:15:29) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "scikit-learn": "1.9.1",
+    "cloudpickle": "3.1.2",
+    "joblib": "1.6.0",
+    "setuptools": "78.1.0",
+    "pip": "25.0.1",
+    "duckdb": "1.5.5",
+    "python-dateutil": "2.9.0.post0",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0",
+    "pandas": "3.0.6",
+    "six": "1.17.0",
+    "numpy": "2.4.2",
+    "narwhals": "2.26.0"
+  },
+  "native_libraries": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "/Users/priyanshpathak/Projects/omicsedgebio/rna-observability-execution/.venv/lib/python3.11/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "fold_fits": [
+    {
+      "fold": 0,
+      "iterations": [
+        33
+      ],
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 20260923,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "fold": 1,
+      "iterations": [
+        32
+      ],
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 20260923,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "fold": 2,
+      "iterations": [
+        31
+      ],
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 20260923,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "fold": 3,
+      "iterations": [
+        32
+      ],
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 20260923,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "fold": 4,
+      "iterations": [
+        34
+      ],
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 20260923,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      }
+    }
+  ],
+  "artifact_sha256": {
+    "analysis/baseline_models/fit_structure_blind.py": "175239e847e7d4cc6a3b812913541d518c942403af43b870af18fff5bdf8259c",
+    "metadata/final_transcript_cohort.tsv": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+    "metadata/cv_folds.tsv": "66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52",
+    "metadata/feature_definitions.tsv": "30b96cad1df8d9f9cad4e4829702e739a05013a013fb5b4f0b3d770859ab8d4d",
+    "configs/model_c_reestablishment.json": "84168bd11531d9f6a7d1ad655ad9c35a64cb7149913e16717609808d228191f0",
+    "configs/model_c_outcome.json": "9082781c22e16e64f00dc7e57bbe83b5c8824ff46ae96eecadaf5d3aa5f155cf",
+    "scripts/model_c_reestablish.py": "a7314a7c55fb9f39bb7c54c817de32dbcc803b35e5a7fd1863514a396f61253a",
+    "scripts/model_c_artifact.py": "ed3406c37a2fa7133f5419d170bb5cc48132dc8b623d8e8f0fba338d5e22fe4f",
+    "scripts/model_c_extract.R": "3b71ada6dd1161ae1553c4666c436a4e15abab81ca74271bc11ec4dd3feef635",
+    "results/tables/model_c_inputs.tsv.gz": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+    "results/tables/model_c_oof.tsv.gz": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225",
+    "results/tables/model_c_reestablishment_metrics.json": "ee3e23119338cd411f44c4b4e7d22a252fdee35fdb3ae2d445b2a76b83c6921c"
+  },
+  "source_inputs": {
+    ".cache/phase2/sgnex/metadata.rds": {
+      "bytes": 27131354,
+      "sha256": "d37b4e2bf289ea46b59c2cd47c23c036f0708b1c31a5c235687dbfd1048b24b5"
+    },
+    ".cache/phase2/sgnex/transcript.rds": {
+      "bytes": 669521420,
+      "sha256": "51d41a85766e536fc995965d820facc3e2e02bb99391330b9df4a46ff9a3a7d2"
+    },
+    ".cache/phase3a/references/ensembl91.cdna.fa.gz": {
+      "bytes": 65088589,
+      "sha256": "a7f0022e884826d70e0a151f6c38547aea8d443eaa9653aaf56e698e23109201"
+    },
+    ".cache/phase3a/references/ensembl91.ncrna.fa.gz": {
+      "bytes": 9365901,
+      "sha256": "0ab3565714f88fb98eb7df7814fe3fed770e2b098d37cd7b83601258f87e75dd"
+    }
+  },
+  "structure_inputs_read": false,
+  "longbench_inputs_read": false,
+  "training_attempts": 1,
+  "selection_or_tuning": false,
+  "prefit_lock_commit": "162ee8f4195bf2141cd8c086c131acf2c65dda9b",
+  "extracted_sha256": {
+    ".cache/phase3a/qc/sgnex_annotation_full.tsv": "5ac1122d0e751b235d416ee7457e2711108935a55f417accf23e33fe7c7661fa",
+    ".cache/phase3a/qc/k562_quantification.tsv": "f00b1002e1b5c5e3109df112fbeb6c9799fafb795ee2d1cd546a42c90878289a"
+  }
+}
