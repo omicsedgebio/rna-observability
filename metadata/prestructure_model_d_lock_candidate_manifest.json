@@ -1,0 +1,93 @@
+{
+  "manifest_version": "prestructure_model_d_lock_candidate_manifest_v2",
+  "created_utc_date": "2026-09-24",
+  "status": "CANDIDATE_FOR_HUMAN_REVIEW",
+  "starting_git_status_short": "",
+  "parent_commit": "d077a7bc9c7cd0bf1209a72265ea84e800e570c0",
+  "starting_head": "d077a7bc9c7cd0bf1209a72265ea84e800e570c0",
+  "starting_origin_main": "d077a7bc9c7cd0bf1209a72265ea84e800e570c0",
+  "model_c_oof_sha256": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225",
+  "model_c_inputs_sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+  "cohort_sha256": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+  "fold_sha256": "66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52",
+  "historical_model_c_source_sha256": "175239e847e7d4cc6a3b812913541d518c942403af43b870af18fff5bdf8259c",
+  "feature_registry_sha256": "30b96cad1df8d9f9cad4e4829702e739a05013a013fb5b4f0b3d770859ab8d4d",
+  "human_review_revisions": [
+    "tightened PARTIALLY_SUPPORTED to require delta_macro_f1 >= 0.005, successful permutation calibration, positive strict-callability sensitivity, at least 3 of 5 positive fold deltas, and either positive bootstrap lower bound or MEANINGFUL magnitude",
+    "added mandatory separately committed reviewed and human-approved PRESTRUCTURE_IMPLEMENTATION_LOCK before any structure access"
+  ],
+  "candidate_file_sha256": {
+    "configs/prestructure_model_d_lock.json": "d280b0e0505a7eaa24f6df7fcba2d9a6e53fe81fa2610a349b9e370ec7fe3d17",
+    "docs/prestructure_model_d_lock.md": "488475f6543b56c64f19e9377c13a10bc4b8a9fb1bfec84e94cd572705ec7dcf",
+    "docs/prestructure_model_d_reviewer2.md": "19d4007b24d5bed969212c732fb6ec0ee3957a013a936895ee8fab6066cb3777"
+  },
+  "registered_structure_source": {
+    "dataset_accession": "GSE132099",
+    "file_name": "GSE132099_icSHAPE_invivo.out.txt.gz",
+    "bytes": 22840529,
+    "sha256": "d2d168e235faf9cdc3169c96ffc046635695bf1bec5e1e63a4066cd283cd198d",
+    "read_during_candidate_phase": false
+  },
+  "model_hierarchy": [
+    "C_HISTORICAL",
+    "C_ANNOTATION",
+    "C_QUALITY",
+    "D_STRUCTURE"
+  ],
+  "primary_comparison": "D_STRUCTURE_minus_C_QUALITY",
+  "primary_metric": "macro_f1",
+  "annotation_only_controls": [
+    "unique_kmer_fraction",
+    "unique_kmer_fraction_missing",
+    "unique_exonic_bases",
+    "shared_exon_fraction",
+    "unique_junction_count",
+    "max_exon_jaccard",
+    "identical_splice_chain_isoforms",
+    "incidence_rank_deficiency",
+    "mean_exon_length",
+    "miniquant_kvalue",
+    "miniquant_kvalue_missing"
+  ],
+  "assay_quality_controls": [
+    "callable_fraction"
+  ],
+  "biological_structure_features": [
+    "median_reactivity"
+  ],
+  "reviewer2_issue_counts": {
+    "FATAL": 0,
+    "MAJOR_BUT_MANAGEABLE": 9,
+    "MINOR": 2,
+    "NOT_SUPPORTED": 9
+  },
+  "reviewer2_disposition": "ELIGIBLE_FOR_HUMAN_LOCK_REVIEW",
+  "static_validation": {
+    "json_parse": "PASS",
+    "schema_style_consistency": "PASS",
+    "decision_rule_consistency": "PASS",
+    "authorization_sequence_consistency": "PASS",
+    "authoritative_hash_recheck": "PASS",
+    "prestructure_integrity_tests": "PASS_4_OF_4",
+    "repository_validator": "PASS",
+    "git_diff_check": "PASS",
+    "excluded_test_suites": [
+      "tests/test_phase3b.py because it opens structure-derived summary files",
+      "tests/test_phase3c.py because it opens a structure reproducibility diagnosis summary",
+      "full test discovery because it would include those excluded tests"
+    ]
+  },
+  "structure_test_authorized": false,
+  "implementation_lock_required": true,
+  "prestructure_implementation_lock_created": false,
+  "prestructure_implementation_lock_approved": false,
+  "annotation_matrix_materialized": false,
+  "future_execution_implementation_created": false,
+  "structure_inputs_read": false,
+  "longbench_inputs_read": false,
+  "model_d_fits": 0,
+  "structure_features_computed": false,
+  "structure_outcome_tests": 0,
+  "commit_created": false,
+  "push_performed": false
+}

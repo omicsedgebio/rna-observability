@@ -1,0 +1,1011 @@
+{
+  "version": "prestructure_model_d_lock_candidate_v2",
+  "status": "CANDIDATE_FOR_HUMAN_REVIEW",
+  "authorization": {
+    "structure_test_authorized": false,
+    "block_structure_test": true,
+    "implementation_lock_required": true,
+    "scientific_lock_commit_alone_authorizes_structure_access": false,
+    "requires_human_approval_and_committed_scientific_lock_before_implementation_lock": true,
+    "requires_separately_committed_reviewed_and_human_approved_implementation_lock_before_structure_access": true,
+    "authorization_sequence": [
+      "human review of scientific lock candidate",
+      "commit and push approved scientific prestructure lock",
+      "while structure remains blinded create and statically validate exact execution implementation",
+      "materialize and hash complete annotation-only comparator matrix",
+      "commit and push PRESTRUCTURE_IMPLEMENTATION_LOCK",
+      "separate human review and explicit approval of committed PRESTRUCTURE_IMPLEMENTATION_LOCK",
+      "only then may structure_test_authorized become true"
+    ]
+  },
+  "provenance_classification": "PRESTRUCTURE_BASELINE_REESTABLISHMENT",
+  "provenance_description": "PRE-STRUCTURE BASELINE RE-ESTABLISHMENT AFTER PRIOR BASELINE INSPECTION",
+  "not_prospective_preregistration": true,
+  "parent_commit": "d077a7bc9c7cd0bf1209a72265ea84e800e570c0",
+  "frozen_artifacts": {
+    "cohort": {
+      "path": "metadata/final_transcript_cohort.tsv",
+      "sha256": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+      "n_transcripts": 15999,
+      "row_order_locked": true
+    },
+    "folds": {
+      "path": "metadata/cv_folds.tsv",
+      "sha256": "66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52",
+      "n_folds": 5,
+      "n_sequence_clusters": 4314,
+      "fold_values": [0, 1, 2, 3, 4]
+    },
+    "model_c_oof": {
+      "path": "results/tables/model_c_oof.tsv.gz",
+      "sha256": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225"
+    },
+    "model_c_inputs": {
+      "path": "results/tables/model_c_inputs.tsv.gz",
+      "sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31"
+    },
+    "historical_model_c_source": {
+      "path": "analysis/baseline_models/fit_structure_blind.py",
+      "sha256": "175239e847e7d4cc6a3b812913541d518c942403af43b870af18fff5bdf8259c"
+    },
+    "feature_registry": {
+      "path": "metadata/feature_definitions.tsv",
+      "sha256": "30b96cad1df8d9f9cad4e4829702e739a05013a013fb5b4f0b3d770859ab8d4d"
+    }
+  },
+  "outcome": {
+    "config_path": "configs/model_c_outcome.json",
+    "version": "workflow_detection_v1",
+    "unchanged": true,
+    "classes": [
+      "BOTH",
+      "ILLUMINA_ONLY",
+      "DIRECT_RNA_ONLY",
+      "NEITHER",
+      "INDETERMINATE"
+    ],
+    "probability_columns": [
+      "p_both",
+      "p_illumina_only",
+      "p_directrna_only",
+      "p_neither",
+      "p_indeterminate"
+    ],
+    "sample_weight": 1.0
+  },
+  "model_hierarchy": [
+    {
+      "name": "C_HISTORICAL",
+      "role": "SECONDARY_HISTORICAL_BENCHMARK",
+      "fit_policy": "DO_NOT_REFIT",
+      "oof_artifact": "results/tables/model_c_oof.tsv.gz",
+      "features_ref": "feature_sets.C_HISTORICAL"
+    },
+    {
+      "name": "C_ANNOTATION",
+      "role": "MANDATORY_ENHANCED_ANNOTATION_COMPARATOR",
+      "fit_policy": "ONE_LOCKED_FIVE_FOLD_OOF_FIT",
+      "features_ref": "feature_sets.C_ANNOTATION"
+    },
+    {
+      "name": "C_QUALITY",
+      "role": "PRIMARY_NONBIOLOGICAL_COMPARATOR",
+      "fit_policy": "ONE_LOCKED_FIVE_FOLD_OOF_FIT",
+      "features_ref": "feature_sets.C_QUALITY"
+    },
+    {
+      "name": "D_STRUCTURE",
+      "role": "PRIMARY_STRUCTURE_MODEL",
+      "fit_policy": "ONE_LOCKED_FIVE_FOLD_OOF_FIT",
+      "features_ref": "feature_sets.D_STRUCTURE"
+    }
+  ],
+  "feature_sets": {
+    "C_HISTORICAL": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy"
+    ],
+    "C_ANNOTATION": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy",
+      "unique_kmer_fraction",
+      "unique_kmer_fraction_missing",
+      "unique_exonic_bases",
+      "shared_exon_fraction",
+      "unique_junction_count",
+      "max_exon_jaccard",
+      "identical_splice_chain_isoforms",
+      "incidence_rank_deficiency",
+      "mean_exon_length",
+      "miniquant_kvalue",
+      "miniquant_kvalue_missing"
+    ],
+    "C_QUALITY": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy",
+      "unique_kmer_fraction",
+      "unique_kmer_fraction_missing",
+      "unique_exonic_bases",
+      "shared_exon_fraction",
+      "unique_junction_count",
+      "max_exon_jaccard",
+      "identical_splice_chain_isoforms",
+      "incidence_rank_deficiency",
+      "mean_exon_length",
+      "miniquant_kvalue",
+      "miniquant_kvalue_missing",
+      "callable_fraction"
+    ],
+    "D_STRUCTURE": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy",
+      "unique_kmer_fraction",
+      "unique_kmer_fraction_missing",
+      "unique_exonic_bases",
+      "shared_exon_fraction",
+      "unique_junction_count",
+      "max_exon_jaccard",
+      "identical_splice_chain_isoforms",
+      "incidence_rank_deficiency",
+      "mean_exon_length",
+      "miniquant_kvalue",
+      "miniquant_kvalue_missing",
+      "callable_fraction",
+      "median_reactivity"
+    ]
+  },
+  "annotation_only_controls": [
+    {
+      "name": "unique_kmer_fraction",
+      "source": "Ensembl 91 validated transcript FASTA and src/exact_kmers.cpp",
+      "definition": "canonical ACGT-only distinct 31-mers unique to one transcript identity divided by all distinct valid canonical 31-mers",
+      "rationale": "exact transcript-specific sequence evidence",
+      "transformation": "identity",
+      "missingness": "training_fold_median_imputation_with_fixed_indicator",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "unique_kmer_fraction_missing",
+      "source": "derived before imputation from unique_kmer_fraction",
+      "definition": "1 when raw value is absent or non-finite, else 0",
+      "rationale": "retain inability to define exact 31-mer uniqueness",
+      "transformation": "binary_identity",
+      "missingness": "none_allowed",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "unique_exonic_bases",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "exonic bases in segments belonging to no other same-gene transcript",
+      "rationale": "absolute isoform-specific exonic evidence",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "shared_exon_fraction",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "1 - unique_exonic_bases/transcript_length",
+      "rationale": "fractional exon sharing and assignment ambiguity",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "unique_junction_count",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "adjacent junction coordinate pairs occurring in exactly one same-gene transcript",
+      "rationale": "splice-specific assignment opportunity",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "max_exon_jaccard",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "maximum exonic-base intersection/union with another same-gene transcript",
+      "rationale": "closest annotated isoform similarity",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "identical_splice_chain_isoforms",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "same-gene isoforms including self with identical ordered intron chain",
+      "rationale": "ambiguity among identical splice-chain annotations",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "incidence_rank_deficiency",
+      "source": "Ensembl 91 exon-segment plus junction incidence matrix and existing SVD tolerance",
+      "definition": "number of transcript columns minus numerical matrix rank",
+      "rationale": "annotation-derived nonidentifiable transcript combinations",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "mean_exon_length",
+      "source": "Ensembl 91 GTF and src/rnaobs/core.py annotation_features",
+      "definition": "transcript exonic length divided by exon count",
+      "rationale": "read-support geometry beyond total length and exon count",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "miniquant_kvalue",
+      "source": "original miniQuant c1b5a89f3c31c83b271a477475a1e289ee9806d7 gene K-value; fragment length 235; effective-length entry; two threads; Ensembl 91 GTF",
+      "definition": "original miniQuant gene K-value mapped many transcripts to one gene value",
+      "rationale": "published annotation/read-model conditioning control distinct from exact k-mers and exon incidence",
+      "transformation": "identity",
+      "missingness": "training_fold_median_imputation_with_fixed_indicator",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    },
+    {
+      "name": "miniquant_kvalue_missing",
+      "source": "derived before imputation from miniquant_kvalue",
+      "definition": "1 when raw value is absent or non-finite, else 0",
+      "rationale": "retain K-value availability without treating absence as an ordinary K-value",
+      "transformation": "binary_identity",
+      "missingness": "none_allowed",
+      "scaling": "training_fold_standard_scaler",
+      "available_before_structure_unblinding": true,
+      "outcome_selected": false
+    }
+  ],
+  "excluded_annotation_candidates": [
+    {
+      "name": "genomic_span",
+      "reason": "intronic span is not a direct transcriptome-identifiability control after transcript construction"
+    },
+    {
+      "name": "repeat_content",
+      "reason": "not implemented and no authoritative repeat-mask release is pinned"
+    },
+    {
+      "name": "incidence_condition_number",
+      "reason": "singular matrices create non-finite values; incidence_rank_deficiency encodes the locked failure mode"
+    }
+  ],
+  "annotation_matrix_materialization": {
+    "current_joined_matrix_path": "results/tables/identifiability_sequence_features.tsv",
+    "current_joined_matrix_present_in_candidate_checkout": false,
+    "sources_definitions_and_implementations_available_before_structure_unblinding": true,
+    "identifier_join": "apply src/rnaobs/core.py stable_id rule that removes the terminal numeric transcript version while preserving _PAR_Y; require one-to-one frozen stable_id rows",
+    "pinned_reference_sha256": {
+      "ensembl91_gtf": "1abe442ea2ba90c022545be71c4e7b95b66d45c8c9e4e4ec3788b6be440b598d",
+      "ensembl91_cdna": "a7f0022e884826d70e0a151f6c38547aea8d443eaa9653aaf56e698e23109201",
+      "ensembl91_ncrna": "0ab3565714f88fb98eb7df7814fe3fed770e2b098d37cd7b83601258f87e75dd"
+    },
+    "implementation_sha256": {
+      "src/rnaobs/core.py": "42a42d2cba1a3fcf20b77360feed2ef4d84183485a3072a56023556f641b1969",
+      "src/exact_kmers.cpp": "2ab285bd2a052c4a0cfc9afa5051192b73a66375b25c4bb326416f061edadc7a",
+      "scripts/phase3a_feature_audit.py": "4d1537108521f513f004bb528dc2f1881e827e8a71d643f496df3b1a7c6f2459",
+      "scripts/run_miniquant_kvalue.py": "960487e1077b044fbe269526c3e4693223cf5993fa346180f1561f202d7194d6"
+    },
+    "miniquant_upstream_commit": "c1b5a89f3c31c83b271a477475a1e289ee9806d7",
+    "required_before_any_structure_file_access": [
+      "materialize from only pinned Ensembl 91 and pinned miniQuant resources and implementations without structure or outcome inputs",
+      "restrict to the frozen ordered 15999-transcript cohort",
+      "verify exactly one row per frozen transcript",
+      "preserve exact frozen transcript ordering",
+      "include every locked added annotation control",
+      "contain no outcome-derived feature",
+      "contain no structure-derived feature",
+      "apply no outcome-guided selection",
+      "validate every deterministic definition",
+      "record exact matrix file SHA256",
+      "record source and reference hashes",
+      "record implementation hashes",
+      "commit or hash the matrix through a deterministic artifact or receipt allowed by repository policy in PRESTRUCTURE_IMPLEMENTATION_LOCK"
+    ],
+    "raw_missing_values_permitted_for": ["unique_kmer_fraction", "miniquant_kvalue"],
+    "global_imputation_during_materialization": "PROHIBITED",
+    "imputation_timing": "training-fold-only during later authorized execution",
+    "failure_policy": "ANALYSIS_BLOCKER_NO_CONTROL_DROPPING_OR_REDUCED_COMPARATOR"
+  },
+  "prestructure_implementation_lock": {
+    "name": "PRESTRUCTURE_IMPLEMENTATION_LOCK",
+    "mandatory": true,
+    "current_status": "NOT_CREATED_NOT_APPROVED",
+    "structure_must_remain_blinded": true,
+    "required_before_any_structure_file_is_opened": true,
+    "scientific_lock_commit_is_insufficient_authorization": true,
+    "implementation_scope": {
+      "models": ["C_ANNOTATION", "C_QUALITY", "D_STRUCTURE"],
+      "must_encode": [
+        "frozen feature ordering",
+        "fold-local imputation",
+        "scaling",
+        "estimator",
+        "seeds",
+        "one-thread fitting",
+        "OOF generation",
+        "paired bootstrap",
+        "negative-control permutations",
+        "strict-callability sensitivity",
+        "decision rules",
+        "protocol-deviation handling",
+        "stop rule"
+      ]
+    },
+    "hard_guards": [
+      "changed cohort hash",
+      "changed fold hash",
+      "changed Model C artifacts",
+      "changed annotation matrix hash",
+      "unexpected structure resource hash",
+      "LongBench access",
+      "rerunning a consumed locked model attempt without adjudication"
+    ],
+    "permitted_static_validation_without_real_structure": [
+      "syntax checks",
+      "config validation",
+      "unit tests",
+      "synthetic or mock structure arrays",
+      "synthetic missingness cases",
+      "deterministic decision-rule tests",
+      "bootstrap logic tests on synthetic data",
+      "permutation logic tests on synthetic data",
+      "hash-guard tests",
+      "attempt-guard tests"
+    ],
+    "prohibited_during_implementation_lock": [
+      "reading real GSE132099 structure values",
+      "structure extraction",
+      "structure feature computation",
+      "real-cohort C_ANNOTATION fitting",
+      "real-cohort C_QUALITY fitting",
+      "D_STRUCTURE fitting",
+      "real-data permutations",
+      "real-data sensitivities",
+      "LongBench access"
+    ],
+    "commit_must_contain_or_hash_at_minimum": [
+      "final scientific lock config",
+      "materialized annotation matrix or deterministic artifact or receipt according to repository policy",
+      "annotation matrix SHA256",
+      "exact execution scripts",
+      "exact execution script SHA256 values",
+      "implementation unit tests",
+      "implementation validation receipt",
+      "environment and version requirements",
+      "model-attempt guard policy"
+    ],
+    "approval_to_authorization_transition": "only a separately committed, pushed, reviewed, and human-approved PRESTRUCTURE_IMPLEMENTATION_LOCK may permit structure_test_authorized to become true"
+  },
+  "structure_source": {
+    "role": "PRIMARY_DEVELOPMENT_STRUCTURE_SOURCE",
+    "dataset_accession": "GSE132099",
+    "processing_sample_accession": "GSM3842467",
+    "assay": "in_vivo_icSHAPE",
+    "biological_context": "K562; pooled processed in-vivo scores from a different study and preparation than SG-NEx",
+    "file_name": "GSE132099_icSHAPE_invivo.out.txt.gz",
+    "cache_path": ".cache/phase3b/structure/GSE132099_icSHAPE_invivo.out.txt.gz",
+    "bytes": 22840529,
+    "sha256": "d2d168e235faf9cdc3169c96ffc046635695bf1bec5e1e63a4066cd283cd198d",
+    "reference_genome": "GRCh38.p10",
+    "source_transcript_annotation": "Ensembl release 88",
+    "analysis_transcript_annotation": "Ensembl release 91",
+    "score_interpretation": "unbounded per-position icSHAPE enrichment/accessibility proxy; not probability, truth, or causal exposure",
+    "primary_or_secondary": "PRIMARY",
+    "mapping": {
+      "allowed_classes": ["A"],
+      "disallowed_classes": ["B", "C", "D", "E"],
+      "required_checks": [
+        "unique source stable ID in Ensembl 88",
+        "processed reported length equals Ensembl 88 transcript length",
+        "release 88 and 91 gene equal",
+        "release 88 and 91 chromosome equal",
+        "release 88 and 91 strand equal",
+        "release 88 and 91 exon intervals equal",
+        "release 88 and 91 transcript length equal",
+        "release 88 and 91 transcript sequence equal"
+      ],
+      "disallowed_methods": [
+        "gene_symbol_mapping",
+        "many_to_one_mapping",
+        "one_to_many_mapping",
+        "length_only_mapping",
+        "coordinate_interpolation"
+      ],
+      "unexpected_ambiguity": "ANALYSIS_BLOCKER"
+    }
+  },
+  "structure_feature_classification": {
+    "BIOLOGICAL_STRUCTURE": ["median_reactivity"],
+    "ASSAY_QUALITY": ["callable_fraction"],
+    "MISSINGNESS_CONTROL": ["unique_kmer_fraction_missing", "miniquant_kvalue_missing"],
+    "UNSUPPORTED": [
+      "mean_reactivity",
+      "high_reactivity_fraction",
+      "low_reactivity_fraction",
+      "variance",
+      "local_variability",
+      "local_heterogeneity",
+      "transcript_end_summaries",
+      "splice_junction_summaries",
+      "assay_rpkm"
+    ]
+  },
+  "assay_quality_controls": [
+    {
+      "name": "callable_fraction",
+      "definition": "count of finite non-NULL per-position scores divided by reported transcript length",
+      "transformation": "identity",
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler",
+      "biological_credit_prohibited": true
+    }
+  ],
+  "biological_structure_features": [
+    {
+      "name": "median_reactivity",
+      "definition": "NumPy float64 median of all finite non-NULL per-position GSE132099 enrichment scores for the uniquely mapped transcript; arithmetic mean of the two middle sorted values for an even callable count",
+      "transformation": "identity",
+      "clipping": false,
+      "winsorization": false,
+      "ranking": false,
+      "thresholding": false,
+      "missingness": "analysis_blocker",
+      "scaling": "training_fold_standard_scaler"
+    }
+  ],
+  "structure_parsing_and_missingness": {
+    "row_schema": ["transcript_id", "reported_length", "assay_rpkm", "one_field_per_reported_position"],
+    "required_position_count_equals_reported_length": true,
+    "uncalled_token": "NULL",
+    "uncalled_token_case_sensitive": true,
+    "numeric_parse_dtype": "float64",
+    "numeric_values_must_be_finite": true,
+    "median_algorithm": "numpy median float64; arithmetic mean of two middle sorted values when callable count is even",
+    "callable_positions_minimum": 50,
+    "callable_fraction_minimum": 0.5,
+    "partial_callability": "exclude NULL positions from median and denominator; retain callable_fraction as assay quality",
+    "no_mapped_record": "ANALYSIS_BLOCKER",
+    "duplicate_record": "ANALYSIS_BLOCKER",
+    "insufficient_callable_positions": "ANALYSIS_BLOCKER",
+    "callable_fraction_below_minimum": "ANALYSIS_BLOCKER",
+    "missing_reactivity_value": "exclude exact NULL position only",
+    "nonfinite_value": "ANALYSIS_BLOCKER",
+    "unexpected_mapping_ambiguity": "ANALYSIS_BLOCKER",
+    "structure_imputation": "NONE",
+    "structure_missingness_indicator": "NONE",
+    "primary_cohort_filtering_after_unblinding": "PROHIBITED",
+    "cohort_size_required": 15999
+  },
+  "preprocessing": {
+    "baseline_feature_source": "authoritative saved model_c_inputs matrix",
+    "added_annotation_source": "pinned Ensembl 91 resources and locked implementations",
+    "feature_transformations_before_scaling": {
+      "independent_abundance_log1p": "consume stored natural log1p value without re-derivation",
+      "sequence_length": "identity_on_saved_value",
+      "gc_fraction": "identity_on_saved_value",
+      "exon_count": "identity_on_saved_value",
+      "isoforms_per_gene": "identity_on_saved_value",
+      "sequence_cluster_size": "identity_on_saved_value",
+      "homopolymer_fraction": "identity_on_saved_value",
+      "low_complexity_fraction": "identity_on_saved_value",
+      "sequence_entropy": "identity_on_saved_value",
+      "unique_kmer_fraction": "identity_after_locked_imputation",
+      "unique_kmer_fraction_missing": "binary_identity",
+      "unique_exonic_bases": "identity",
+      "shared_exon_fraction": "identity",
+      "unique_junction_count": "identity",
+      "max_exon_jaccard": "identity",
+      "identical_splice_chain_isoforms": "identity",
+      "incidence_rank_deficiency": "identity",
+      "mean_exon_length": "identity",
+      "miniquant_kvalue": "identity_after_locked_imputation",
+      "miniquant_kvalue_missing": "binary_identity",
+      "callable_fraction": "identity",
+      "median_reactivity": "identity"
+    },
+    "fold_local_imputation": {
+      "variables": ["unique_kmer_fraction", "miniquant_kvalue"],
+      "missing_definition": "absent or non-finite",
+      "strategy": "NumPy float64 median of finite training-fold values, including arithmetic mean of two middle values for even count",
+      "apply_to": ["training_fold", "test_fold"],
+      "empty_training_basis": "ANALYSIS_BLOCKER"
+    },
+    "all_other_missing_or_nonfinite_predictors": "ANALYSIS_BLOCKER",
+    "scaler": {
+      "class": "sklearn.preprocessing.StandardScaler",
+      "with_mean": true,
+      "with_std": true,
+      "variance_ddof": 0,
+      "fit_on": "training_fold_only",
+      "constant_column_behavior": "retain; sklearn maps centered constant to zero"
+    }
+  },
+  "estimator": {
+    "library": "scikit-learn",
+    "version": "1.9.1",
+    "class": "sklearn.linear_model.LogisticRegression",
+    "constructor_arguments": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "max_iter": 2000,
+      "random_state": 20260923,
+      "class_weight": null,
+      "fit_intercept": true
+    },
+    "omitted_constructor_arguments": ["penalty", "multi_class", "n_jobs"],
+    "effective_penalty": "scikit-learn 1.9.1 default L2 behavior",
+    "warm_start": false,
+    "thread_count": 1,
+    "sample_weights": "all 1.0",
+    "fit_order": "folds 0,1,2,3,4; saved input row order",
+    "test_behavior": "apply training imputation medians and training scaler unchanged",
+    "probability_class_order": [
+      "BOTH",
+      "ILLUMINA_ONLY",
+      "DIRECT_RNA_ONLY",
+      "NEITHER",
+      "INDETERMINATE"
+    ],
+    "prediction_tie_break": "lexicographic class name among maximum probabilities",
+    "probability_sum_tolerance": 1e-12,
+    "convergence_failure": "ANALYSIS_BLOCKER",
+    "nonfinite_fit_output": "ANALYSIS_BLOCKER",
+    "n_iter_equal_or_above_max_iter": "ANALYSIS_BLOCKER",
+    "hyperparameter_tuning": false,
+    "model_family_search": false,
+    "seed_search": false,
+    "feature_selection": false,
+    "posthoc_calibration": false,
+    "full_cohort_refit": false
+  },
+  "execution_environment": {
+    "python": "3.11.12",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.6",
+    "duckdb": "1.5.5",
+    "scikit_learn": "1.9.1",
+    "threadpoolctl": "3.7.0",
+    "development_platform": "current declared Mac re-establishment environment",
+    "canonical_linux_reproduction": "REQUIRED_FOR_REPRODUCIBILITY_REPORTING_BUT_NOT_PERMITTED_TO_REPLACE_OR_TUNE_DEVELOPMENT_RESULT"
+  },
+  "primary_comparison": {
+    "hypothesis": "D_STRUCTURE provides joint held-out incremental information over C_QUALITY",
+    "primary_model": "D_STRUCTURE",
+    "primary_comparator": "C_QUALITY",
+    "historical_c_role": "SECONDARY_DESCRIPTIVE_BENCHMARK_ONLY",
+    "metric": "macro_f1",
+    "formula": "macro_f1(D_STRUCTURE pooled OOF) - macro_f1(C_QUALITY pooled OOF)",
+    "direction_of_improvement": "positive",
+    "zero_difference": "tie_and_no_increment",
+    "paired_evaluation_unit": "same frozen transcript rows with same held-out folds",
+    "class_imbalance_treatment": "unweighted macro average across all five fixed classes; zero_division=0",
+    "fold_aggregation": "pool all five OOF folds once; do not average fold metrics"
+  },
+  "bootstrap": {
+    "purpose": "paired primary uncertainty",
+    "replicates": 5000,
+    "seed": 20260924,
+    "rng": "numpy.random.Generator(PCG64)",
+    "cluster_unit": "frozen sequence_cluster_id",
+    "cluster_order": "lexicographic",
+    "n_clusters": 4314,
+    "sampling": "sample 4314 cluster IDs with replacement and include all rows in every sampled cluster",
+    "paired": true,
+    "statistic": "macro_f1(D_STRUCTURE) - macro_f1(C_QUALITY) on identical resampled rows",
+    "interval": [0.025, 0.975],
+    "quantile_method": "linear",
+    "missing_class_draw": "retain all five labels and assign absent-class F1 zero",
+    "interpretation": "conditional on fitted OOF predictions, frozen groups, and observed preparations; not biological-replicate uncertainty"
+  },
+  "permutation_negative_control": {
+    "classification": "NEGATIVE_CONTROL_CALIBRATION_NOT_FORMAL_CONDITIONAL_INDEPENDENCE_TEST",
+    "permutations": 1000,
+    "seed": 20260925,
+    "rng": "numpy.random.Generator(PCG64)",
+    "permuted_variable": "median_reactivity",
+    "permutation_unit": "complete sequence-cluster feature vector",
+    "strata": ["outer_fold", "cluster_size"],
+    "cluster_order": "lexicographic within stratum",
+    "within_cluster_row_order": "stable_id lexicographic",
+    "assignment": "independently permute source cluster IDs within each stratum and assign complete ordered vector to target cluster",
+    "singleton_strata": "identity",
+    "permutable_rows": 15217,
+    "fixed_rows": 782,
+    "permutable_fraction": 0.9511219451215701,
+    "fit_behavior": "refit D_STRUCTURE on all five frozen folds for every permutation; reuse observed C_QUALITY OOF predictions",
+    "test_statistic": "permuted D_STRUCTURE pooled macro_f1 - observed C_QUALITY pooled macro_f1",
+    "missingness_pattern": "preserved; primary biological feature must be complete",
+    "reported_quantities": [
+      "95th percentile using numpy quantile method linear",
+      "(1 + count(permuted_delta >= observed_delta)) / 1001"
+    ],
+    "pass_rule": "observed delta strictly greater than permutation 95th percentile",
+    "p_value_claim_prohibited": true
+  },
+  "secondary_metrics": [
+    {
+      "name": "macro_f1_increment",
+      "classification": "PRIMARY",
+      "direction": "D_STRUCTURE_minus_C_QUALITY"
+    },
+    {
+      "name": "corrected_log_loss",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "direction": "C_QUALITY_minus_D_STRUCTURE"
+    },
+    {
+      "name": "accuracy",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "direction": "D_STRUCTURE_minus_C_QUALITY"
+    },
+    {
+      "name": "balanced_accuracy",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "direction": "D_STRUCTURE_minus_C_QUALITY"
+    },
+    {
+      "name": "brier_multiclass",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "direction": "C_QUALITY_minus_D_STRUCTURE"
+    },
+    {
+      "name": "per_class_f1_all_five_classes",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "direction": "D_STRUCTURE_minus_C_QUALITY",
+      "required_prominent_classes": ["DIRECT_RNA_ONLY", "INDETERMINATE"],
+      "cannot_rescue_primary": true
+    },
+    {
+      "name": "confusion_matrices",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "models": ["C_QUALITY", "D_STRUCTURE"],
+      "rows": "observed",
+      "columns": "predicted"
+    },
+    {
+      "name": "fold_specific_macro_f1_and_delta",
+      "classification": "SECONDARY_DESCRIPTIVE"
+    },
+    {
+      "name": "historical_c_benchmark",
+      "classification": "SECONDARY_DESCRIPTIVE",
+      "cannot_support_biological_claim": true
+    }
+  ],
+  "secondary_metric_definitions": {
+    "corrected_log_loss": "negative mean natural log of max(named actual-class probability, 2.220446049250313e-16)",
+    "accuracy": "number of correct predictions divided by number of transcripts",
+    "balanced_accuracy": "unweighted mean recall across the five fixed classes",
+    "brier_multiclass": "mean across transcripts of sum across five ordered classes of squared probability minus one-hot outcome",
+    "per_class_f1": "2TP/(observed support + predicted support), with zero_division=0",
+    "confusion_matrix": "rows observed and columns predicted in fixed class order"
+  },
+  "class_instability_gate": {
+    "classes": ["DIRECT_RNA_ONLY", "INDETERMINATE"],
+    "minimum_allowed_f1_delta_for_supported": -0.02,
+    "inferential_test": false,
+    "cannot_rescue_primary": true
+  },
+  "sensitivity_analyses": [
+    {
+      "name": "stricter_callability_0_75",
+      "mandatory": true,
+      "dataset": "subset of frozen 15999 cohort only",
+      "filter": {
+        "mapping_class": "A",
+        "callable_positions_minimum": 50,
+        "callable_fraction_minimum": 0.75
+      },
+      "cohort_changes": true,
+      "new_transcripts_allowed": false,
+      "models": ["C_QUALITY", "D_STRUCTURE"],
+      "comparison": "D_STRUCTURE_minus_C_QUALITY pooled macro_f1",
+      "folds": "original frozen fold labels; no regeneration",
+      "preprocessing_and_estimator": "identical to primary",
+      "uncertainty": "same 5000-draw paired sequence-cluster bootstrap with seed 20260924 on surviving clusters",
+      "reason": "test robustness in a more completely observed assay subset using a threshold documented before structure-outcome testing",
+      "interpretation": "conditional robustness only; not a better target population",
+      "can_upgrade_primary_conclusion": false,
+      "can_rescue_failed_primary": false,
+      "nonpositive_delta_prevents_supported": true,
+      "missing_training_class_or_fit_failure": "INCONCLUSIVE"
+    }
+  ],
+  "prohibited_sensitivities": [
+    "alternative biological structure summary",
+    "alternative structure resource",
+    "0.25 callability threshold analysis",
+    "outcome restriction",
+    "quantifier substitution",
+    "threshold grid",
+    "feature ablation",
+    "best-performing sensitivity selection"
+  ],
+  "multiplicity_policy": {
+    "primary_hypotheses": 1,
+    "primary_hypothesis": "joint D_STRUCTURE model increment over C_QUALITY in pooled OOF macro_f1",
+    "feature_coefficients_are_separate_hypotheses": false,
+    "secondary_inferential_analyses": [],
+    "secondary_descriptive_analyses": [
+      "corrected_log_loss",
+      "accuracy",
+      "balanced_accuracy",
+      "brier_multiclass",
+      "per_class_f1_all_five_classes",
+      "confusion_matrices",
+      "fold_specific_macro_f1",
+      "historical_c_benchmark"
+    ],
+    "correction_applied": false,
+    "correction_method": null,
+    "reason_no_correction": "there is one primary hypothesis and no secondary inferential family",
+    "permutation_treatment": "calibration of the same primary comparison, not a separate hypothesis",
+    "unlisted_inference": "POST_HOC_EXPLORATORY_AND_CANNOT_ALTER_LOCKED_CONCLUSION"
+  },
+  "practical_effect_thresholds": {
+    "metric": "delta_macro_f1",
+    "NO_INCREMENT": {
+      "lower": null,
+      "lower_inclusive": false,
+      "upper": 0.0,
+      "upper_inclusive": true
+    },
+    "NEGLIGIBLE": {
+      "lower": 0.0,
+      "lower_inclusive": false,
+      "upper": 0.005,
+      "upper_inclusive": false
+    },
+    "SMALL": {
+      "lower": 0.005,
+      "lower_inclusive": true,
+      "upper": 0.02,
+      "upper_inclusive": false
+    },
+    "MEANINGFUL": {
+      "lower": 0.02,
+      "lower_inclusive": true,
+      "upper": null,
+      "upper_inclusive": false
+    },
+    "rationale": "macro-F1 averages five class F1 values; 0.020 requires a total 0.10 class-F1 increase, while a sub-0.005 gain is too small for a biological increment claim in this imbalanced workflow-specific setting",
+    "judgment_based": true,
+    "not_empirically_validated_minimal_important_differences": true
+  },
+  "central_decision_rule": {
+    "gates": {
+      "validity": "all locked artifacts, mapping, features, fits, probabilities, negative controls, and mandatory sensitivity complete without unresolved blocker or deviation",
+      "positive": "delta_macro_f1 > 0",
+      "statistical": "paired_bootstrap_ci_lower > 0",
+      "practical": "practical_effect_category == MEANINGFUL",
+      "null_calibrated": "observed_delta > permutation_95th_percentile",
+      "fold_robust": "number_of_fold_deltas_strictly_positive >= 4",
+      "partial_magnitude": "delta_macro_f1 >= 0.005",
+      "partial_fold_robust": "number_of_fold_deltas_strictly_positive >= 3",
+      "callability_robust": "stricter_callability_sensitivity_delta > 0",
+      "class_stable": "DIRECT_RNA_ONLY_delta_f1 >= -0.020 and INDETERMINATE_delta_f1 >= -0.020"
+    },
+    "ordered_rules": [
+      {
+        "outcome": "INCONCLUSIVE",
+        "if": "validity == false"
+      },
+      {
+        "outcome": "SUPPORTED",
+        "if": "validity and positive and statistical and practical and null_calibrated and fold_robust and callability_robust and class_stable"
+      },
+      {
+        "outcome": "PARTIALLY_SUPPORTED",
+        "if": "validity and delta_macro_f1 >= 0.005 and null_calibrated and callability_robust and number_of_fold_deltas_strictly_positive >= 3 and (statistical or practical) and not SUPPORTED"
+      },
+      {
+        "outcome": "NOT_SUPPORTED",
+        "if": "every other valid case"
+      }
+    ],
+    "boundary_rules": {
+      "ci_touches_zero": "statistical_false",
+      "delta_equals_zero": "NO_INCREMENT_and_NOT_SUPPORTED",
+      "positive_negligible_delta_even_if_ci_excludes_zero": "NOT_SUPPORTED",
+      "delta_equals_0_005": "SMALL_and_eligible_for_PARTIALLY_SUPPORTED_if_all_other_partial_gates_pass",
+      "delta_equals_0_020": "MEANINGFUL",
+      "delta_equals_permutation_95th_percentile": "null_calibrated_false_and_NOT_SUPPORTED",
+      "failed_permutation_calibration": "NOT_SUPPORTED",
+      "nonpositive_strict_callability_sensitivity": "NOT_SUPPORTED",
+      "fewer_than_3_positive_fold_deltas": "NOT_SUPPORTED"
+    },
+    "partial_support_interpretation": {
+      "SMALL": "eligible only if permutation calibration passes, strict-callability delta is positive, at least 3 of 5 fold deltas are positive, and paired bootstrap CI lower bound is above zero",
+      "MEANINGFUL_WITH_CI_TOUCHING_ZERO": "eligible only if permutation calibration passes, strict-callability delta is positive, and at least 3 of 5 fold deltas are positive",
+      "class_instability": "does not invalidate a completed analysis; can downgrade SUPPORTED to PARTIALLY_SUPPORTED if every partial gate passes and must be prominently named as a deficiency",
+      "secondary_or_class_specific_upgrade": "PROHIBITED"
+    },
+    "report_dimensions_separately": ["statistical_evidence", "practical_magnitude", "robustness"]
+  },
+  "protocol_deviation_rules": {
+    "IMPLEMENTATION_REPAIR": {
+      "definition": "correct code that demonstrably fails to implement an unambiguous locked rule without changing any scientific or statistical choice",
+      "requirements": [
+        "preserve failed artifacts and logs",
+        "document defect and exact patch",
+        "rerun every affected hierarchy model and downstream statistic from clean derived outputs",
+        "human adjudication before rerun if performance was visible"
+      ]
+    },
+    "PROTOCOL_DEVIATION": {
+      "definition": "any change to source identity, mapping, cohort, feature list/order, threshold, transformation, missingness, comparator, model, hyperparameter, fold, seed, thread rule, metric, resampling, sensitivity, decision rule, or claim boundary",
+      "requirements": [
+        "record before reanalysis",
+        "preserve original attempt",
+        "human and Reviewer 2 adjudication",
+        "deviated analysis cannot silently replace locked primary"
+      ]
+    },
+    "ANALYSIS_BLOCKER": {
+      "events": [
+        "hash mismatch",
+        "required source unavailable",
+        "unexpected mapping ambiguity",
+        "any primary-cohort structure missingness or callability failure",
+        "prespecified feature impossible",
+        "empty training-fold imputation basis",
+        "missing training class",
+        "model convergence failure",
+        "non-finite fit output",
+        "required negative control unavailable",
+        "required sensitivity unavailable",
+        "ambiguity in lock specification"
+      ],
+      "action": "STOP_WITHOUT_ROW_DROPPING_SUBSTITUTION_THRESHOLD_RELAXATION_ITERATION_CHANGE_OR_MODEL_SEARCH; REQUIRE_HUMAN_ADJUDICATION"
+    },
+    "reanalysis_allowed": "only for adjudicated implementation repair or explicitly labeled protocol deviation; never silently and never selected by performance"
+  },
+  "stop_rule": {
+    "after_scientific_lock_approval_commit_and_push": "STOP; next phase is PRESTRUCTURE_IMPLEMENTATION_LOCK, not Model D execution",
+    "after_implementation_lock_commit_and_push": "STOP for separate human review and explicit approval before any structure access",
+    "structure_access_before_separate_implementation_lock_approval": "PROHIBITED",
+    "development_complete_requires": [
+      "valid OOF predictions for C_ANNOTATION",
+      "valid OOF predictions for C_QUALITY",
+      "valid OOF predictions for D_STRUCTURE",
+      "primary point estimate",
+      "5000-draw paired bootstrap interval",
+      "1000 negative-control permutations",
+      "all listed descriptive outputs",
+      "stricter-callability sensitivity",
+      "practical category",
+      "four-way conclusion",
+      "full artifact hashes",
+      "convergence records",
+      "protocol-deviation statement"
+    ],
+    "action_after_completion": "STOP_FOR_HUMAN_AND_REVIEWER2_ADJUDICATION",
+    "rescue_analysis_prohibited": true
+  },
+  "claim_boundaries": {
+    "SUPPORTED": "Within the frozen, structure-callable SG-NEx K562 transcript cohort and named Salmon 1.9.0/Ensembl 91 workflows, pooled GSE132099 K562 in-vivo icSHAPE median enrichment provided a meaningful, held-out incremental association beyond the locked abundance, sequence, annotation-identifiability, and assay-callability comparator. The result is cross-study, conditional, predictive, and non-causal.",
+    "PARTIALLY_SUPPORTED": "Within the frozen workflow-specific cohort, the locked structure model showed limited evidence of incremental predictive information. The effect was at least SMALL, exceeded the negative-control 95th percentile, remained positive under stricter callability, and was positive in at least three of five folds, but it did not meet every SUPPORTED gate. Name the unmet statistical, meaningful-magnitude, four-of-five-fold, and/or class-stability gates explicitly, and report any DIRECT_RNA_ONLY or INDETERMINATE class-instability flag prominently.",
+    "NOT_SUPPORTED": "The locked development analysis did not support an incremental contribution of GSE132099 median icSHAPE enrichment beyond the strongest locked non-biological comparator for this workflow-specific conditional estimand. The null or negative result is retained as a scientific result, not described as pipeline failure.",
+    "INCONCLUSIVE": "The locked development analysis could not yield a valid conclusion because a prespecified data, mapping, model, negative-control, sensitivity, convergence, or protocol-integrity requirement failed. No direction of biological structure contribution is inferred.",
+    "prohibited_under_all_outcomes": [
+      "technology-intrinsic bias",
+      "biological ground truth",
+      "endogenous true measurement error",
+      "causal structure effects",
+      "universal platform behavior",
+      "clinical utility",
+      "clinically validated reliability",
+      "broad cross-tissue generalization",
+      "matched biological material",
+      "novelty"
+    ],
+    "mandatory_visible_limitations": [
+      "weak DIRECT_RNA_ONLY prediction",
+      "weak INDETERMINATE prediction",
+      "historical numerical environment not exactly recoverable",
+      "original historical transcript-level predictions not recoverable",
+      "aggregate historical agreement does not establish original prediction identity",
+      "documented sequence ambiguity-handling discrepancy",
+      "bootstrap conditional on fitted OOF predictions and sequence clusters",
+      "shared preparation and workflow specificity limits",
+      "cross-study K562 structure context",
+      "canonical Linux reproduction unperformed"
+    ]
+  },
+  "longbench": {
+    "status": "LOCKED",
+    "inputs_read_for_this_candidate": false,
+    "unlock_during_development": false,
+    "locked_through_scientific_lock_phase": true,
+    "locked_through_prestructure_implementation_lock_phase": true,
+    "eligibility_considered_only_after": "development conclusion and execution artifacts are frozen, committed, human-reviewed, and explicitly approved",
+    "can_validate": [
+      "transport of the fixed workflow phenotype and fixed model in a distinct sequencing context, subject to an approved compatibility audit"
+    ],
+    "cannot_validate_without_compatible_structure_assay": [
+      "GSE132099 biological structure increment",
+      "matched in-vivo structure generalization"
+    ],
+    "cannot_rescue": [
+      "negative development result",
+      "weak development result",
+      "invalid development result",
+      "inconclusive development result"
+    ],
+    "prohibited_uses": [
+      "redesign Model D",
+      "choose structure features",
+      "choose thresholds",
+      "change primary metric",
+      "redefine outcome categories",
+      "select a better model"
+    ]
+  },
+  "candidate_state": {
+    "structure_inputs_read": false,
+    "longbench_inputs_read": false,
+    "model_d_fits": 0,
+    "c_annotation_fits": 0,
+    "c_quality_fits": 0,
+    "structure_features_computed": false,
+    "structure_outcome_tests": 0,
+    "annotation_matrix_materialized": false,
+    "future_execution_implementation_created": false,
+    "prestructure_implementation_lock_created": false,
+    "prestructure_implementation_lock_approved": false,
+    "commit_created": false,
+    "push_performed": false
+  }
+}
