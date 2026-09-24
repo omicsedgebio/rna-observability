@@ -1,0 +1,22 @@
+{
+  "phase": "PRESTRUCTURE_IMPLEMENTATION_LOCK",
+  "purpose": "Materialize the 11 locked annotation-only controls for the frozen ordered cohort without structure or outcome inputs.",
+  "pinned_resource_stage": [
+    "Copy the already acquired Ensembl 91 GTF, cDNA FASTA, ncRNA FASTA, and miniQuant source snapshot into ignored .cache paths.",
+    "Verify the three Ensembl SHA256 values and miniQuant source snapshot provenance before computation."
+  ],
+  "intended_commands_before_expensive_computation": [
+    ".venv/bin/python scripts/run_miniquant_kvalue.py",
+    ".venv/bin/python scripts/materialize_prestructure_annotation.py"
+  ],
+  "materializer_algorithm": [
+    "Use the exact 199216-transcript intersection of pinned Ensembl 91 GTF transcript IDs and combined pinned cDNA/ncRNA FASTA IDs.",
+    "Compute annotation controls with pinned src/rnaobs/core.py annotation_features over the complete GTF annotation.",
+    "Compile pinned src/exact_kmers.cpp with C++23 and run k=31 over the full sorted validated universe.",
+    "Use original miniQuant c1b5a89f3c31c83b271a477475a1e289ee9806d7 with fragment length 235, effective-length entry, and two threads.",
+    "Join by the pinned stable-ID rule, restrict to the frozen 15999 IDs, preserve their exact order, derive missingness indicators, and apply no imputation."
+  ],
+  "structure_inputs_read": false,
+  "outcome_inputs_read": false,
+  "longbench_inputs_read": false
+}

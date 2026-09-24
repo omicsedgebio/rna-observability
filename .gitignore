@@ -28,6 +28,7 @@ data/processed/*
 !data/processed/.gitkeep
 results/tables/*
 !results/tables/.gitkeep
+!results/tables/prestructure_annotation_comparator.tsv.gz
 !results/tables/reference_mapping_summary.json
 !results/tables/feature_audit_summary.json
 !results/tables/outcome_qc_summary.json

@@ -1,0 +1,64 @@
+{
+  "receipt_version": "prestructure_annotation_comparator_v1",
+  "phase": "PRESTRUCTURE_IMPLEMENTATION_LOCK",
+  "artifact_path": "results/tables/prestructure_annotation_comparator.tsv.gz",
+  "artifact_bytes": 522602,
+  "artifact_sha256": "6530a0280112483a5d43790d2518dc11b996c8bee7a24ddbc6891f67ac863fe2",
+  "rows": 15999,
+  "columns": [
+    "stable_id",
+    "unique_kmer_fraction",
+    "unique_kmer_fraction_missing",
+    "unique_exonic_bases",
+    "shared_exon_fraction",
+    "unique_junction_count",
+    "max_exon_jaccard",
+    "identical_splice_chain_isoforms",
+    "incidence_rank_deficiency",
+    "mean_exon_length",
+    "miniquant_kvalue",
+    "miniquant_kvalue_missing"
+  ],
+  "missing_counts": {
+    "unique_kmer_fraction": 0,
+    "miniquant_kvalue": 212
+  },
+  "global_imputation_applied": false,
+  "frozen_order_preserved": true,
+  "duplicate_transcript_ids": 0,
+  "unexpected_columns": 0,
+  "outcome_columns": 0,
+  "structure_columns": 0,
+  "validated_universe_transcripts": 199216,
+  "pinned_reference_sha256": {
+    "ensembl91_gtf": "1abe442ea2ba90c022545be71c4e7b95b66d45c8c9e4e4ec3788b6be440b598d",
+    "ensembl91_cdna": "a7f0022e884826d70e0a151f6c38547aea8d443eaa9653aaf56e698e23109201",
+    "ensembl91_ncrna": "0ab3565714f88fb98eb7df7814fe3fed770e2b098d37cd7b83601258f87e75dd"
+  },
+  "pinned_implementation_sha256": {
+    "src/rnaobs/core.py": "42a42d2cba1a3fcf20b77360feed2ef4d84183485a3072a56023556f641b1969",
+    "src/exact_kmers.cpp": "2ab285bd2a052c4a0cfc9afa5051192b73a66375b25c4bb326416f061edadc7a",
+    "scripts/phase3a_feature_audit.py": "4d1537108521f513f004bb528dc2f1881e827e8a71d643f496df3b1a7c6f2459",
+    "scripts/run_miniquant_kvalue.py": "960487e1077b044fbe269526c3e4693223cf5993fa346180f1561f202d7194d6"
+  },
+  "miniquant": {
+    "upstream_commit": "c1b5a89f3c31c83b271a477475a1e289ee9806d7",
+    "source_snapshot_sha256": "6b2e2de5eaeb66bf48d4a4bacb463c7ff484f3efb281cecf93f8d52639ef829b",
+    "regenerated_kvalues_sha256": "9bce0d5cd750298b0ff2394c486d19d0f9548dd21144a9dbef867e886e320d6a",
+    "fragment_length": 235,
+    "entry": "effective_length",
+    "threads": 2
+  },
+  "derived_intermediate_sha256": {
+    ".cache/prestructure_annotation/validated_transcripts.fa": "cc1187798bffa469776a7930f486a84dee72d87aefae9b26cca18ab7bf057f83",
+    ".cache/prestructure_annotation/unique_kmers31.tsv": "3c77aa0a0f18897868eb915f844b87059411f2264c4c09d31a4f2e067e7c294b"
+  },
+  "build_commands": [
+    "/Users/priyanshpathak/Projects/omicsedgebio/rna-observability-execution/.venv/bin/python scripts/run_miniquant_kvalue.py",
+    "/Users/priyanshpathak/Projects/omicsedgebio/rna-observability-execution/.venv/bin/python scripts/materialize_prestructure_annotation.py"
+  ],
+  "materializer_sha256": "71410174ac80f5e54cfdd5bd20cdc6a0782d670733ad0d98a5100c1844511790",
+  "structure_inputs_read": false,
+  "outcome_inputs_read": false,
+  "longbench_inputs_read": false
+}

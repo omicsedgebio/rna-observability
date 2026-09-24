@@ -1,0 +1,8 @@
+{
+  "guard_version": "model_d_single_attempt_v1",
+  "state": "MODEL_D_ATTEMPT_NOT_CONSUMED",
+  "structure_test_authorized": false,
+  "implementation_lock_approved": false,
+  "consumed_marker": "metadata/model_d_attempt_consumed.json",
+  "rerun_policy": "EXPLICIT_HUMAN_ADJUDICATION_REQUIRED"
+}
