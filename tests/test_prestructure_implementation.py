@@ -212,18 +212,18 @@ class StructureParserTests(unittest.TestCase):
     def test_mapping_tsv_requires_all_class_a_evidence(self):
         columns = [
             "stable_id", "structure_transcript_id", "mapping_class", "reported_length",
-            "unique_source_stable_id", "processed_length_matches_ensembl88",
-            "gene_equal_88_91", "chromosome_equal_88_91", "strand_equal_88_91",
+            "unique_source_stable_id", "gene_equal_88_91",
+            "chromosome_equal_88_91", "strand_equal_88_91",
             "exon_intervals_equal_88_91", "transcript_length_equal_88_91",
             "transcript_sequence_equal_88_91",
         ]
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "mapping.tsv"
             path.write_text("\t".join(columns) + "\n" +
-                            "\t".join(["T1", "S1", "A", "50"] + ["true"] * 8) + "\n")
+                            "\t".join(["T1", "S1", "A", "50"] + ["true"] * 7) + "\n")
             self.assertEqual(set(parse_mapping_tsv(path, ["T1"])), {"T1"})
             path.write_text("\t".join(columns) + "\n" +
-                            "\t".join(["T1", "S1", "A", "50", "false"] + ["true"] * 7) + "\n")
+                            "\t".join(["T1", "S1", "A", "50", "false"] + ["true"] * 6) + "\n")
             with self.assertRaises(AnalysisBlocker):
                 parse_mapping_tsv(path, ["T1"])
 

@@ -1,8 +1,9 @@
 {
-  "manifest_version": "prestructure_implementation_lock_candidate_v1",
+  "manifest_version": "prestructure_implementation_lock_candidate_v2_repair",
   "created_utc_date": "2026-09-24",
-  "implementation_lock_status": "CANDIDATE_FOR_HUMAN_REVIEW",
-  "parent_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
+  "implementation_lock_status": "IMPLEMENTATION_REPAIR_CANDIDATE_FOR_HUMAN_REVIEW",
+  "implementation_repair_classification": "IMPLEMENTATION_REPAIR_NOT_PROTOCOL_DEVIATION",
+  "parent_commit": "d15af40f99900a539dc9d730548bb408fadce893",
   "scientific_lock_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
   "scientific_lock_config_sha256": "d280b0e0505a7eaa24f6df7fcba2d9a6e53fe81fa2610a349b9e370ec7fe3d17",
   "scientific_lock_file_sha256": {
@@ -18,17 +19,29 @@
   "annotation_comparator_path": "results/tables/prestructure_annotation_comparator.tsv.gz",
   "annotation_comparator_bytes": 522602,
   "annotation_comparator_sha256": "6530a0280112483a5d43790d2518dc11b996c8bee7a24ddbc6891f67ac863fe2",
+  "class_a_mapping": {
+    "path": ".cache/model_d/class_a_mapping.tsv",
+    "receipt_path": "metadata/class_a_mapping_receipt.json",
+    "rows": 15999,
+    "bytes": 1174624,
+    "sha256": "b78371a0b78996ab81fc3e9c617f1478ac3220f7530229a6b9479ef40870f9b4",
+    "reported_length_semantics": "EXPECTED_ENSEMBL_88_TRANSCRIPT_LENGTH",
+    "actual_processed_length_checked": false,
+    "actual_processed_length_check_deferred_to_authorized_parser": true
+  },
   "execution_implementation_sha256": {
-    "src/rnaobs/model_d_locked.py": "18d0a36f8c6cd98ea091f8744b994cf8283498cedfaded8c230e464ee6deec2b",
+    "src/rnaobs/model_d_locked.py": "d83f222bb11061380e89e631bf01f21f0ad73d473fd5619ff024d184cba1f86f",
     "scripts/run_locked_model_d.py": "ff46571a03d433949ee2865debd9dd3c8268700c9fbad1ed981d2e40b75b71b0",
-    "scripts/materialize_prestructure_annotation.py": "71410174ac80f5e54cfdd5bd20cdc6a0782d670733ad0d98a5100c1844511790"
+    "scripts/materialize_prestructure_annotation.py": "71410174ac80f5e54cfdd5bd20cdc6a0782d670733ad0d98a5100c1844511790",
+    "scripts/materialize_class_a_mapping.py": "8ff6ab28e5b7197d97e3ea7e9083fc883bc41d44bb125e9d97c8b6ea6d2d4d16"
   },
   "test_sha256": {
-    "tests/test_prestructure_implementation.py": "8f0d67bf0e54660aee0d35616cbc090482fd4e59f1f0966cd2c694cbf7ee5807"
+    "tests/test_prestructure_implementation.py": "5f75e4f9520a96765a0e9c8aec66d66c27e361e5c5eb7040a666b68905aabcc7",
+    "tests/test_class_a_mapping_materialization.py": "8f7bec33a82226acbaaff6e4026d0fc776da2396591df21a12df95dfe47e8c97"
   },
   "implementation_documentation_sha256": {
-    "docs/prestructure_implementation_lock.md": "5485f58e1c421340b3a0d51af40ec5c0250ce595127c7ee2440c921b1ba63dd6",
-    "docs/prestructure_implementation_reviewer2.md": "0c0c150e7865179ec3c14d892f8bfb2ab6213bc91ccf705d7fabce9b1d7fbb7a"
+    "docs/prestructure_implementation_lock.md": "e3ad558fedaf619f33d5cdb19918579328198673603ebad2b8167bf01b03c287",
+    "docs/prestructure_implementation_reviewer2.md": "5bc9a54ea80bdeda255e99c41681e096751f865a9032e3ad6b629432ea6a0833"
   },
   "attempt_guard_sha256": "3993046bdeb692da4fce89eb505458a1faeae51e2a3020af913e329df4003d52",
   "protected_file_sha256": {
@@ -38,8 +51,10 @@
     "results/tables/model_c_inputs.tsv.gz": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
     "configs/prestructure_model_d_lock.json": "d280b0e0505a7eaa24f6df7fcba2d9a6e53fe81fa2610a349b9e370ec7fe3d17",
     "results/tables/prestructure_annotation_comparator.tsv.gz": "6530a0280112483a5d43790d2518dc11b996c8bee7a24ddbc6891f67ac863fe2",
-    "src/rnaobs/model_d_locked.py": "18d0a36f8c6cd98ea091f8744b994cf8283498cedfaded8c230e464ee6deec2b",
+    "src/rnaobs/model_d_locked.py": "d83f222bb11061380e89e631bf01f21f0ad73d473fd5619ff024d184cba1f86f",
     "scripts/run_locked_model_d.py": "ff46571a03d433949ee2865debd9dd3c8268700c9fbad1ed981d2e40b75b71b0",
+    "scripts/materialize_class_a_mapping.py": "8ff6ab28e5b7197d97e3ea7e9083fc883bc41d44bb125e9d97c8b6ea6d2d4d16",
+    "metadata/class_a_mapping_receipt.json": "12eae22c0029d5fb7b9f70a7536f46b1b9197e1058ba10ac0e74968969afc30f",
     "metadata/model_d_attempt_guard.json": "3993046bdeb692da4fce89eb505458a1faeae51e2a3020af913e329df4003d52"
   },
   "environment": {
@@ -56,8 +71,10 @@
   "static_validation": {
     "json_parse": "PASS",
     "python_syntax": "PASS",
-    "tests_run": 41,
-    "tests_passed": 41,
+    "mapping_materialization": "PASS_DETERMINISTIC_15999_OF_15999",
+    "mapping_artifact_validation": "PASS",
+    "tests_run": 65,
+    "tests_passed": 65,
     "tests_failed": 0,
     "framework_tests_skipped": 0,
     "tests_intentionally_not_run": 23,
@@ -73,6 +90,7 @@
     ]
   },
   "structure_inputs_read": false,
+  "structure_derived_tables_read": false,
   "structure_features_computed": false,
   "structure_outcome_tests": 0,
   "c_annotation_real_fits": 0,
@@ -83,6 +101,13 @@
   "longbench_inputs_read": false,
   "model_d_attempt_consumed": false,
   "structure_test_authorized": false,
+  "execution_authorization_created": false,
+  "reviewer2_repair_findings": {
+    "FATAL": 0,
+    "MAJOR_BUT_MANAGEABLE": 0,
+    "MINOR": 0,
+    "NOT_SUPPORTED": 15
+  },
   "commit_created": false,
   "push_performed": false
 }

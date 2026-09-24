@@ -65,6 +65,19 @@ C_QUALITY_FEATURES = C_ANNOTATION_FEATURES + ("callable_fraction",)
 D_STRUCTURE_FEATURES = C_QUALITY_FEATURES + ("median_reactivity",)
 IMPUTED_FEATURES = ("unique_kmer_fraction", "miniquant_kvalue")
 ANNOTATION_MATRIX_COLUMNS = ("stable_id",) + ANNOTATION_CONTROLS
+CLASS_A_MAPPING_COLUMNS = (
+    "stable_id",
+    "structure_transcript_id",
+    "mapping_class",
+    "reported_length",
+    "unique_source_stable_id",
+    "gene_equal_88_91",
+    "chromosome_equal_88_91",
+    "strand_equal_88_91",
+    "exon_intervals_equal_88_91",
+    "transcript_length_equal_88_91",
+    "transcript_sequence_equal_88_91",
+)
 
 
 class ProtocolClassification(str, Enum):
@@ -577,13 +590,14 @@ def validate_class_a_mappings(
 
 
 def parse_mapping_tsv(path: Path, frozen_ids: Sequence[str]) -> dict[str, StructureMapping]:
-    required = [
-        "stable_id", "structure_transcript_id", "mapping_class", "reported_length",
-        "unique_source_stable_id", "processed_length_matches_ensembl88",
-        "gene_equal_88_91", "chromosome_equal_88_91", "strand_equal_88_91",
-        "exon_intervals_equal_88_91", "transcript_length_equal_88_91",
-        "transcript_sequence_equal_88_91",
-    ]
+    """Read structure-blind class-A evidence.
+
+    ``reported_length`` is the expected pinned Ensembl 88 transcript length.  It
+    is not evidence that the processed structure file has already been opened.
+    The actual processed-file length remains a mandatory equality check in
+    :func:`parse_structure_stream`.
+    """
+    required = list(CLASS_A_MAPPING_COLUMNS)
     with path.open(newline="") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != required:
@@ -627,7 +641,10 @@ def parse_structure_stream(
         if not np.isfinite(assay_rpkm):
             raise AnalysisBlocker("non-finite assay_rpkm")
         if reported_length != record.reported_length:
-            raise AnalysisBlocker("reported structure length differs from class-A mapping")
+            raise AnalysisBlocker(
+                "processed structure reported length differs from locked Ensembl 88 "
+                "expected length"
+            )
         positions = fields[3:]
         if len(positions) != reported_length:
             raise AnalysisBlocker("position field count differs from reported length")
