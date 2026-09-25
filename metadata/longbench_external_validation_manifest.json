@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "OUTCOMES_BLIND_LOCK_CANDIDATE",
+  "created_utc": "2026-09-25T00:00:00Z",
+  "development_freeze_commit": "294f59ddab5dc4262d23ebbd976f2cec6469bc71",
+  "scientific_lock_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
+  "repaired_implementation_lock_commit": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "model_d_conclusion": "NOT_SUPPORTED",
+  "model_d_practical_magnitude": "NEGLIGIBLE",
+  "model_d_attempt_consumed": true,
+  "model_d_automatic_rerun_allowed": false,
+  "external_validation_decision": "CONDITIONALLY_PURSUE_C_AND_D_ONLY",
+  "incremental_structure_validation": false,
+  "structure_feature_reproducibility": false,
+  "workflow_phenotype_transport": "CONDITIONAL",
+  "structure_blind_model_transport": "CONDITIONAL_ON_PREACCESS_ESTIMATOR_FREEZE",
+  "included_cell_lines": [],
+  "included_transcripts": 0,
+  "planned_transcript_universe_size": 15999,
+  "inclusion_manifest_complete": false,
+  "compatibility_audit_complete": true,
+  "compatibility_audit_resolved_for_release": false,
+  "compatibility_counts": {
+    "PASS": 5,
+    "CONDITIONAL_PASS": 4,
+    "BLOCKER": 1,
+    "UNKNOWN": 9
+  },
+  "serialized_transport_estimator_present": true,
+  "serialized_transport_preprocessing_present": true,
+  "serialized_transport_estimator_committed": true,
+  "deployment_estimator_commit": "936ba5b33cc22b0eeae18bbfb7d93e63bce6358a",
+  "prediction_artifact_present": false,
+  "prediction_receipt_present": false,
+  "longbench_inputs_read": false,
+  "longbench_bucket_listed": false,
+  "longbench_files_downloaded": false,
+  "longbench_transcript_values_read": false,
+  "longbench_outcomes_viewed": false,
+  "longbench_figures_or_results_viewed": false,
+  "longbench_tutorial_outputs_viewed": false,
+  "longbench_full_paper_results_extracted": false,
+  "longbench_external_outcome_queries_performed": false,
+  "longbench_access_authorized": false,
+  "scoring_authorized": false,
+  "validation_predictions_generated": false,
+  "validation_metrics_computed": false,
+  "model_d_rerun": false,
+  "model_d_retuned": false,
+  "model_d_rescue_attempted": false,
+  "model_d_fits": 0,
+  "exposure_incident_recorded": true,
+  "contaminated_session_quarantined": true,
+  "exposed_scientific_content_propagated": false,
+  "human_review_complete": false,
+  "reviewer2_review_complete": true,
+  "reviewer2_counts": {
+    "FATAL": 0,
+    "MAJOR_BUT_MANAGEABLE": 2,
+    "MINOR": 2,
+    "NOT_SUPPORTED": 11
+  },
+  "authorization_artifacts": {
+    "metadata/longbench_data_access_authorization.json": "ABSENT_REQUIRED",
+    "metadata/longbench_scoring_authorization.json": "ABSENT_REQUIRED"
+  },
+  "frozen_development_artifact_sha256": {
+    "metadata/model_d_development_result_freeze.json": "2078b59c68e415235b49b975e811add074441b13fa5627bd8e7ad393e99cb87a",
+    "metadata/model_d_attempt_consumed.json": "ff47a7af39d3589072ad9c4682d982335043d22b0f6f0fe975f9e9a2d86672b6",
+    "results/tables/model_c_inputs.tsv.gz": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+    "results/tables/model_c_oof.tsv.gz": "aa3798858f17194b2acebdcb7e9411e1cb724fa7beff3441b585116c0fef5225",
+    "configs/model_c_reestablishment.json": "84168bd11531d9f6a7d1ad655ad9c35a64cb7149913e16717609808d228191f0",
+    "configs/model_c_outcome.json": "9082781c22e16e64f00dc7e57bbe83b5c8824ff46ae96eecadaf5d3aa5f155cf",
+    "metadata/final_transcript_cohort.tsv": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+    "metadata/cv_folds.tsv": "66cfccce6252a39bda918cd99843cb4415b3af64f2ec4a965a9787234e948c52",
+    "metadata/feature_definitions.tsv": "30b96cad1df8d9f9cad4e4829702e739a05013a013fb5b4f0b3d770859ab8d4d",
+    "configs/prestructure_model_d_lock.json": "d280b0e0505a7eaa24f6df7fcba2d9a6e53fe81fa2610a349b9e370ec7fe3d17"
+  },
+  "governance_source_sha256": {
+    "docs/external_validation_lock.md": "3fddf807275a719e03b42a8b4ca436560d4eb6665d9ea15bbbcc8698854b3406",
+    "metadata/datasets.tsv": "2bc130b5ab9dcbbadadac03da622b29c0e8f311f484946ebb36dafb26d53fcf6"
+  },
+  "containment_artifact_sha256": {
+    "metadata/longbench_exposure_incident_20260925.json": "1dc7974ba96fb6c4ebd05c295b4c77cb8b597889512d57d639a1cd9717b6bcf2"
+  },
+  "deployment_artifact_sha256": {
+    "configs/model_c_deployment.json": "e8fad64dc39821362db95eaa93fcdd27d1e38972b406680929b93ad7e0724e1d",
+    "scripts/materialize_model_c_deployment.py": "05dc6d6340c3889f1c1904d85e042b188be7a951ef5eaf74cf888060bcc091b3",
+    "metadata/model_c_deployment_estimator.json": "af16799849ae05ff8ba26718d2a79ad53ccde1291041653d0257e5797ed59ec2",
+    "metadata/model_c_deployment_estimator_receipt.json": "e5480d9afde5b9c94fba400cd494b6e982196b7d63028bd8602cf28c73a22443",
+    "metadata/model_c_deployment_attempt.json": "a60e5b1c30f524a921c2868fc33708a8b513e54dc37f4239d8aa894e1689129e",
+    "docs/model_c_deployment_estimator.md": "25210db0cf26509596227288bd5e083c50efd25ba78d7ff05b5ee00eb3759b8b",
+    "tests/test_model_c_deployment.py": "9c850af73128abfe5e097eca65bb59186ffe1338f2d4fbaa72dc659a9ecb1ad5"
+  },
+  "artifact_sha256": {
+    "configs/longbench_external_validation_lock.json": "1a15e94fbb5e7b497baefa7a0c163a33727df129f6e416ade335f084df1694ae",
+    "docs/longbench_external_validation_plan.md": "244023274c1c9b09db3b03a7a87d2eee10168a76259765177cdfcaf80c245266",
+    "docs/longbench_external_validation_reviewer2.md": "5b6196cecf184f9a8bd35f494f3f51b5f9680d50f25d7a6ff5ff4ed614fae5ba",
+    "metadata/longbench_compatibility_audit.tsv": "9d07ade0d3ce1c1895139c8f083d06fb090ddb0af1e1d32c6d5c0238378a1f8c",
+    "src/rnaobs/external_validation_lock.py": "af301d32c86007e0818e3d7435914dfeff3780a0b20c81daa724537623a521b2",
+    "scripts/check_longbench_release.py": "ec08ea808660254981f5df256b6fdb93147e54a4fbcf269d5ddc8ef011ac533f",
+    "tests/test_longbench_external_validation_lock.py": "f11dff4b5d3678a8bcd2e72fe2ce4894cbe2be02b30ca97d01b685c18eef6bfd"
+  },
+  "public_preparation_artifact_sha256": {
+    "README.md": "41a914e1fc10c42877addbf103cec987372a87ed54269612685c2db8548ead75",
+    "docs/reproducibility.md": "48e4313bececfd7aeca9dcfe0c3dfa559c628ea2bb3a80712200c477c6d9dc33",
+    "docs/claims_register.md": "2e62369362d9740a8954b43d25d06110c21f1f0a0244840f834ac9777fdc772c",
+    "docs/manuscript_plan.md": "eafe6bead39243bb64d6c6d100ae8bba648375e1df9f4a20fd09d73326b677aa",
+    "docs/public_release_hygiene.md": "7965919d8e418496aba10ed785a3fcae9db44f893dc6ba62d456d200f7741e0d",
+    "scripts/validate_repository.py": "9cce74525d3373c6fa1f95ccab9e9ce9fc6cf8c996c4aed5bb8918548c73ae82",
+    ".github/workflows/validate.yml": "1b682e1ebe9490b3ccd4adf9587bc9923484ee7cd9706e8ae31229e29c0d5a84"
+  },
+  "environment_policy": {
+    "canonical_python": "3.11.12",
+    "model_materialization_environment": "must exactly match the frozen Model C environment before the sole pre-access fit",
+    "deployment_environment_frozen": true,
+    "validation_environment_hash_present": false,
+    "release_blocked_until_environment_hash": true
+  }
+}

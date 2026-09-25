@@ -355,11 +355,19 @@ class GuardTests(unittest.TestCase):
                 with self.assertRaises(AnalysisBlocker):
                     locked_runner.consume_attempt("a" * 40)
 
-    def test_current_phase_guard_not_consumed(self):
+    def test_historical_guard_and_current_consumed_marker_are_consistent(self):
         guard = json.loads((ROOT / "metadata/model_d_attempt_guard.json").read_text())
         self.assertEqual(guard["state"], "MODEL_D_ATTEMPT_NOT_CONSUMED")
         self.assertFalse(guard["structure_test_authorized"])
-        self.assertFalse((ROOT / guard["consumed_marker"]).exists())
+        marker_path = ROOT / guard["consumed_marker"]
+        self.assertTrue(marker_path.exists())
+        marker = json.loads(marker_path.read_text())
+        self.assertEqual(marker["state"], "MODEL_D_ATTEMPT_CONSUMED_NO_AUTOMATIC_RERUN")
+        freeze = json.loads(
+            (ROOT / "metadata/model_d_development_result_freeze.json").read_text()
+        )
+        self.assertTrue(freeze["execution_governance"]["single_attempt_consumed"])
+        self.assertFalse(freeze["execution_governance"]["automatic_rerun_allowed"])
 
     def test_mock_altered_frozen_file_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

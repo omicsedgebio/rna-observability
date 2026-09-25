@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "status": "LOCK_CANDIDATE_NOT_AUTHORIZED",
+  "created_utc": "2026-09-25T00:00:00Z",
+  "development_freeze_commit": "294f59ddab5dc4262d23ebbd976f2cec6469bc71",
+  "scientific_lock_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
+  "repaired_implementation_lock_commit": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "frozen_development_conclusion": {
+    "model_d": "NOT_SUPPORTED",
+    "practical_magnitude": "NEGLIGIBLE",
+    "primary_delta_macro_f1": 0.0009736264857591603,
+    "paired_bootstrap_interval": [
+      -0.0023443180806064804,
+      0.004123505221307526
+    ],
+    "negative_control_95th_percentile": 0.0015090734133574142,
+    "strict_callability_delta": 0.0007399110130869024,
+    "strict_callability_bootstrap_interval": [
+      -0.0034377341044534047,
+      0.004809181103569267
+    ],
+    "immutable_under_external_validation": true
+  },
+  "scientific_decision": {
+    "incremental_structure_hypothesis": "EXCLUDED",
+    "structure_feature_reproducibility": "EXCLUDED",
+    "workflow_measurement_phenotype_transport": "CONDITIONALLY_PURSUE",
+    "structure_blind_model_transport": "CONDITIONALLY_PURSUE_AFTER_PREACCESS_MODEL_FREEZE",
+    "longbench_overall": "CONDITIONAL_C_AND_D_ONLY",
+    "matched_structure_required_for_a_or_b": true,
+    "matched_structure_currently_verified": false
+  },
+  "objective": {
+    "primary": "Estimate transport performance of one fixed structure-blind transcript classifier from K562 development to eligible independent human lung-cancer cell lines using an exactly reconstructed workflow_detection_v1 label.",
+    "secondary": "Describe cell-line-stratified transport of the fixed workflow-specific five-class transcript measurement phenotype without fitting or selecting a validation-data model.",
+    "not_an_objective": [
+      "validate or rescue the incremental Model D structure hypothesis",
+      "reproduce structure features without a matched experimental structure assay",
+      "redesign, rerun, retune, rescue, or expand Model D",
+      "establish causation, biological truth, clinical utility, or a validated score"
+    ]
+  },
+  "target_context": {
+    "study": "biological LongBench / GSE303762 / AWS longbench-data",
+    "population": "eligible independent human lung-cancer cell lines with matched bulk Illumina and bulk ONT direct-RNA biological preparations",
+    "development_context": "K562",
+    "minimum_eligible_cell_lines": 4,
+    "primary_pooling": "PROHIBITED",
+    "primary_aggregation": "unweighted mean of cell-line-specific metrics",
+    "cell_line_stratified_reporting": true,
+    "single_cell_or_single_nucleus_primary_use": false,
+    "pcr_cdna_primary_use": false,
+    "pacbio_primary_use": false
+  },
+  "transcript_policy": {
+    "unit": "pinned Ensembl 91 transcript accession with version identity retained; unversioned stable ID is only the frozen join key",
+    "universe": "the frozen 15999-transcript development cohort in its frozen order",
+    "validation_value_dependent_inclusion": false,
+    "annotation_requirement": "the exact pinned Ensembl 91 transcriptome used in development, or a pre-access exact-identity mapping with gene, chromosome, strand, exon intervals, length, and sequence all equal",
+    "missing_quantification_row": "ANALYSIS_BLOCKER_NOT_ZERO_NOT_DROPPED",
+    "missing_feature": "ANALYSIS_BLOCKER_NO_IMPUTATION",
+    "novel_or_ambiguous_mapping": "ANALYSIS_BLOCKER",
+    "post_exposure_transcript_filtering": false
+  },
+  "technology_policy": {
+    "required_primary_modalities": [
+      "bulk Illumina RNA sequencing",
+      "bulk ONT direct RNA sequencing"
+    ],
+    "quantifier": "Salmon 1.9 fixed development settings",
+    "reference": "pinned Ensembl 91 reference used in development",
+    "processed_outputs_allowed": "only if metadata prove exact transcript index, quantifier, settings, and complete-row compatibility before values are opened",
+    "raw_requantification_allowed": "only after size, purpose, processed alternatives, necessity, hashes, and human authorization are recorded",
+    "modified_endpoint_substitution": false
+  },
+  "replicate_policy": {
+    "unit": "independent biological preparation",
+    "technical_runs": "nested within preparation and never counted as independent support",
+    "illumina_outcome_preparations": 2,
+    "direct_rna_outcome_preparations": 4,
+    "independent_abundance_illumina_preparations": 1,
+    "abundance_preparation_may_overlap_outcome": false,
+    "sample_selection": "exact accessions and roles must be frozen from methods/sample metadata before any expression value is opened",
+    "excess_eligible_preparations": "selection rule must be frozen in the reviewed inclusion manifest before access; outcome values cannot select preparations"
+  },
+  "phenotype": {
+    "name": "workflow_detection_v1",
+    "threshold_tpm": 1.0,
+    "illumina_outcome_preparations": 2,
+    "illumina_positive_rule": "TPM >= 1 in both of 2",
+    "direct_rna_outcome_preparations": 4,
+    "direct_rna_positive_rule": "TPM >= 1 in at least 3 of 4",
+    "intermediate_rule": "Illumina support exactly 1 of 2 or direct-RNA support 1 or 2 of 4",
+    "classes": [
+      "BOTH",
+      "ILLUMINA_ONLY",
+      "DIRECT_RNA_ONLY",
+      "NEITHER",
+      "INDETERMINATE"
+    ],
+    "exact_transport_required": true,
+    "validation_estimated_thresholds": false,
+    "class_merging": false
+  },
+  "model_policy": {
+    "validation_type": "PURE_FROZEN_MODEL_TRANSPORT_AFTER_PREACCESS_MATERIALIZATION",
+    "current_serialized_estimator_present": true,
+    "current_oof_predictions_are_deployable_estimator": false,
+    "development_matrix_path": "results/tables/model_c_inputs.tsv.gz",
+    "development_matrix_sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+    "required_estimator_name": "POST-DEVELOPMENT DEPLOYMENT ESTIMATOR",
+    "required_preaccess_action": "fit exactly one full-cohort StandardScaler plus multinomial LogisticRegression artifact from the frozen development matrix, then serialize and hash it before LongBench access",
+    "required_preaccess_action_is_not_performed_by_this_candidate": false,
+    "deployment_estimator_state": "metadata/model_c_deployment_estimator.json",
+    "deployment_estimator_state_sha256": "af16799849ae05ff8ba26718d2a79ad53ccde1291041653d0257e5797ed59ec2",
+    "deployment_estimator_receipt": "metadata/model_c_deployment_estimator_receipt.json",
+    "deployment_estimator_receipt_sha256": "e5480d9afde5b9c94fba400cd494b6e982196b7d63028bd8602cf28c73a22443",
+    "deployment_estimator_commit": "936ba5b33cc22b0eeae18bbfb7d93e63bce6358a",
+    "training_rows": 15999,
+    "features": [
+      "independent_abundance_log1p",
+      "sequence_length",
+      "gc_fraction",
+      "exon_count",
+      "isoforms_per_gene",
+      "sequence_cluster_size",
+      "homopolymer_fraction",
+      "low_complexity_fraction",
+      "sequence_entropy"
+    ],
+    "class_order": [
+      "BOTH",
+      "ILLUMINA_ONLY",
+      "DIRECT_RNA_ONLY",
+      "NEITHER",
+      "INDETERMINATE"
+    ],
+    "scaler_fit_data": "frozen development rows only",
+    "estimator": "LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "max_iter": 2000,
+    "class_weight": null,
+    "fit_intercept": true,
+    "random_state": 20260923,
+    "threads": 1,
+    "validation_refit_allowed": false,
+    "validation_recalibration_allowed": false,
+    "validation_feature_selection_allowed": false,
+    "validation_threshold_tuning_allowed": false,
+    "validation_imputation_allowed": false,
+    "fallback_if_estimator_not_frozen": "NO_MODEL_TRANSPORT"
+  },
+  "validation_preprocessing": {
+    "validation_fitted_cross_sample_parameters": false,
+    "independent_abundance_transform": "log1p of TPM from the separately reserved eligible bulk Illumina preparation",
+    "sequence_and_annotation_features": "deterministic values for the pinned reference using the frozen development definitions",
+    "standardization": "apply the scaler fit on development only",
+    "label_or_outcome_influence": false,
+    "batch_correction": "NONE",
+    "cell_line_pooling_for_preprocessing": false
+  },
+  "metrics": {
+    "primary": "unweighted mean across eligible cell lines of five-class macro-F1 with zero_division=0",
+    "primary_class_order": [
+      "BOTH",
+      "ILLUMINA_ONLY",
+      "DIRECT_RNA_ONLY",
+      "NEITHER",
+      "INDETERMINATE"
+    ],
+    "uncertainty": "10000-replicate percentile bootstrap resampling eligible cell lines with replacement",
+    "bootstrap_seed": 20260925,
+    "confidence_level": 0.95,
+    "secondary": [
+      "cell-line-specific macro-F1",
+      "cell-line-specific and aggregate multiclass log loss",
+      "cell-line-specific and aggregate multiclass Brier score",
+      "per-class precision, recall, F1, and support",
+      "fixed-class confusion matrices",
+      "phenotype class prevalence by cell line"
+    ],
+    "calibration": "For every class, report counts, mean predicted probability, and observed proportion in 10 fixed equal-width probability bins; report no recalibrated predictions.",
+    "pooled_transcript_cell_line_metric": "SECONDARY_DESCRIPTIVE_ONLY",
+    "performance_success_threshold": "NONE; report the prespecified estimate and uncertainty without a post hoc validated/not-validated cutoff",
+    "development_comparison": "DESCRIPTIVE_ONLY_NO_NONINFERIORITY_OR_RESCUE_CLAIM"
+  },
+  "failure_conditions": [
+    "fewer than 4 eligible cell lines",
+    "absence of matched bulk Illumina and bulk ONT direct-RNA preparations in any included cell line",
+    "failure to identify exactly 2 Illumina outcome, 4 direct-RNA outcome, and 1 non-overlapping Illumina abundance preparation per included cell line",
+    "technical runs cannot be nested under biological preparations",
+    "annotation, transcript version, quantifier, or processing compatibility cannot be established before values are opened",
+    "any frozen transcript is missing, duplicated, ambiguously mapped, non-finite, or lacks a required feature or quantification row",
+    "feature-only access cannot be separated operationally from label/outcome access",
+    "serialized full-development estimator and preprocessing state are not frozen and hashed before LongBench access",
+    "prediction artifact is not saved and hashed before outcome-label exposure",
+    "any validation outcome or expression value influences inclusion, preprocessing, missingness handling, threshold, or model choice",
+    "any attempt is made to reinterpret LongBench as validation or rescue of Model D"
+  ],
+  "prediction_before_scoring": {
+    "initial_state": "PLANNING_LOCKED",
+    "steps": [
+      "freeze study/sample inclusion, transcript mapping, code, environment, and the full-development estimator",
+      "obtain explicit human feature-only data-access authorization",
+      "materialize only reference features and the separately reserved independent-abundance covariate",
+      "generate class predictions and probabilities without opening outcome-library expression values",
+      "save and hash predictions plus inclusion and feature receipts",
+      "obtain separate explicit human label-access/scoring authorization tied to the prediction hash",
+      "construct workflow_detection_v1 labels from outcome preparations and score once"
+    ],
+    "bundled_data_rule": "If packaging exposes outcome-library values while constructing features, use a trusted custodian/sample-separated extraction; otherwise analysis is blocked.",
+    "prediction_receipt_required_before_label_access": true,
+    "separate_scoring_authorization_required": true
+  },
+  "release_conditions": {
+    "development_conclusion_frozen_and_committed": true,
+    "external_validation_objective_human_approved_and_committed": false,
+    "exact_validation_code_config_environment_hashed_and_committed": false,
+    "independent_study_inclusion_manifest_complete_and_committed": false,
+    "outcomes_blind_compatibility_audit_all_required_items_resolved": false,
+    "compatibility_audit_human_approved": false,
+    "annotation_and_transcript_mapping_policy_implemented_and_frozen": false,
+    "exact_reference_frozen": false,
+    "feature_order_and_preprocessing_frozen_and_committed": true,
+    "inclusion_rules_frozen_and_committed": false,
+    "prediction_before_scoring_workflow_implemented_and_frozen": false,
+    "full_development_model_and_preprocessing_state_serialized_hashed_and_committed": true,
+    "acquisition_size_purpose_alternatives_and_necessity_recorded": false,
+    "human_review_complete": false,
+    "reviewer2_review_complete": true,
+    "explicit_human_feature_access_authorization_present": false,
+    "explicit_human_scoring_authorization_present": false
+  },
+  "authorization_artifacts": {
+    "feature_access": "metadata/longbench_data_access_authorization.json",
+    "scoring": "metadata/longbench_scoring_authorization.json",
+    "current_feature_access_authorization_present": false,
+    "current_scoring_authorization_present": false
+  },
+  "prohibitions": {
+    "longbench_access_authorized": false,
+    "longbench_outcomes_viewed": false,
+    "longbench_bucket_listed": false,
+    "model_d_rerun_allowed": false,
+    "validation_tuning_allowed": false,
+    "structure_result_rescue_allowed": false,
+    "post_exposure_objective_change_allowed": false
+  }
+}
