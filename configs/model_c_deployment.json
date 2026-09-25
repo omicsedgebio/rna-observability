@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "artifact_label": "POST-DEVELOPMENT DEPLOYMENT ESTIMATOR",
+  "historical_oof_reconstruction": false,
+  "new_development_evidence": false,
+  "development_freeze_commit": "294f59ddab5dc4262d23ebbd976f2cec6469bc71",
+  "training_matrix": "results/tables/model_c_inputs.tsv.gz",
+  "training_matrix_sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+  "training_rows": 15999,
+  "cohort": "metadata/final_transcript_cohort.tsv",
+  "cohort_sha256": "3df267fde7a8bafbaccd0266d55bf4f3ad11c2a18a142db70e49dd3b86a8b7f5",
+  "feature_registry": "metadata/feature_definitions.tsv",
+  "feature_registry_sha256": "30b96cad1df8d9f9cad4e4829702e739a05013a013fb5b4f0b3d770859ab8d4d",
+  "model_c_config": "configs/model_c_reestablishment.json",
+  "model_c_config_sha256": "84168bd11531d9f6a7d1ad655ad9c35a64cb7149913e16717609808d228191f0",
+  "features": [
+    "independent_abundance_log1p",
+    "sequence_length",
+    "gc_fraction",
+    "exon_count",
+    "isoforms_per_gene",
+    "sequence_cluster_size",
+    "homopolymer_fraction",
+    "low_complexity_fraction",
+    "sequence_entropy"
+  ],
+  "output_class_order": [
+    "BOTH",
+    "ILLUMINA_ONLY",
+    "DIRECT_RNA_ONLY",
+    "NEITHER",
+    "INDETERMINATE"
+  ],
+  "preprocessing": {
+    "type": "StandardScaler",
+    "with_mean": true,
+    "with_std": true,
+    "fit_scope": "all 15999 frozen development rows only"
+  },
+  "estimator": {
+    "type": "LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "max_iter": 2000,
+    "class_weight": null,
+    "fit_intercept": true,
+    "random_state": 20260923,
+    "threads": 1,
+    "tuning": "NONE"
+  },
+  "environment": {
+    "python": "3.11.12",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "outputs": {
+    "state": "metadata/model_c_deployment_estimator.json",
+    "receipt": "metadata/model_c_deployment_estimator_receipt.json",
+    "attempt": "metadata/model_c_deployment_attempt.json"
+  },
+  "longbench_inputs_read": false,
+  "model_d_rerun": false
+}

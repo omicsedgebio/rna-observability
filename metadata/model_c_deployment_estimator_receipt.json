@@ -1,0 +1,56 @@
+{
+  "artifact_label": "POST-DEVELOPMENT DEPLOYMENT ESTIMATOR",
+  "attempt_sha256": "a60e5b1c30f524a921c2868fc33708a8b513e54dc37f4239d8aa894e1689129e",
+  "coefficient_class_order": [
+    "BOTH",
+    "DIRECT_RNA_ONLY",
+    "ILLUMINA_ONLY",
+    "INDETERMINATE",
+    "NEITHER"
+  ],
+  "completed_utc": "2026-09-25T12:02:02.888806+00:00",
+  "config_sha256": "e8fad64dc39821362db95eaa93fcdd27d1e38972b406680929b93ad7e0724e1d",
+  "development_freeze_commit": "294f59ddab5dc4262d23ebbd976f2cec6469bc71",
+  "development_metrics_computed": false,
+  "environment": {
+    "numpy": "2.4.2",
+    "pandas": "3.0.6",
+    "python": "3.11.12",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "features": [
+    "independent_abundance_log1p",
+    "sequence_length",
+    "gc_fraction",
+    "exon_count",
+    "isoforms_per_gene",
+    "sequence_cluster_size",
+    "homopolymer_fraction",
+    "low_complexity_fraction",
+    "sequence_entropy"
+  ],
+  "fit_attempts": 1,
+  "historical_oof_reconstruction": false,
+  "longbench_inputs_read": false,
+  "longbench_metrics_computed": false,
+  "longbench_predictions_computed": false,
+  "model_d_rerun": false,
+  "new_development_evidence": false,
+  "output_class_order": [
+    "BOTH",
+    "ILLUMINA_ONLY",
+    "DIRECT_RNA_ONLY",
+    "NEITHER",
+    "INDETERMINATE"
+  ],
+  "prediction_sha256": "aa19e23f6d80b6f2210f941eaa7ba6ce6c6b163d01a63233d4276ff56c70d40b",
+  "schema_version": 1,
+  "script_sha256": "05dc6d6340c3889f1c1904d85e042b188be7a951ef5eaf74cf888060bcc091b3",
+  "selection_or_tuning": false,
+  "state_sha256": "af16799849ae05ff8ba26718d2a79ad53ccde1291041653d0257e5797ed59ec2",
+  "status": "FROZEN_POST_DEVELOPMENT_DEPLOYMENT_ESTIMATOR",
+  "training_input_sha256": "c7597fcf57d955a84dcd512d4e4689be6127a408b76aed992d176af8e3a41a31",
+  "training_rows": 15999
+}

@@ -1,0 +1,10 @@
+{
+  "status": "DEPLOYMENT_FIT_STARTED_NO_AUTOMATIC_RETRY",
+  "started_utc": "2026-09-25T12:02:02.668091+00:00",
+  "development_freeze_commit": "294f59ddab5dc4262d23ebbd976f2cec6469bc71",
+  "artifact_label": "POST-DEVELOPMENT DEPLOYMENT ESTIMATOR",
+  "historical_oof_reconstruction": false,
+  "new_development_evidence": false,
+  "longbench_inputs_read": false,
+  "model_d_rerun": false
+}
