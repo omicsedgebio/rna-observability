@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Project 001 locked development result</title>
+  <desc id="desc">C_QUALITY macro-F1 was 0.5489 and D_STRUCTURE macro-F1 was 0.5499, for an increment of 0.0010. The paired bootstrap interval from negative 0.0023 to positive 0.0041 crosses zero. The observed increment is below the 0.0015 negative-control permutation 95th percentile. The locked decision is NOT_SUPPORTED and the practical magnitude is NEGLIGIBLE.</desc>
+  <defs>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .heading { font-size: 28px; font-weight: 700; fill: #173b45; }
+      .stage { font-size: 14px; font-weight: 700; letter-spacing: 1.7px; fill: #5b6c72; }
+      .label { font-size: 18px; font-weight: 650; fill: #263f47; }
+      .body { font-size: 16px; fill: #465a61; }
+      .small { font-size: 13px; fill: #607278; }
+      .number { font-size: 38px; font-weight: 720; fill: #173b45; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="700" fill="#f7f8f4"/>
+  <rect x="28" y="28" width="1344" height="644" rx="28" fill="#ffffff" stroke="#d9e2df" stroke-width="2"/>
+  <text x="70" y="86" class="sans heading">Locked K562 development result</text>
+  <text x="70" y="117" class="sans body">Adding measured structure produced a near-zero increment that did not pass the locked gates</text>
+
+  <!-- aligned values, no bars -->
+  <text x="70" y="170" class="sans stage">HELD-OUT CLASSIFICATION</text>
+  <rect x="70" y="194" width="360" height="104" rx="20" fill="#eef4f5" stroke="#8aa7ae"/>
+  <text x="96" y="228" class="sans label">C_QUALITY</text>
+  <text x="96" y="265" class="sans number">0.5489</text>
+  <text x="275" y="265" class="sans small">macro-F1</text>
+
+  <rect x="70" y="314" width="360" height="104" rx="20" fill="#f3edf5" stroke="#ab8cb7"/>
+  <text x="96" y="348" class="sans label">D_STRUCTURE</text>
+  <text x="96" y="385" class="sans number">0.5499</text>
+  <text x="275" y="385" class="sans small">macro-F1</text>
+
+  <rect x="70" y="440" width="360" height="95" rx="20" fill="#f7f4eb" stroke="#c6b98e"/>
+  <text x="96" y="474" class="sans label">Increment</text>
+  <text x="96" y="513" class="sans number">+0.0010</text>
+  <text x="294" y="513" class="sans small">NEGLIGIBLE</text>
+
+  <!-- uncertainty plot -->
+  <text x="490" y="170" class="sans stage">PAIRED UNCERTAINTY</text>
+  <rect x="490" y="194" width="840" height="225" rx="20" fill="#fbfcfa" stroke="#d6dfdc"/>
+  <text x="523" y="229" class="sans label">Bootstrap interval for the macro-F1 increment</text>
+  <text x="523" y="255" class="sans small">-0.0023 to +0.0041, with the observed increment at +0.0010</text>
+
+  <!-- scale from -0.005 to +0.005 -->
+  <line x1="548" y1="327" x2="1268" y2="327" stroke="#89999d" stroke-width="2"/>
+  <line x1="548" y1="319" x2="548" y2="337" stroke="#89999d" stroke-width="2"/>
+  <line x1="908" y1="287" x2="908" y2="350" stroke="#52636f" stroke-width="3"/>
+  <line x1="1268" y1="319" x2="1268" y2="337" stroke="#89999d" stroke-width="2"/>
+  <text x="548" y="365" text-anchor="middle" class="sans small">-0.005</text>
+  <text x="908" y="365" text-anchor="middle" class="sans small">zero</text>
+  <text x="1268" y="365" text-anchor="middle" class="sans small">+0.005</text>
+
+  <!-- interval maps to x739 and x1205; point maps to x978 -->
+  <line x1="739" y1="327" x2="1205" y2="327" stroke="#8a5d9f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="739" y1="309" x2="739" y2="345" stroke="#8a5d9f" stroke-width="4"/>
+  <line x1="1205" y1="309" x2="1205" y2="345" stroke="#8a5d9f" stroke-width="4"/>
+  <circle cx="978" cy="327" r="12" fill="#173b45" stroke="#ffffff" stroke-width="4"/>
+  <text x="908" y="397" text-anchor="middle" class="sans body">Interval crosses zero</text>
+
+  <!-- permutation comparison -->
+  <text x="490" y="466" class="sans stage">NEGATIVE-CONTROL CALIBRATION</text>
+  <rect x="490" y="490" width="520" height="132" rx="20" fill="#fbfcfa" stroke="#d6dfdc"/>
+  <line x1="542" y1="550" x2="958" y2="550" stroke="#89999d" stroke-width="3"/>
+  <!-- scale 0 to 0.002, observed 0.000974, threshold 0.001509 -->
+  <circle cx="745" cy="550" r="10" fill="#173b45"/>
+  <line x1="856" y1="522" x2="856" y2="579" stroke="#b3842f" stroke-width="4"/>
+  <text x="745" y="591" text-anchor="middle" class="sans small">observed 0.0010</text>
+  <text x="856" y="514" text-anchor="middle" class="sans small">threshold 0.0015</text>
+  <text x="750" y="613" text-anchor="middle" class="sans body">Observed increment is below threshold</text>
+
+  <!-- decision -->
+  <rect x="1032" y="490" width="298" height="132" rx="20" fill="#e9edeb" stroke="#879590" stroke-width="2"/>
+  <text x="1181" y="521" text-anchor="middle" class="sans small">LOCKED DECISION</text>
+  <text x="1181" y="563" text-anchor="middle" class="sans" font-size="26" font-weight="750" fill="#263f47">NOT_SUPPORTED</text>
+  <rect x="1100" y="581" width="162" height="25" rx="12" fill="#ffffff" stroke="#a5b0ac"/>
+  <text x="1181" y="599" text-anchor="middle" class="sans small">NEGLIGIBLE</text>
+</svg>
