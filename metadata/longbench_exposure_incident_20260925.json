@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "incident_date": "2026-09-25",
+  "status": "CONTAINED_SESSION_QUARANTINED",
+  "summary": "Accidental result-bearing tutorial text appeared in a search response during a prior Codex session.",
+  "deliberate_tutorial_opening": false,
+  "longbench_files_accessed": false,
+  "longbench_bucket_listed": false,
+  "longbench_transcript_values_inspected": false,
+  "longbench_predictions_computed": false,
+  "longbench_metrics_computed": false,
+  "repository_modified_after_exposure_recognition": false,
+  "contaminated_codex_session_quarantined": true,
+  "exposed_scientific_content_propagated_to_repository": false,
+  "future_planning_rule": "Use clean agents and repository-local pre-exposure material only; do not reconstruct, infer, search for, summarize, or reproduce the exposed content.",
+  "longbench_status": "LOCKED",
+  "pre_exposure_candidate_reverified": true,
+  "pre_exposure_candidate_sha256": {
+    "configs/longbench_external_validation_lock.json": "af4ca468f92192e0723d3068db546d69af6815ec8f300a475cc1cb953079ad0b",
+    "docs/longbench_external_validation_plan.md": "670acc45be1a6e207c8a8656a5731fc21c94c36c0b15d0f640bfa1d131648f0e",
+    "docs/longbench_external_validation_reviewer2.md": "a665464e29c857263c0c63483aae5ed43159898216a3dc238dad3be0b41801ff",
+    "metadata/longbench_compatibility_audit.tsv": "9d07ade0d3ce1c1895139c8f083d06fb090ddb0af1e1d32c6d5c0238378a1f8c",
+    "metadata/longbench_external_validation_manifest.json": "d5a2887d66dc25fd0a0dc2951a5db55297101ee285f08f22708d93ee99586b66",
+    "scripts/check_longbench_release.py": "ec08ea808660254981f5df256b6fdb93147e54a4fbcf269d5ddc8ef011ac533f",
+    "src/rnaobs/external_validation_lock.py": "84c281e4eff5dce23e2a667cb9a6a6c4aeea3f6c2028c6f017a768658d4ce7a2",
+    "tests/test_longbench_external_validation_lock.py": "532c507ad2a1879e586bb04fa6aef4834a08bc97f2993d988ce31a93077f9d67"
+  }
+}

@@ -1,5 +1,22 @@
 # External validation lock
 
+## Contained search-response exposure, 2026-09-25
+
+Status remains **LOCKED**. In a prior Codex session, accidental result-bearing
+tutorial text appeared in a search response. The tutorial was not deliberately
+opened. No LongBench file was accessed, no bucket was listed, no transcript
+value was inspected, and no prediction or metric was computed. The session was
+quarantined immediately, with no repository modification after recognition.
+The exposed scientific content was not propagated into repository artifacts
+and must not be reconstructed or repeated.
+
+The eight external-validation candidate files predated the incident. A fresh
+session independently reverified their exact pre-exposure SHA256 values, as
+recorded in
+`metadata/longbench_exposure_incident_20260925.json`. Future planning is limited
+to clean agents and repository-local pre-exposure material. LongBench remains
+**LOCKED**.
+
 ## Phase 3B exposure audit, 2026-09-23
 
 Status remains **LOCKED**. Phase 3B read this lock and prior catalog-level compatibility notes only. No LongBench bucket, file, transcript outcome, platform-disagreement distribution, figure, model performance, tutorial result or association was accessed. No LongBench download occurred. The analysis plan is still `DRAFT_NOT_FROZEN`; its Phase 3B edit does not authorize release of the lock.
