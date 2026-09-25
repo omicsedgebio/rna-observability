@@ -16,7 +16,7 @@ DOCS = (
     "reproducibility phase1_report command_log sgnex_processed_data_qc replicate_structure icshape_qc structure_missingness outcome_selection quantifier_sensitivity identifiability_baseline structure_feature_specification k562_compatibility_audit data_reuse_and_licensing structure_external_validation_search phase2_report"
 ).split()
 REQUIRED = [
-    "README.md", "AGENTS.md", "LICENSE", "LICENSE_SCOPE.md",
+    "README.md", "AGENTS.md", "CONTRIBUTING.md", "LICENSE", "LICENSE_SCOPE.md",
     "THIRD_PARTY_NOTICES.md", "CITATION.cff",
     "data/README.md", "results/README.md", "metadata/datasets.tsv",
     "docs/prior_art_matrix.tsv", "docs/search_log.tsv", "configs/phase1.json",

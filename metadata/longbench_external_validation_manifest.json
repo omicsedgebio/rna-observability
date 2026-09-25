@@ -103,12 +103,13 @@
   },
   "public_preparation_artifact_sha256": {
     "README.md": "c85c99d18a86dcf606b756996ff49d4c56a57ae175a00ba6aee0bc7b472c06fb",
-    "docs/reproducibility.md": "aefd3870c9c079c93cb9a995ad9c8f3aed2a6d7fae8683ea36f18079189ce964",
+    "docs/reproducibility.md": "8659083e077ce294a2c3de30c34ffd6c863a8d3856055988d8503f46d56faca7",
     "docs/claims_register.md": "2e62369362d9740a8954b43d25d06110c21f1f0a0244840f834ac9777fdc772c",
     "docs/manuscript_plan.md": "eafe6bead39243bb64d6c6d100ae8bba648375e1df9f4a20fd09d73326b677aa",
-    "docs/public_release_hygiene.md": "159a67a232373bdc5967959bd9b56a0452cd202b2daede256873f612c135af67",
-    "scripts/validate_repository.py": "e09782c4ebf1e30516b119e28f75f53287fe92f15f34072e3d151c0d301f4bfc",
-    ".github/workflows/validate.yml": "1b682e1ebe9490b3ccd4adf9587bc9923484ee7cd9706e8ae31229e29c0d5a84"
+    "docs/public_release_hygiene.md": "279332fe459e97b8a332ae15f713b3d127133fed923f50d1171da63d799a85b0",
+    "scripts/validate_repository.py": "9105dcbfa4ca906f8100aaf02416abb4b5a4cad49ab0266c2e2fc6291225d188",
+    ".github/workflows/validate.yml": "1b682e1ebe9490b3ccd4adf9587bc9923484ee7cd9706e8ae31229e29c0d5a84",
+    "CONTRIBUTING.md": "f49a3af237148949fff03743df560ae3305e0ef57dd5899a3bc437ea1d8ee5f7"
   },
   "environment_policy": {
     "canonical_python": "3.11.12",

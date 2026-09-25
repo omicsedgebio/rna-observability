@@ -39,7 +39,7 @@ Before scientific execution: pin R/Python and dependencies, create lockfiles and
 
 CI validates schema/policies/local links and data exclusions; it does not certify novelty, source correctness, actual license permissions, biological compatibility, or the procedural validation firewall.
 
-Release remains deferred pending final rights review, contribution guidance, and approval of a publication-grade tagged GitHub release. After approval, archive the exact tagged version on Zenodo and cite its DOI. Apache-2.0 project licensing and repository citation metadata are now established, but no DOI or archival release is claimed yet.
+Repository-level rights/privacy review and contribution guidance are complete. A publication-grade tagged archival release remains deferred. When that release is approved, archive the exact tagged version on Zenodo and cite its DOI. Apache-2.0 project licensing and repository citation metadata are established, but no DOI or archival release is claimed yet.
 
 ## Phase 3A reproducibility record
 
