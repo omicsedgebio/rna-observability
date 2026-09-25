@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software or research workflow, please cite this repository and the underlying datasets and software separately."
+title: "RNA Observability"
+type: software
+authors:
+  - family-names: "Pathak"
+    given-names: "Priyansh"
+repository-code: "https://github.com/omicsedgebio/rna-observability"
+license: "Apache-2.0"
+abstract: >-
+  Computational genomics research code, reproducibility artifacts, and
+  governance workflows for studying workflow-specific transcript measurement
+  behavior and the incremental contribution of experimentally measured RNA
+  structure.

@@ -159,7 +159,13 @@ own terms. SG-NEx is recorded as CC BY-NC 4.0; LongBench catalog metadata record
 CC BY 4.0, but its lock remains in force; GEO availability is not treated as a
 blanket redistribution license. See [data reuse and licensing](docs/data_reuse_and_licensing.md).
 
-The project code/documentation license, authorship, release version, and DOI are
-not finalized. [Citation metadata remains pending](CITATION_PENDING.md), so no
-`CITATION.cff`, ORCID, affiliation, or release claim is invented. Repository:
+Original project-authored software and non-manuscript repository documentation
+are licensed under Apache License 2.0, subject to `LICENSE_SCOPE.md`. Draft
+manuscript text is excluded unless explicitly licensed later. Third-party
+datasets, software, and reference resources retain their own terms; see
+`THIRD_PARTY_NOTICES.md`.
+
+Priyansh Pathak is the sole author of this repository release metadata.
+Citation metadata are provided in `CITATION.cff`. No DOI, ORCID, affiliation,
+archival deposit, or tagged release version is claimed yet. Repository:
 [omicsedgebio/rna-observability](https://github.com/omicsedgebio/rna-observability).

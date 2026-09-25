@@ -102,12 +102,12 @@
     "tests/test_longbench_external_validation_lock.py": "f11dff4b5d3678a8bcd2e72fe2ce4894cbe2be02b30ca97d01b685c18eef6bfd"
   },
   "public_preparation_artifact_sha256": {
-    "README.md": "41a914e1fc10c42877addbf103cec987372a87ed54269612685c2db8548ead75",
-    "docs/reproducibility.md": "48e4313bececfd7aeca9dcfe0c3dfa559c628ea2bb3a80712200c477c6d9dc33",
+    "README.md": "c85c99d18a86dcf606b756996ff49d4c56a57ae175a00ba6aee0bc7b472c06fb",
+    "docs/reproducibility.md": "aefd3870c9c079c93cb9a995ad9c8f3aed2a6d7fae8683ea36f18079189ce964",
     "docs/claims_register.md": "2e62369362d9740a8954b43d25d06110c21f1f0a0244840f834ac9777fdc772c",
     "docs/manuscript_plan.md": "eafe6bead39243bb64d6c6d100ae8bba648375e1df9f4a20fd09d73326b677aa",
-    "docs/public_release_hygiene.md": "7965919d8e418496aba10ed785a3fcae9db44f893dc6ba62d456d200f7741e0d",
-    "scripts/validate_repository.py": "9cce74525d3373c6fa1f95ccab9e9ce9fc6cf8c996c4aed5bb8918548c73ae82",
+    "docs/public_release_hygiene.md": "159a67a232373bdc5967959bd9b56a0452cd202b2daede256873f612c135af67",
+    "scripts/validate_repository.py": "e09782c4ebf1e30516b119e28f75f53287fe92f15f34072e3d151c0d301f4bfc",
     ".github/workflows/validate.yml": "1b682e1ebe9490b3ccd4adf9587bc9923484ee7cd9706e8ae31229e29c0d5a84"
   },
   "environment_policy": {
