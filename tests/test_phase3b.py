@@ -23,6 +23,9 @@ def script(name):
 
 
 class BridgeTests(unittest.TestCase):
+    @unittest.skipUnless(
+        importlib.util.find_spec("pyfaidx"), "optional frozen Phase 3B dependency absent"
+    )
     def test_full_reference_equivalence_and_changes(self):
         bridge = script('phase3b_bridge')
         old = Transcript('ENST1.1', 'ENSG1', '1', '+', ((0, 4), (8, 12)))

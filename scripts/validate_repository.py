@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline Phase 1 governance/schema checks; not scientific validation."""
 import csv
+import hashlib
 import json
 import re
 import subprocess
@@ -20,6 +21,23 @@ REQUIRED = [
     "docs/prior_art_matrix.tsv", "docs/search_log.tsv", "configs/phase1.json",
     ".github/workflows/validate.yml",
 ] + ["docs/" + name + ".md" for name in DOCS]
+REQUIRED += [
+    "configs/longbench_external_validation_lock.json",
+    "configs/model_c_deployment.json",
+    "docs/longbench_external_validation_plan.md",
+    "docs/longbench_external_validation_reviewer2.md",
+    "docs/model_c_deployment_estimator.md",
+    "docs/public_release_hygiene.md",
+    "metadata/longbench_compatibility_audit.tsv",
+    "metadata/longbench_exposure_incident_20260925.json",
+    "metadata/longbench_external_validation_manifest.json",
+    "metadata/model_c_deployment_attempt.json",
+    "metadata/model_c_deployment_estimator.json",
+    "metadata/model_c_deployment_estimator_receipt.json",
+    "scripts/check_longbench_release.py",
+    "scripts/materialize_model_c_deployment.py",
+    "src/rnaobs/external_validation_lock.py",
+]
 DIRS = (
     "configs data/external data/processed scripts src analysis/pilot_k562 "
     "results/tables results/figures manuscript/figures manuscript/tables manuscript/notes tests"
@@ -100,6 +118,55 @@ def phase_errors(policy, plan, lock, datasets):
     return errors
 
 
+def postdevelopment_errors(root):
+    errors = []
+    result = json.loads((root / "metadata/model_d_development_result_freeze.json").read_text())
+    decision = result.get("locked_decision", {})
+    if (
+        decision.get("conclusion") != "NOT_SUPPORTED"
+        or decision.get("practical_category") != "NEGLIGIBLE"
+        or decision.get("class_instability") is not False
+    ):
+        errors.append("Frozen Model D conclusion changed")
+    if not result.get("execution_governance", {}).get("single_attempt_consumed"):
+        errors.append("Model D attempt must remain consumed")
+    candidate = json.loads(
+        (root / "configs/longbench_external_validation_lock.json").read_text()
+    )
+    if candidate.get("status") != "LOCK_CANDIDATE_NOT_AUTHORIZED":
+        errors.append("LongBench candidate must remain unauthorized")
+    for rel in (
+        "metadata/longbench_data_access_authorization.json",
+        "metadata/longbench_scoring_authorization.json",
+    ):
+        if (root / rel).exists():
+            errors.append("Forbidden LongBench authorization exists: " + rel)
+    incident = json.loads(
+        (root / "metadata/longbench_exposure_incident_20260925.json").read_text()
+    )
+    if incident.get("status") != "CONTAINED_SESSION_QUARANTINED":
+        errors.append("LongBench exposure containment record changed")
+    receipt = json.loads(
+        (root / "metadata/model_c_deployment_estimator_receipt.json").read_text()
+    )
+    state = root / "metadata/model_c_deployment_estimator.json"
+    if hashlib.sha256(state.read_bytes()).hexdigest() != receipt.get("state_sha256"):
+        errors.append("Model C deployment estimator state hash mismatch")
+    scope_flags = (
+        "historical_oof_reconstruction",
+        "new_development_evidence",
+        "longbench_inputs_read",
+        "model_d_rerun",
+    )
+    if any(receipt.get(key) is not False for key in scope_flags):
+        errors.append("Model C deployment scope flag changed")
+    readme = (root / "README.md").read_text()
+    for phrase in ("NOT_SUPPORTED / NEGLIGIBLE", "LongBench remains **LOCKED**"):
+        if phrase not in readme:
+            errors.append("README missing frozen scientific boundary: " + phrase)
+    return errors
+
+
 def validate(root=ROOT):
     errors = []
     for rel in REQUIRED:
@@ -122,6 +189,7 @@ def validate(root=ROOT):
         (root / "docs/external_validation_lock.md").read_text(),
         tables["metadata/datasets.tsv"],
     ))
+    errors.extend(postdevelopment_errors(root))
     files = subprocess.check_output(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=root
     ).decode().split("\0")

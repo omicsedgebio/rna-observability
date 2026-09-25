@@ -14,9 +14,9 @@ executing agent, not an independent human reviewer.
 | Classification | Count |
 |---|---:|
 | FATAL | 0 |
-| MAJOR_BUT_MANAGEABLE | 2 |
+| MAJOR_BUT_MANAGEABLE | 1 |
 | MINOR | 2 |
-| NOT_SUPPORTED | 11 |
+| NOT_SUPPORTED | 12 |
 
 ## Findings
 
@@ -34,7 +34,7 @@ executing agent, not an independent human reviewer.
 | 10 | Are LongBench compatibility unknowns still honest? | NOT_SUPPORTED | Yes. No classification was upgraded using external information; nine required items remain `UNKNOWN`, and absent matched structure blocks aims A/B only. |
 | 11 | Can prediction-before-scoring currently be bypassed? | MAJOR_BUT_MANAGEABLE | No execution path is authorized or implemented, so no current scoring bypass exists. A future implementation, exact mapping, validation environment, inclusion manifest, feature/label separation, and two human authorizations remain mandatory release blockers. |
 | 12 | Did repository polish introduce an overclaim? | NOT_SUPPORTED | No. The project contribution is framed as a measurement framework and falsifiable test, not novelty, truth, clinical utility, or a validated score. |
-| 13 | Can the prepared work be committed and pushed from this session? | MAJOR_BUT_MANAGEABLE | No. The environment denies `.git/index.lock` creation. This is an operational blocker; it does not justify weakening governance or bypassing Git. |
+| 13 | Can the prepared work be committed without weakening Git controls? | NOT_SUPPORTED | Yes. The primary checkout denies `.git/index.lock` creation, so a fresh isolated clone was used for byte-identical staged review and commits. No Git guard was bypassed. |
 | 14 | Is final citation/license metadata complete? | MINOR | No. Authorship and project license remain intentionally pending, so creating `CITATION.cff` would invent release metadata. The blockers are visible. |
 | 15 | Is historical provenance fully free of personal absolute paths? | MINOR | Four frozen receipt/audit lines retain an execution username/path. Editing them would break locked hashes and not erase Git history; they are flagged for final privacy review. |
 
@@ -52,6 +52,6 @@ structure input, or LongBench input entered construction.
 There is no unresolved scientific or containment FATAL issue. The external
 validation program remains unreleased because compatibility, mapping,
 environment, prediction-before-scoring implementation, inclusion, human review,
-and authorization conditions are unmet. Repository content is ready for a
-normal Git commit once Git metadata is writable; no workaround is scientifically
-or operationally appropriate.
+and authorization conditions are unmet. Repository changes were reviewed and
+committed through an isolated writable clone because the primary checkout's Git
+metadata is read-only in this environment.

@@ -1,5 +1,23 @@
 # Claims register
 
+## Frozen post-development claim state, 2026-09-25
+
+The Model D development result is frozen as `NOT_SUPPORTED / NEGLIGIBLE`.
+The observed D_STRUCTURE minus C_QUALITY macro-F1 delta was
+`0.0009736264857591603`, its paired bootstrap interval crossed zero, and it did
+not exceed the negative-control permutation 95th percentile. Permitted wording:
+"Within the frozen workflow-specific K562 development cohort, the locked
+analysis did not support an incremental contribution of the GSE132099 structure
+features beyond the strongest locked non-biological comparator."
+
+This supersedes the earlier "untested" status for the development structure
+increment, while preserving the historical chronology below. It does not imply
+that RNA structure is biologically irrelevant, that the assays measure truth,
+or that the conclusion generalizes across tissues, protocols, or annotations.
+LongBench remains locked and cannot validate or rescue the structure increment.
+The post-development Model C deployment artifact supplies no new development
+evidence.
+
 Current integrity status: **BLOCK_STRUCTURE_TEST**, with no approved pre-structure analysis lock. Baseline results were inspected before the old recorded freeze. This does not invalidate a future development-set structure comparison by itself; the current artifact and specification blockers are in [decision chronology](prestructure_decision_chronology.md). Do not claim prospective preregistration or an approved structure test. If a lock is subsequently established, preserve the wording: "This is a pre-structure analysis lock established after inspection of structure-blind baseline performance. It is not a prospective preregistration."
 
 Phase 3B update, 2026-09-23: GSE132099 now has 16,055 coverage-eligible, release-validated A transcript bridges. The older statement below saying zero A/B mappings is historical and applies only to GSE145805. The zero-aware endpoint remains a candidate, the plan is unfrozen, Models A/B/C and D have not been fitted, and no structure-versus-sequencing association has been inspected. The allowed manuscript wording is unchanged: "This project tests whether independently measured RNA structure contains incremental information about technology-specific transcript measurement behavior after accounting for established sources of quantification difficulty." No novelty, causation, accuracy, clinical, universal or product claim is supported.
@@ -12,10 +30,10 @@ Updated 2026-09-23. Phase 3A produced reference and QC findings, but no structur
 
 | Candidate claim | Evidence required | Current evidence status | Prior-art risk | Allowed wording | Prohibited wording |
 |---|---|---|---|---|---|
-| RNA structure predicts sequencing reliability | Reproducible D>C improvement; truth if calling it accuracy | Untested | Very high: Price; Brooks; Su | We are testing whether measured structure is associated with protocol-specific measurement behavior | RNA structure determines sequencing reliability |
+| RNA structure predicts sequencing reliability | Reproducible D>C improvement; truth if calling it accuracy | Frozen development increment NOT_SUPPORTED / NEGLIGIBLE | Very high: Price; Brooks; Su | The locked development analysis did not support an incremental structure contribution for the workflow-specific estimand | RNA structure is irrelevant; RNA structure determines sequencing reliability |
 | RNA Observability is novel | Complete-contribution comparison and updated independent review | Reconnaissance only; MODIFY | Very high | Provisional project term | First-ever; newly discovered property; biological law |
 | Transcript measurement phenotype is coherent | Replicate stability beyond sampling and sensitivity checks | Untested | High: SG-NEx; miniQuant | Candidate disagreement endpoint | Validated observability score |
-| Structure adds beyond identifiability | Strong Model C; exact common cohort; conditional controls; clustered held-out uncertainty | Untested | High: miniQuant; subgraphquant | Incremental hypothesis | Structure explains residuals merely because a coefficient is significant |
+| Structure adds beyond identifiability | Strong Model C; exact common cohort; conditional controls; clustered held-out uncertainty | NOT_SUPPORTED / NEGLIGIBLE in the frozen development comparison | High: miniQuant; subgraphquant | No supported incremental contribution was detected under the locked design | Structure explains residuals; external sequencing transport rescues Model D |
 | Platform A is more accurate | Matched truth, scope-specific replicated error comparison | Spike-in resources located, not analyzed | High benchmarking overlap | Platforms may disagree | Long reads are truth; disagreement equals error |
 | In-vivo reactivity measures intrinsic folding | Orthogonal structure evidence and controlled molecular perturbations | Not established | High | Assay-derived accessibility proxy, cell-context specific | Direct measurement of immutable base-pairing or causation |
 | K562 data are biologically matched | Same-source provenance, culture, passage, extraction and treatments | Different studies; incomplete provenance | High confounding | Same named cell line, cross-study integration candidate | Matched RNA aliquots |

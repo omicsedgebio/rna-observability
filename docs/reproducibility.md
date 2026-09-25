@@ -1,5 +1,23 @@
 # Reproducibility
 
+## Current frozen state, 2026-09-25
+
+The historical Phase 1 notes below are retained for chronology but no longer
+describe the current project state. The Model D development comparison has been
+executed once and frozen at commit
+`294f59ddab5dc4262d23ebbd976f2cec6469bc71` with conclusion
+`NOT_SUPPORTED / NEGLIGIBLE`. Model D must not be rerun. The post-development
+Model C deployment estimator is a separate transparent artifact verified by
+`scripts/materialize_model_c_deployment.py --verify`; its fit mode is consumed
+and cannot be rerun automatically.
+
+The locked scientific environment is Python 3.11.12, NumPy 2.4.2, SciPy 1.17.1,
+pandas 3.0.6, DuckDB 1.5.5, scikit-learn 1.9.1, and threadpoolctl 3.7.0. Safe
+offline checks are listed in the repository README. LongBench remains locked and
+is not part of reproduction.
+
+## Historical Phase 1 record
+
 Phase 1 contains literature/metadata reconnaissance and offline repository validation only. No models, science package environment, random draws, scientific inputs or results yet.
 
 Local observed environment: macOS Darwin 25.6.0 arm64; Python 3.9.6; Git 2.50.1 (Apple Git-155). Checks use only the Python standard library. Linux CI targets Python 3.11 on ubuntu-24.04. Linux execution has not been observed locally; workflow configuration is not a CI pass.

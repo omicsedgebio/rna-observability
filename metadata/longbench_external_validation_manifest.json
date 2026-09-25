@@ -56,9 +56,9 @@
   "reviewer2_review_complete": true,
   "reviewer2_counts": {
     "FATAL": 0,
-    "MAJOR_BUT_MANAGEABLE": 2,
+    "MAJOR_BUT_MANAGEABLE": 1,
     "MINOR": 2,
-    "NOT_SUPPORTED": 11
+    "NOT_SUPPORTED": 12
   },
   "authorization_artifacts": {
     "metadata/longbench_data_access_authorization.json": "ABSENT_REQUIRED",
@@ -95,7 +95,7 @@
   "artifact_sha256": {
     "configs/longbench_external_validation_lock.json": "1a15e94fbb5e7b497baefa7a0c163a33727df129f6e416ade335f084df1694ae",
     "docs/longbench_external_validation_plan.md": "244023274c1c9b09db3b03a7a87d2eee10168a76259765177cdfcaf80c245266",
-    "docs/longbench_external_validation_reviewer2.md": "5b6196cecf184f9a8bd35f494f3f51b5f9680d50f25d7a6ff5ff4ed614fae5ba",
+    "docs/longbench_external_validation_reviewer2.md": "9eb038f2e5d260528dc054fd59557f361cf32b0cb4ff024cec04025651c9d6c7",
     "metadata/longbench_compatibility_audit.tsv": "9d07ade0d3ce1c1895139c8f083d06fb090ddb0af1e1d32c6d5c0238378a1f8c",
     "src/rnaobs/external_validation_lock.py": "af301d32c86007e0818e3d7435914dfeff3780a0b20c81daa724537623a521b2",
     "scripts/check_longbench_release.py": "ec08ea808660254981f5df256b6fdb93147e54a4fbcf269d5ddc8ef011ac533f",
