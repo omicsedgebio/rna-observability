@@ -1,0 +1,94 @@
+{
+  "freeze_version": "model_d_development_result_freeze_v1",
+  "analysis": "Project 001 RNA Observability locked Model D development analysis",
+  "development_status": "FROZEN_AFTER_SINGLE_AUTHORIZED_EXECUTION",
+  "approved_implementation_lock_commit": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "scientific_lock_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
+  "head_at_freeze": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "origin_main_at_freeze": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "class_a_mapping_sha256": "b78371a0b78996ab81fc3e9c617f1478ac3220f7530229a6b9479ef40870f9b4",
+  "structure_resource": {
+    "path": ".cache/phase3b/structure/GSE132099_icSHAPE_invivo.out.txt.gz",
+    "bytes": 22840529,
+    "sha256_verified_by_locked_execution": "d2d168e235faf9cdc3169c96ffc046635695bf1bec5e1e63a4066cd283cd198d"
+  },
+  "execution_governance": {
+    "authorization": {
+      "path": "metadata/model_d_execution_authorization.json",
+      "bytes": 458,
+      "sha256": "7a7e48dea6b13ce0362cb093d33eefdb1baee8ad4bead10c31fd9692b4c52c5b"
+    },
+    "attempt_consumed": {
+      "path": "metadata/model_d_attempt_consumed.json",
+      "bytes": 200,
+      "sha256": "ff47a7af39d3589072ad9c4682d982335043d22b0f6f0fe975f9e9a2d86672b6"
+    },
+    "single_attempt_consumed": true,
+    "automatic_rerun_allowed": false,
+    "protocol_deviation": null
+  },
+  "result_artifacts": {
+    "c_annotation_oof": {
+      "path": "results/tables/model_d_c_annotation_oof.tsv.gz",
+      "bytes": 995789,
+      "sha256": "01931a613c394c18d22b0f21483db664087ac61b447fd4c87635ded4e9e47e18"
+    },
+    "c_quality_oof": {
+      "path": "results/tables/model_d_c_quality_oof.tsv.gz",
+      "bytes": 996134,
+      "sha256": "75d0f665abb8c8d651f805a3f12e43e8d99210925721afd9f2f66776eae871ec"
+    },
+    "d_structure_oof": {
+      "path": "results/tables/model_d_d_structure_oof.tsv.gz",
+      "bytes": 996314,
+      "sha256": "04cecb5659b45406d0eb33d6c1fb4f02b7c92aad7e13573ca1375561503c8105"
+    },
+    "locked_results": {
+      "path": "results/tables/model_d_locked_results.json",
+      "bytes": 10558,
+      "sha256": "5e8f81bee5b5e8dd626be35e6d90090d24cdc53bfb8b332748055e7f6bf7b516"
+    }
+  },
+  "primary_result": {
+    "comparison": "D_STRUCTURE_minus_C_QUALITY",
+    "metric": "pooled_five_fold_oof_macro_f1",
+    "c_quality_macro_f1": 0.54890983706729,
+    "d_structure_macro_f1": 0.5498834635530492,
+    "delta_macro_f1": 0.0009736264857591603,
+    "paired_bootstrap_ci": [
+      -0.0023443180806064804,
+      0.004123505221307526
+    ],
+    "negative_control_percentile_95": 0.0015090734133574142,
+    "strict_callability_rows": 15114,
+    "strict_callability_delta_macro_f1": 0.0007399110130869024,
+    "strict_callability_bootstrap_ci": [
+      -0.0034377341044534047,
+      0.004809181103569267
+    ]
+  },
+  "locked_decision": {
+    "conclusion": "NOT_SUPPORTED",
+    "practical_category": "NEGLIGIBLE",
+    "gates": {
+      "validity": true,
+      "positive": true,
+      "statistical": false,
+      "practical": false,
+      "null_calibrated": false,
+      "fold_robust": true,
+      "partial_magnitude": false,
+      "partial_fold_robust": true,
+      "callability_robust": true,
+      "class_stable": true
+    },
+    "class_instability": false
+  },
+  "interpretation_boundary": {
+    "development_conclusion_frozen": true,
+    "no_model_d_rerun": true,
+    "no_posthoc_structure_feature_expansion": true,
+    "no_threshold_retuning": true,
+    "longbench_remains_locked": true
+  }
+}

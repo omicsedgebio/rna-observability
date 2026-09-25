@@ -1,0 +1,10 @@
+{
+  "implementation_lock_committed": true,
+  "implementation_lock_pushed": true,
+  "implementation_lock_human_reviewed": true,
+  "implementation_lock_approved": true,
+  "structure_test_authorized": true,
+  "approved_implementation_lock_commit": "ba9516ecea7dcfea5d216c2560f591638c874e13",
+  "scientific_lock_commit": "ea1dd05a992b92becc66e1cb825a821e48798923",
+  "class_a_mapping_sha256": "b78371a0b78996ab81fc3e9c617f1478ac3220f7530229a6b9479ef40870f9b4"
+}
