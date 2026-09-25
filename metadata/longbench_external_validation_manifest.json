@@ -108,7 +108,7 @@
     "docs/manuscript_plan.md": "eafe6bead39243bb64d6c6d100ae8bba648375e1df9f4a20fd09d73326b677aa",
     "docs/public_release_hygiene.md": "279332fe459e97b8a332ae15f713b3d127133fed923f50d1171da63d799a85b0",
     "scripts/validate_repository.py": "9105dcbfa4ca906f8100aaf02416abb4b5a4cad49ab0266c2e2fc6291225d188",
-    ".github/workflows/validate.yml": "fb8024462eb52e1b8e4160aba7c2bd8689830265574bc85a1114fcd9bd872431",
+    ".github/workflows/validate.yml": "f019a92a7b490cd99b1a3a5bdd6f0e0ff6a47e31e91045b045f50ab534390555",
     "CONTRIBUTING.md": "f49a3af237148949fff03743df560ae3305e0ef57dd5899a3bc437ea1d8ee5f7"
   },
   "environment_policy": {
